@@ -1,0 +1,4 @@
+2025-08-11 10:42:29.018 - ERROR - 05dde48e-c14b-4b48-9ff7-2d3932ddbe1d - Failed save event: read tcp 192.168.49.230:58349->138.2.103.58:5432: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2025-08-11 10:42:29.029 - ERROR - 05dde48e-c14b-4b48-9ff7-2d3932ddbe1d - Failed to process queue: read tcp 192.168.49.230:58349->138.2.103.58:5432: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2025-08-11 10:42:30.249 - ERROR - 9128cadc-ffc8-441f-9e22-201e95778cc4 - Failed save event: conn closed
+2025-08-11 10:42:30.251 - ERROR - 9128cadc-ffc8-441f-9e22-201e95778cc4 - Failed to process queue: conn closed
