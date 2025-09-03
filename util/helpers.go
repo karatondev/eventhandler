@@ -31,8 +31,19 @@ func CreateDirectory(paths ...string) (err error) {
 }
 
 // ExtractJIDPrefix extracts the part before @ from a JID string
-// Example: "a81bc81b-dead-4e5d-abff-90865d1e13b1@s.whatsapp.net" -> "a81bc81b-dead-4e5d-abff-90865d1e13b1"
+// If the JID contains phone number format (digits:digits), returns the original JID
+// If the JID contains UUID format, returns only the UUID part
+// Examples:
+// - "6289513689096:50@s.whatsapp.net" -> "6289513689096:50@s.whatsapp.net" (no extraction)
+// - "a81bc81b-dead-4e5d-abff-90865d1e13b1@s.whatsapp.net" -> "a81bc81b-dead-4e5d-abff-90865d1e13b1"
 func ExtractJIDPrefix(jid string) string {
+	// Check if JID contains phone number format (digits:digits@domain)
+	if strings.Contains(jid, ":") && strings.Contains(jid, "@") {
+		// It's phone number format, return original JID
+		return jid
+	}
+
+	// Extract UUID part (everything before @)
 	if idx := strings.Index(jid, "@"); idx != -1 {
 		return jid[:idx]
 	}

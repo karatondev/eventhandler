@@ -17,6 +17,8 @@ const (
 
 func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error {
 
+	senderJID := util.ExtractJIDPrefix(data.SenderJID)
+
 	switch data.EventType {
 	case model.EventTypeQR:
 		var qe model.QREventData
@@ -36,7 +38,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 	case model.EventTypeMessage:
 
-		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
@@ -45,26 +47,156 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		if err := json.Unmarshal(data.Data, &message); err != nil {
 			return err
 		}
-		req := entity.CreateMessageInboundRequest{}
+
+		req := entity.CreateMessageInboundRequest{
+			EventID:     data.EventID,
+			AccountID:   account.AccountID,
+			FromMe:      message.Metadata.FromMe,
+			MessageID:   message.Metadata.MessageID,
+			Sender:      message.Sender,
+			MessageType: string(message.MessageType),
+			ReceivedAt:  data.Timestamp,
+		}
+
 		switch message.MessageType {
 		case model.MessageTypeText:
+			// Create a clean message data without sender and metadata
+			messageData := model.MessageData{
+				Content: message.Content,
+			}
 
-			msgbyte, err := util.MarshalToJSON(message)
-			if err != nil {
-				return err
-			}
-			req = entity.CreateMessageInboundRequest{
-				EventID:     data.EventID,
-				AccountID:   account.AccountID,
-				FromMe:      message.Metadata.FromMe,
-				MessageID:   message.Metadata.MessageID,
-				Sender:      message.Sender,
-				MessageType: string(message.MessageType),
-				ReceivedAt:  data.Timestamp,
-				Data:        msgbyte,
-			}
+			req.Data = messageData.MustToBytes()
 
 		case model.MessageTypeImage:
+			var imageMessage model.ImageMessageData
+			if err := json.Unmarshal(data.Data, &imageMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:  imageMessage.Content,
+				Caption:  imageMessage.Caption,
+				MimeType: imageMessage.MimeType,
+				FileSize: imageMessage.FileSize,
+				FileURL:  imageMessage.FileURL,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeAudio:
+			var audioMessage model.AudioMessageData
+			if err := json.Unmarshal(data.Data, &audioMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:  audioMessage.Content,
+				Caption:  audioMessage.Caption,
+				MimeType: audioMessage.MimeType,
+				FileSize: audioMessage.FileSize,
+				FileURL:  audioMessage.FileURL,
+				Duration: audioMessage.Duration,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeVideo:
+			var videoMessage model.VideoMessageData
+			if err := json.Unmarshal(data.Data, &videoMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:  videoMessage.Content,
+				Caption:  videoMessage.Caption,
+				MimeType: videoMessage.MimeType,
+				FileSize: videoMessage.FileSize,
+				FileURL:  videoMessage.FileURL,
+				Duration: videoMessage.Duration,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeDocument:
+			var documentMessage model.DocumentMessageData
+			if err := json.Unmarshal(data.Data, &documentMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:  documentMessage.Content,
+				Caption:  documentMessage.Caption,
+				FileName: documentMessage.FileName,
+				MimeType: documentMessage.MimeType,
+				FileSize: documentMessage.FileSize,
+				FileURL:  documentMessage.FileURL,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeLocation:
+			var locationMessage model.LocationMessageData
+			if err := json.Unmarshal(data.Data, &locationMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:   locationMessage.Content,
+				Caption:   locationMessage.Caption,
+				Latitude:  locationMessage.Latitude,
+				Longitude: locationMessage.Longitude,
+				Name:      locationMessage.Name,
+				Address:   locationMessage.Address,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeReaction:
+			var reactionMessage model.ReactionMessageData
+			if err := json.Unmarshal(data.Data, &reactionMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:      reactionMessage.Content,
+				Caption:      reactionMessage.Caption,
+				Text:         reactionMessage.Text,
+				TargetKey:    reactionMessage.TargetKey,
+				TargetSender: reactionMessage.TargetSender,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeButton:
+			var buttonMessage model.ButtonResponseMessageData
+			if err := json.Unmarshal(data.Data, &buttonMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:          buttonMessage.Content,
+				Caption:          buttonMessage.Caption,
+				SelectedButtonID: buttonMessage.SelectedButtonID,
+				DisplayText:      buttonMessage.DisplayText,
+			}
+
+			req.Data = messageData.MustToBytes()
+
+		case model.MessageTypeList:
+			var listMessage model.ListResponseMessageData
+			if err := json.Unmarshal(data.Data, &listMessage); err != nil {
+				return err
+			}
+
+			messageData := model.MessageData{
+				Content:       listMessage.Content,
+				Caption:       listMessage.Caption,
+				Title:         listMessage.Title,
+				Description:   listMessage.Description,
+				SelectedRowID: listMessage.SelectedRowID,
+			}
+
+			req.Data = messageData.MustToBytes()
 
 		default:
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Unsupported message type: %s", message.MessageType)
@@ -111,7 +243,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 	case model.EventTypeConnected:
 
-		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
@@ -138,7 +270,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 	case model.EventTypeDisconnected:
 
-		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
@@ -165,7 +297,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 	case model.EventTypeLoggedOut:
 
-		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
@@ -192,7 +324,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 	case model.EventTypeReceipt, model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
 
-		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
@@ -209,7 +341,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save event: %v", err)
 			return err
 		}
-		s.logger.Infofctx(provider.AppLog, ctx, "Event %s for device %s saved", data.EventType, account.AccountID)
+		s.logger.Infofctx(provider.AppLog, ctx, "Event %s for accountID %s saved", data.EventType, account.AccountID)
 		return nil
 
 	default:

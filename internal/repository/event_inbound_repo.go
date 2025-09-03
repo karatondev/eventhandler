@@ -35,7 +35,7 @@ const (
 		VALUES (@event_id, @account_id, @event_type, @timestamp, @data, @created_at, @updated_at)`
 
 	insertMessageInboundQuery = `
-		INSERT INTO public.message_inbounds 
+		INSERT INTO whatsapp_web.message_inbounds 
 			(account_id, from_me, message_id, sender, message_type, received_at, data, created_at, updated_at) 
 		VALUES (@account_id, @from_me, @message_id, @sender, @message_type, @received_at, @data, @created_at, @updated_at)`
 )

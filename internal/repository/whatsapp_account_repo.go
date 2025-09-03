@@ -32,7 +32,7 @@ const (
 			   session_data, connect_status, is_active, initiated_at, connected_at, 
 			   disconnected_at, created_at, created_by
 		FROM public.whatsapp_accounts 
-		WHERE sender_jid = @sender_jid AND deleted_at IS NULL
+		WHERE (sender_jid = @sender_jid OR account_id::text = @sender_jid) AND deleted_at IS NULL
 		LIMIT 1
 	`
 

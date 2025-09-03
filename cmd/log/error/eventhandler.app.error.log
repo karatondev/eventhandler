@@ -275,3 +275,89 @@
 2025-09-03 11:59:20.366 - ERROR - 62eb8c31-5783-464b-9ab8-767a112be4a9 - Failed to process queue: ERROR: invalid input value for enum connect_status_enum: "pair_success" (SQLSTATE 22P02)
 2025-09-03 12:01:32.619 - ERROR - 055731b7-e56e-4180-a397-831d5e1b2f91 - Failed to get account from database: no rows in result set
 2025-09-03 12:01:32.624 - ERROR - 055731b7-e56e-4180-a397-831d5e1b2f91 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.742 - ERROR - d54a1506-7016-4126-87b4-76ccb016ad06 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.749 - ERROR - d54a1506-7016-4126-87b4-76ccb016ad06 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.743 - ERROR - de58e84e-dc47-46f3-b023-7f82babeedb1 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.749 - ERROR - de58e84e-dc47-46f3-b023-7f82babeedb1 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.752 - ERROR - a8327808-f107-41b2-97f7-6038220ccf20 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.752 - ERROR - a8327808-f107-41b2-97f7-6038220ccf20 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.754 - ERROR - 0d0a1f24-1a78-4baf-bad4-7830a08b0828 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.754 - ERROR - 0d0a1f24-1a78-4baf-bad4-7830a08b0828 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.780 - ERROR - bab4710c-4ed6-4957-864d-324ec2e2fec4 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.780 - ERROR - bab4710c-4ed6-4957-864d-324ec2e2fec4 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.783 - ERROR - d28a0ac2-de00-4c3d-b9ad-395cea16e37b - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.783 - ERROR - d28a0ac2-de00-4c3d-b9ad-395cea16e37b - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.821 - ERROR - e340b900-b5ab-40bb-af3b-2a219bd46cb8 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.822 - ERROR - e340b900-b5ab-40bb-af3b-2a219bd46cb8 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.822 - ERROR - 96bc157c-5952-4268-9488-dc4203272640 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.822 - ERROR - 96bc157c-5952-4268-9488-dc4203272640 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - 5fa4378d-1220-4d15-9b0a-71a9408b8fdb - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - 5fa4378d-1220-4d15-9b0a-71a9408b8fdb - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - c5b412e2-c950-4fa6-bbc3-cb4e729deaae - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.878 - ERROR - c5b412e2-c950-4fa6-bbc3-cb4e729deaae - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - 3bb8ab33-8d49-452f-a294-a87780b15f84 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.879 - ERROR - 3bb8ab33-8d49-452f-a294-a87780b15f84 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - 0c965401-7397-4964-8eec-7cf81ec7ade5 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.879 - ERROR - 0c965401-7397-4964-8eec-7cf81ec7ade5 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.877 - ERROR - ddadbc87-3c22-4505-8fce-7a50af0d70a2 - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.879 - ERROR - ddadbc87-3c22-4505-8fce-7a50af0d70a2 - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - 5d3f4eaf-60d0-481e-bfc9-edbe84f765bb - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - ab90505c-7a6f-4be3-a931-8a22618c2c3e - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - ab90505c-7a6f-4be3-a931-8a22618c2c3e - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - 5d3f4eaf-60d0-481e-bfc9-edbe84f765bb - Failed to process queue: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - 3360016d-5d85-408e-bf10-8b64b9e34a1a - Failed to get account from database: no rows in result set
+2025-09-03 20:33:30.880 - ERROR - 3360016d-5d85-408e-bf10-8b64b9e34a1a - Failed to process queue: no rows in result set
+2025-09-03 20:38:25.068 - ERROR - 8d9a717e-8fc8-415a-9961-4ce0a95e921e - Failed to get account from database: no rows in result set
+2025-09-03 20:38:25.077 - ERROR - 8d9a717e-8fc8-415a-9961-4ce0a95e921e - Failed to process queue: no rows in result set
+2025-09-03 20:38:31.913 - ERROR - a578ebc8-e82b-44c6-886b-b985d5ceca70 - Failed to get account from database: no rows in result set
+2025-09-03 20:38:31.915 - ERROR - a578ebc8-e82b-44c6-886b-b985d5ceca70 - Failed to process queue: no rows in result set
+2025-09-03 20:38:32.753 - ERROR - 4da5f7f7-ae9b-450c-a473-ea2e71718671 - Failed to get account from database: no rows in result set
+2025-09-03 20:38:32.753 - ERROR - 4da5f7f7-ae9b-450c-a473-ea2e71718671 - Failed to process queue: no rows in result set
+2025-09-03 20:38:33.419 - ERROR - e3fafe1e-e9d1-4a35-9214-8d2f9ac514d5 - Failed to get account from database: no rows in result set
+2025-09-03 20:38:33.420 - ERROR - e3fafe1e-e9d1-4a35-9214-8d2f9ac514d5 - Failed to process queue: no rows in result set
+2025-09-03 20:38:34.316 - ERROR - 49b127c8-dfcf-4278-9ac0-ee6fd8c4df9e - Failed to get account from database: no rows in result set
+2025-09-03 20:38:34.317 - ERROR - 49b127c8-dfcf-4278-9ac0-ee6fd8c4df9e - Failed to process queue: no rows in result set
+2025-09-03 20:38:35.247 - ERROR - bb0f5582-be19-4e3d-9cc5-90caaccff9d1 - Failed to get account from database: no rows in result set
+2025-09-03 20:38:35.247 - ERROR - bb0f5582-be19-4e3d-9cc5-90caaccff9d1 - Failed to process queue: no rows in result set
+2025-09-03 20:38:36.342 - ERROR - 3c9d69e5-cfe8-4e1a-b1d9-641938062c19 - Failed to get account from database: no rows in result set
+2025-09-03 20:38:36.342 - ERROR - 3c9d69e5-cfe8-4e1a-b1d9-641938062c19 - Failed to process queue: no rows in result set
+2025-09-03 20:38:39.322 - ERROR - 890f4c1e-d596-45dd-ad83-9cc9652ec3bd - Failed to get account from database: no rows in result set
+2025-09-03 20:38:39.322 - ERROR - 890f4c1e-d596-45dd-ad83-9cc9652ec3bd - Failed to process queue: no rows in result set
+2025-09-03 20:45:30.064 - ERROR - b9aa431b-7b97-49ad-ad33-cc356b3363c3 - Failed to get account from database: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 20:45:30.068 - ERROR - b9aa431b-7b97-49ad-ad33-cc356b3363c3 - Failed to process queue: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 20:45:31.648 - ERROR - 48737d1c-2522-454d-bb26-69d9204df8e8 - Failed to get account from database: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 20:45:31.648 - ERROR - 48737d1c-2522-454d-bb26-69d9204df8e8 - Failed to process queue: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 21:01:13.304 - ERROR - 54010c74-60db-434d-a834-82127da1e3c6 - Failed to get account from database: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 21:01:13.310 - ERROR - 54010c74-60db-434d-a834-82127da1e3c6 - Failed to process queue: ERROR: operator does not exist: uuid = text (SQLSTATE 42883)
+2025-09-03 21:03:06.990 - ERROR - 010c06cf-6a89-4522-802d-a99ce36fb113 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:06.997 - ERROR - 010c06cf-6a89-4522-802d-a99ce36fb113 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:07.530 - ERROR - ae3b3af9-b952-4720-8a7c-31fd103cfad5 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:07.531 - ERROR - ae3b3af9-b952-4720-8a7c-31fd103cfad5 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:08.298 - ERROR - 3de5a26a-df78-4d9f-bc76-b1ed4703f74f - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:08.298 - ERROR - 3de5a26a-df78-4d9f-bc76-b1ed4703f74f - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:08.878 - ERROR - 5f0e8fbb-b3da-4d79-8d34-71fd3f9907c6 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:08.878 - ERROR - 5f0e8fbb-b3da-4d79-8d34-71fd3f9907c6 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:09.700 - ERROR - a9ecb69e-97a4-4f4b-980e-1456176fd5ce - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:09.700 - ERROR - a9ecb69e-97a4-4f4b-980e-1456176fd5ce - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:10.490 - ERROR - e51be0f6-43b7-4ffc-8620-6a43581e1d43 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:10.490 - ERROR - e51be0f6-43b7-4ffc-8620-6a43581e1d43 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:14.655 - ERROR - 0bde0052-35ce-43e7-a1b1-cb50fa3cf609 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:03:14.656 - ERROR - 0bde0052-35ce-43e7-a1b1-cb50fa3cf609 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:54.244 - ERROR - 96f2716f-c834-4dcf-99e0-7981258f312b - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:54.244 - ERROR - 96f2716f-c834-4dcf-99e0-7981258f312b - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:54.694 - ERROR - 2e2a1782-0fe9-4a56-90db-416529c56319 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:54.694 - ERROR - 2e2a1782-0fe9-4a56-90db-416529c56319 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:55.659 - ERROR - ec039b29-3437-412e-8fb2-58cce83ef0f6 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:55.659 - ERROR - ec039b29-3437-412e-8fb2-58cce83ef0f6 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:56.292 - ERROR - 0b65c3cf-c853-4c32-aad3-ab791c365868 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:56.292 - ERROR - 0b65c3cf-c853-4c32-aad3-ab791c365868 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:57.093 - ERROR - 07ac3dbb-163f-4dc5-b9ad-a5279a66e802 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:57.094 - ERROR - 07ac3dbb-163f-4dc5-b9ad-a5279a66e802 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:57.661 - ERROR - 23c7fd4b-ab2d-495f-944a-85e4f2fe7c47 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:05:57.661 - ERROR - 23c7fd4b-ab2d-495f-944a-85e4f2fe7c47 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:06:01.001 - ERROR - af9fcf05-581e-431a-a52f-f1d6e8123a53 - Failed save inbound event: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:06:01.002 - ERROR - af9fcf05-581e-431a-a52f-f1d6e8123a53 - Failed to process queue: ERROR: relation "public.message_inbounds" does not exist (SQLSTATE 42P01)
+2025-09-03 21:06:37.742 - ERROR - 027b45fa-c7bd-422d-a68c-82d9910ba291 - Failed to get account from database: no rows in result set
+2025-09-03 21:06:37.744 - ERROR - 027b45fa-c7bd-422d-a68c-82d9910ba291 - Failed to process queue: no rows in result set
+2025-09-03 21:24:27.450 - ERROR - f069190b-9b2a-4a2a-856e-edf06d5c71ec - Failed to get account from database: no rows in result set
+2025-09-03 21:24:27.453 - ERROR - f069190b-9b2a-4a2a-856e-edf06d5c71ec - Failed to process queue: no rows in result set

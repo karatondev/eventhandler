@@ -27,14 +27,14 @@ redis:
 
 amqp:
   scheme: "amqp"
-  # host: 172.26.90.92
-  # port: 5672
-  # username: faisol
-  # password: faisol123
-  host: localhost
+  host: 172.26.90.92
   port: 5672
-  username: guest
-  password: guest
+  username: faisol
+  password: faisol123
+  # host: localhost
+  # port: 5672
+  # username: guest
+  # password: guest
   concurrent: 10 # number of concurrent consumers per queue, number must be <= prefetch_count
   prefetch_count: 10
   prefetch_size: 0
