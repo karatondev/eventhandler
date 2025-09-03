@@ -1,0 +1,326 @@
+2025-09-03 11:44:57.202 - INFO - MAIN - Application started
+2025-09-03 11:44:57.206 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 11:44:57.208 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 11:44:57.210 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 11:45:19.299 - INFO - b196ba9e-49b3-418e-a15b-ca3545eebb82 - Received message: {"event_id":"27353c60-f686-4784-852f-385a6e375364","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"logged_out","timestamp":"2025-09-03T11:45:19.297588875+07:00","data":{"status":"logged_out"}}
+2025-09-03 11:45:19.538 - INFO - b196ba9e-49b3-418e-a15b-ca3545eebb82 - Message acknowledged
+2025-09-03 11:45:35.111 - INFO - 7121e712-dea3-4f12-8428-2190f4b940a3 - Received message: {"event_id":"ef28a5f0-0591-4315-a175-7828b4f112f8","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-03T11:45:35.110086255+07:00","data":{"code":"2@n9ctqggvk0T1tTD47AZw2LBpIdCUhSHd5i12/ueF1F28+jq7FGsB1JzPbSXobWg8UwQ69CEYquLuA8/6nvy9/gtaS+Uf7taygwc=,sDSppfUqix/hPPIl0EI2s3hxjBqusia9D6TqA3GCIR0=,lJtohlP7Id5jCufpnHEyeVf7AnkFCEhX8mBwWyEhUAQ=,16YLlGK9CbI/k+ecomPmmThlVFg07QU9GeSMD+nKlCo="}}
+2025-09-03 11:45:35.111 - INFO - c7660989-be86-4d90-839c-21e088ad28e1 - Received message: {"event_id":"ced1608c-33fd-4441-87e2-82a56851b6e6","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-03T11:45:35.110710791+07:00","data":{"code":"2@n9ctqggvk0T1tTD47AZw2LBpIdCUhSHd5i12/ueF1F28+jq7FGsB1JzPbSXobWg8UwQ69CEYquLuA8/6nvy9/gtaS+Uf7taygwc=,sDSppfUqix/hPPIl0EI2s3hxjBqusia9D6TqA3GCIR0=,lJtohlP7Id5jCufpnHEyeVf7AnkFCEhX8mBwWyEhUAQ=,16YLlGK9CbI/k+ecomPmmThlVFg07QU9GeSMD+nKlCo="}}
+2025-09-03 11:45:35.281 - INFO - 7121e712-dea3-4f12-8428-2190f4b940a3 - Message acknowledged
+2025-09-03 11:45:35.630 - INFO - c7660989-be86-4d90-839c-21e088ad28e1 - Message acknowledged
+2025-09-03 11:45:39.519 - INFO - a77ebb4a-7930-464d-8015-3e972830efe8 - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+2025-09-03 11:45:39.760 - INFO - a77ebb4a-7930-464d-8015-3e972830efe8 - Message acknowledged
+2025-09-03 11:45:53.260 - INFO - 81324942-262d-4341-95d6-655ed847c49a - Received message: {"event_id":"238bdaeb-a42b-4e58-a6fc-b8f787dbfe08","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T11:45:53.259878699+07:00","data":{"status":"connected"}}
+2025-09-03 11:45:53.431 - INFO - 81324942-262d-4341-95d6-655ed847c49a - Message acknowledged
+2025-09-03 11:46:00.120 - INFO - ace4d53c-e70b-4cdf-b6c2-4343e8a6b35d - Received message: {"event_id":"68ae91c5-cf9e-4a9f-a48f-93b422fc6c59","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:00.118877571+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"825D0CC184E225E35E460F7CF897A52D","timestamp":1756874882}}}
+2025-09-03 11:46:00.274 - INFO - ace4d53c-e70b-4cdf-b6c2-4343e8a6b35d - Message acknowledged
+2025-09-03 11:46:00.752 - INFO - ead25c58-a9a5-4241-8eed-42164e7ef2de - Received message: {"event_id":"d4ffe6ca-2b27-4ffb-a8e3-98a495d885f0","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:00.75196797+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"2207AE71743EE6080B28975E5EBC2E5E","timestamp":1756874882}}}
+2025-09-03 11:46:00.829 - INFO - ead25c58-a9a5-4241-8eed-42164e7ef2de - Message acknowledged
+2025-09-03 11:46:01.520 - INFO - b3b5359d-00ce-4b26-a964-cf18e58295d1 - Received message: {"event_id":"f950c223-8b76-4f47-a2fa-d1dcd415ed95","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:01.519394825+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"C444D300EE9DF2F2177F76B20D3512B5","timestamp":1756874884}}}
+2025-09-03 11:46:01.596 - INFO - b3b5359d-00ce-4b26-a964-cf18e58295d1 - Message acknowledged
+2025-09-03 11:46:02.266 - INFO - 218c2615-9e76-41e7-8446-0fbffbffc248 - Received message: {"event_id":"faffec10-ac88-47c5-b3b0-63814bd7562f","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:02.265837305+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"6C62475983500B08B2DE2E6695D028AE","timestamp":1756874884}}}
+2025-09-03 11:46:02.346 - INFO - 218c2615-9e76-41e7-8446-0fbffbffc248 - Message acknowledged
+2025-09-03 11:46:03.353 - INFO - e1c295d0-a780-496f-99b6-a0e86e2854d9 - Received message: {"event_id":"cd8ddf24-d79a-4d9d-894a-19c08021ef4f","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:03.351972206+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"146C335966B1480E12CF75A7053D7B89","timestamp":1756874884}}}
+2025-09-03 11:46:03.511 - INFO - e1c295d0-a780-496f-99b6-a0e86e2854d9 - Message acknowledged
+2025-09-03 11:46:03.953 - INFO - 8e593e3c-f05c-42ad-976c-300579c43cca - Received message: {"event_id":"ca6d6a9f-33c8-4883-ae1b-e3ef730ad028","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:03.952034726+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"D32D7CDEF6700507417918C41EAA8615","timestamp":1756874884}}}
+2025-09-03 11:46:04.029 - INFO - 8e593e3c-f05c-42ad-976c-300579c43cca - Message acknowledged
+2025-09-03 11:46:06.921 - INFO - faf7c63a-8d73-43da-9a54-0ce9ee06fbc4 - Received message: {"event_id":"14809d4f-925e-472d-b0c6-58060477a386","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"message","timestamp":"2025-09-03T11:46:06.920308137+07:00","data":{"sender":"6289513689096@s.whatsapp.net","message_type":"text","content":"Unknown message type","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":true,"message_id":"C784D0BAE217F2A4330FB6AD2C837D09","timestamp":1756874904}}}
+2025-09-03 11:46:07.094 - INFO - faf7c63a-8d73-43da-9a54-0ce9ee06fbc4 - Message acknowledged
+2025-09-03 11:52:01.058 - INFO - MAIN - Application started
+2025-09-03 11:52:01.067 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 11:52:01.071 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 11:52:01.074 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 11:52:43.022 - INFO - MAIN - Application started
+2025-09-03 11:52:43.031 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 11:52:43.031 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 11:52:43.034 - INFO - f5e5b493-f329-4bec-bd13-0c99a17ed2ea - Received message: {"event_id":"6111ea4f-ce9e-4b43-bbbc-4485432f670a","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"message","timestamp":"2025-09-01T20:59:20.2627765+07:00","data":{"sender":"6282335685138:35@s.whatsapp.net","message_type":"text","content":"Halo","metadata":{"chat":"6282335685138@s.whatsapp.net","from_me":false,"message_id":"1E4AB55EE816603CF6AECE32B47E1195","timestamp":1756735292}}}
+2025-09-03 11:52:43.035 - INFO - 42af48e0-c354-4596-b11c-8a731b06fe64 - Received message: {"event_id":"eda6868d-c405-4640-b17d-2a44e9cf1a36","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T19:58:18.2932781+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.035 - INFO - 180f1e42-c904-4974-aacd-ab75e41b6966 - Received message: {"event_id":"a89ed3c0-bcdd-4d39-90b2-069c0473e399","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"disconnected","timestamp":"2025-09-01T20:11:33.1651292+07:00","data":{"status":"disconnected","reason":"disconnected"}}
+2025-09-03 11:52:43.036 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 11:52:43.036 - INFO - 4b7a3337-1610-4086-866d-28997219cb58 - Received message: {"event_id":"1c7a0217-8004-400e-b5da-20f746836624","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T19:58:19.7518023+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.039 - INFO - c57dbb97-f924-4998-b95b-00cc5b1671fc - Received message: {"event_id":"7ac558af-837a-4c41-bfe9-a228bed28b9c","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:22:48.5281235+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.039 - INFO - 367b025c-3c6d-4567-9aff-11ce83c7b22d - Received message: {"event_id":"515e61b2-740f-438d-a83f-9c32a607425a","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:21:14.8618179+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.039 - INFO - e53615dc-79be-458d-9d93-e1520e5c4c54 - Received message: {"event_id":"164018d1-7df3-4795-a7b4-fe67cff4b46b","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:22:50.0718702+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.041 - INFO - 4367c4f5-52a6-4a50-9b14-4ce8a0189c1f - Received message: {"event_id":"7d3375c7-0e73-4d06-9a4c-c8b606a3bea8","device_id":"123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T15:40:08.8488739+07:00","data":{"code":"2@Cqry50FGrETNEoXaN4LGWDp7ZW8KxHLxTAXhGTet8ryyttbBp3I7QIGfM6jNPx1ufV8GelC5S/Lnxlb4j9MTTjv9MFoK2EToxUE=,MV3V/n7EX2rtQlMprH3rIxZc457qAbno/UBdFqiUsTY=,y3RDkRImMU7rQzHEdfdqeDrEGwI4+2sFrA62BgcOA10=,Z/jBXKSKeKI5d8lRWu8ovHmEdLCvcWfzQQoUlao//FA="}}
+2025-09-03 11:52:43.041 - INFO - 222702c0-df8c-4a22-85dc-ec4539348baf - Received message: {"event_id":"82bcb11d-1b81-4557-a1a4-50e2291fe477","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:11:54.2761248+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.042 - INFO - cf958a1f-0ac0-464c-95a9-12aa3a9a5f7d - Received message: {"event_id":"90dcfe71-2e8a-48ee-9d34-1f2ff2b452ee","device_id":"728172@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:23:22.284246+07:00","data":{"code":"2@0B8t45kjR87+L2swhhmEBd/zIpGiqfdAXXXiNjugc6fkjrcdJGpe6HC+jG/FHwdPrId+3wMhSOoiABLeMehXKuVwcjgBjIkU7gE=,Z3fmHvj5yQT5TSjYfE7evz+Fbr90aU1X4wLHvrDWXy8=,PmvUEI09gk7/laD2BD4LO+P2kf5Ge2Ouf5PG/wo2XhQ=,jijHssxMXz1qLp05IGplK8/TXwGbogSFbRCmJPTcjVU="}}
+2025-09-03 11:52:43.042 - INFO - 5bbfa99e-3c55-4aa9-928a-9bdf457498c1 - Received message: {"event_id":"ca704954-7d66-4cbf-8b48-4a5ca8ad7ac0","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:21:13.6284436+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.043 - INFO - e939eb34-97f0-46a8-a53b-90789c77ed77 - Received message: {"event_id":"14c92e3b-1f29-4197-8241-f898b4bb4635","device_id":"123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:16:03.640643+07:00","data":{"code":"2@CEc3f7tPZgYggvHZlyW8a7We/GVOKnjrUfszVR5p655nI7RBe4lpvQNSaasHSLh3+Ec2yV+ivqJZdK9JT+Y4E9Y3+JzQiAuHOe0=,qEMDEmXeX3tzwpB0b5lmD4SUNKY1xP48SFcwoW4YmCg=,YOTAbCuGBC8feORPQ3xyO1Nf691PaAv4qYEPWsfQ+1E=,Pd6jFbbpa0K8rbPbWnLoWpEjNl0u3KryfPfo84rDW1E="}}
+2025-09-03 11:52:43.045 - INFO - ea0482fd-9787-4d68-8aa2-363396a156d5 - Received message: {"event_id":"43011acc-677a-4fba-b75e-817d93c1cd37","device_id":"a123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:37:53.2087383+07:00","data":{"code":"2@0IqyzcrjZ0j6M+y4a28/PHbrAcFVVJ5jqYmy/WaEovpYxyjs4PvxGcBO0jiZkSWguol8DiJaSzDcorhaUrj+iu85Mj2tIdTv5iE=,w8Hm3rAjo5MR2CnWBkV2qyS1K9FDNYHWVFQ+2rP20Bs=,VksuMb9Ez4FXNZtMuXaSr/ymzvVyArPyaQb6SusWCyA=,yFpZ6fdVrshKBq2EtIzD8SZ9/f2dZtHIX+8Lnz+BCXQ="}}
+2025-09-03 11:52:43.037 - INFO - 9adcba2c-199f-4765-9019-21a8ab520a69 - Received message: {"event_id":"8a4768c0-bfe1-4006-9683-bc4230a918fe","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"disconnected","timestamp":"2025-09-01T20:11:44.1183052+07:00","data":{"status":"disconnected","reason":"disconnected"}}
+2025-09-03 11:52:43.046 - INFO - 06cf172e-adeb-4b88-8cac-e950efd8697d - Received message: {"event_id":"625c1ea4-b422-4a23-ac42-e6ac179bdb5d","device_id":"728172@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:32:09.6149298+07:00","data":{"code":"2@2LTwsZuGjBfDbuO3nkXS4+VHF/DKE4VsUbAfmgYzlsOHUSs2X+gNWyV5b5upYkHnvhuQA716X0V4Svuv9ihpmoiqic0pZ2OMpN4=,KiEl/hAeKPRKVM2FhMEjXdifu1wgN7Gli6GbUc1xvz0=,8ajtIJgFJmNNaVYSjSYWfIWrzO0lGntY81/JxWilcFg=,vZIyXb/EWDtwjfjMeFNy7Rm/DM7yDwF7KCkb2Ca7N5g="}}
+2025-09-03 11:52:43.046 - INFO - a9514729-0876-49a2-978e-c286ebaab7b9 - Received message: {"event_id":"49a87ceb-2f06-4dd0-ad1e-d954cc0d98f2","device_id":"a123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:42:37.5430935+07:00","data":{"code":"2@3egFmeRUcubIWEIRqFGaiJYK/89DRsxqxTAWcjf0TYhmGd3quEaxSNXDR+QEEFaOgQv/eP89lx+bSh/sF5elxchbHelQX9w/z6Y=,N6KMQC5GeRxMLIlVKCWI59dEhpU9QUo08tHiJTDEN1M=,iDL72xSydAOTiw5MTlQpB9bqBCNHZFXZ4SqiR2+z4iY=,TUYEtTjvN5egyQo53XiaZkaykPeQALAgkcfeTpxwPvo="}}
+2025-09-03 11:52:43.046 - INFO - 729ef5b4-1949-4fff-81c3-7d74e000e81b - Received message: {"event_id":"00c7e8c0-3067-4ccb-9aff-bdcac2b8d04e","device_id":"b456@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:37:57.354897+07:00","data":{"code":"2@5cInPNwZJcfH4gIkQQh5VNtbUj+vCOohlsjXPbguE6nVk8oAlcDf6LLL0FCymKHST7wS60BrEp+HzGt88fDFPZ9hGU2ER41+3AA=,1QrKuSXIMnFJtJEe3Y984IU9efMC7kjKIsSG1hdfUjY=,UrafPLL53+/0O0QwAHPAIw+r4OG4MIUL90MHopVVgms=,/mGunJ4WVHtGAoEEaCkZiL1Cn2i0hDercivFYFgjX38="}}
+2025-09-03 11:52:43.047 - INFO - 38a85049-2e5a-4709-9c2d-dac85aaff2df - Received message: {"event_id":"4d483ba9-df95-444f-9d10-6a1a29c65d7e","device_id":"a123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:48:00.6606663+07:00","data":{"code":"2@nmZ6uMRI9CuJ2vJ5fmcAFutU0G1qflC4Tz59sdf77wS2fTXYM5ui1dIlNbgdl9EsVm722w0eFIWM/ey7MZ+ooK5Kt/eN9rOMoQM=,vn+dJwiippqpq/7De/53/JKzURrPAOcq8FZENOqj3zA=,deyT7I4XtDSb7pXWI7ZTP+FqJLv34nOxQyT+JPnvxBM=,bJQDHLa92MhsGsIecXLF07x6eOKMQaKp04ByDeBxSVc="}}
+2025-09-03 11:52:43.037 - INFO - 88cb6d71-9cff-41b3-9bad-26df76ca6e76 - Received message: {"event_id":"74afbdf3-b429-493f-a4bf-bce1af095f56","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:12:04.9694398+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.048 - INFO - c75acd85-846b-4edd-8560-f8cf55576ef7 - Received message: {"event_id":"19f1ec14-9bfb-4a95-95ae-aea5beb90684","device_id":"b456@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:46:44.7100151+07:00","data":{"code":"2@5NCYDmcjs4ZQtZHPRB1HHGq3/q7Q91yUkm8LZkC5ULXuN4Y82gSwkccpuvZDKcB+GitlHcgcUN/na9UZFqEL/WLg2uB/cgNo31Y=,vJFBiJIVdcHeNOIXwmsx2qpSJaLaSkXI9GG/V/pplE8=,wQxxrgSxlfRaPf/O8s4vm52pP+/2/Ujo9X7mX8pfwTM=,AZk5oTz6zMxCdAQiJdhvrzZhsz6hfIFEtWx8jqJs+js="}}
+2025-09-03 11:52:43.048 - INFO - c4392b9c-e905-474c-890c-209c1f4e860b - Received message: {"event_id":"bd53fcc5-74d7-483a-93a5-7b2976ae70dc","device_id":"a123@s.whatsapp.net","event_type":"qr","timestamp":"2025-08-16T16:49:25.9472981+07:00","data":{"code":"2@9kjOad99mK4wfslbevbltnN5RUDfl9V80RHltzcPwyVhnCSLBLCOS/vntAt94btdKj/qz9EUMbDyVbhehSqre34UKAt6Ay/j/kE=,/hwRGoNgiyhCd9vUh8DJcnkTv6k6HwiRelqEGaRPGxQ=,hdBqilRxtU9OrRAP9PSAn5dk2aoPGMKiXhS4scAoaUk=,OI8Dxn+lgmiXb58iazK/IvkHBU0KDITJpIaaxnqfwUQ="}}
+2025-09-03 11:52:43.188 - INFO - f5e5b493-f329-4bec-bd13-0c99a17ed2ea - Message acknowledged
+2025-09-03 11:52:43.256 - INFO - a9514729-0876-49a2-978e-c286ebaab7b9 - Message acknowledged
+2025-09-03 11:52:43.258 - INFO - 78c24a54-58c4-4240-af3d-720999db31d9 - Received message: {"event_id":"ebd54503-c303-42e8-9010-2114b00cf687","account_id":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T16:14:32.0259232+07:00","data":{"code":"2@73X7mdUi0vGMjklZkuLqQCSOZUo5hUJXieA14MXYVuWhy0KfEp/a5/+jRc5SroCPLyFHTeo44LpyqQeCZpe0g5lxQ4TmNbptifk=,EjnluDiBBbdIooKp/60J9EIHnoUyU/fNuvvCQbmttDc=,c7rRtSGLli5FTNehHyvhULxS0WVv4ZNWHHvx+hAjvmM=,bvqe4rgDA4lCqXfdckhdcB2eNv5YVlxmkMxaEhmeAdY="}}
+2025-09-03 11:52:43.427 - INFO - 5bbfa99e-3c55-4aa9-928a-9bdf457498c1 - Message acknowledged
+2025-09-03 11:52:43.429 - INFO - dfd4e062-908e-4123-9717-90d7d3bf5bf8 - Received message: {"event_id":"7325f6a4-b4fc-4ffd-8f38-a2b4049f7f6c","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:25:31.3072941+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.505 - INFO - 729ef5b4-1949-4fff-81c3-7d74e000e81b - Message acknowledged
+2025-09-03 11:52:43.521 - INFO - 841a51ce-ce95-4d85-82b2-61a7c841ad80 - Received message: {"event_id":"5dd8880d-4f96-405a-9aaf-b40838c0165f","account_id":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T16:22:12.5505909+07:00","data":{"code":"2@91P0T0Y/gzORwq/RkSyYKUFCJ/O5Hh8Me6Qme4OBEokmsFzKJqfhv7naYSgXl7BVvnehnA7DdGt1JfW1/uwZ9HAg/irhhPEGQxE=,fgNuKlNkpANyUursMVb0TNj0NjlBvuO55ijEtNMLOGs=,PCu9qvD5DCkKl+eW6Z6sDdZUiqWTbZE7nY4YbaT2Pys=,E8ix5iMxMMMCaDWdsEjPpLfNcFNk8+8bUK5OVM/e75Q="}}
+2025-09-03 11:52:43.590 - INFO - c57dbb97-f924-4998-b95b-00cc5b1671fc - Message acknowledged
+2025-09-03 11:52:43.591 - INFO - 03c6e2dc-c912-4e80-a28b-fd7f92813179 - Received message: {"event_id":"3e26fa93-596a-4dd6-8324-95791a2c6216","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:25:31.3273405+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.592 - INFO - e53615dc-79be-458d-9d93-e1520e5c4c54 - Message acknowledged
+2025-09-03 11:52:43.592 - INFO - e2754bcb-cfa3-438c-95b2-6e95ea54b1c2 - Received message: {"event_id":"58c38c39-8886-404a-82fe-940f7ced8d09","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:28:11.2458337+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.593 - INFO - 367b025c-3c6d-4567-9aff-11ce83c7b22d - Message acknowledged
+2025-09-03 11:52:43.596 - INFO - ad1700ff-a25d-4750-a8ef-366825a30b00 - Received message: {"event_id":"e989e011-486d-4272-bc24-03539e16ff2d","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:28:11.2464904+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.597 - INFO - 180f1e42-c904-4974-aacd-ab75e41b6966 - Message acknowledged
+2025-09-03 11:52:43.597 - INFO - afffe5ed-1f47-475e-8569-b6de337f8a4d - Received message: {"event_id":"69a7902f-e57c-43cb-9307-294c53305dfa","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:40:12.5295977+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.597 - INFO - cf958a1f-0ac0-464c-95a9-12aa3a9a5f7d - Message acknowledged
+2025-09-03 11:52:43.598 - INFO - 9adcba2c-199f-4765-9019-21a8ab520a69 - Message acknowledged
+2025-09-03 11:52:43.598 - INFO - 1ba78cb9-621b-4a56-b4d2-fae20771bec6 - Received message: {"event_id":"6ee0b555-6001-413e-b7e6-66ad78128f68","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T17:47:27.7780373+07:00","data":{"code":"2@z+I0HTM43A30MwpXC77tki4Vw/4Gzq9i4hNqfBENMZwgZdjL8BoZF0B7kNIdQeojBOrrjngVTNl9RlE7+9g260YXIu83Qy4kxjw=,498SpXD67bCdQwHTBfn5mFDlMUtpAch1qI8WfoiQ2XE=,M6+ErLlnlqzdsH4b1kadanhw8zL3wnunq2VRyQZt11U=,j0u2pafokKEU09wvGb/NPNA+AE3jLkCjCrbqpZCZjbg="}}
+2025-09-03 11:52:43.599 - INFO - c75acd85-846b-4edd-8560-f8cf55576ef7 - Message acknowledged
+2025-09-03 11:52:43.599 - INFO - 766e307d-f4f2-4aef-a681-bddc4e4ee92a - Received message: {"event_id":"bd57fe70-af03-4afc-a93e-6afd0063e2f9","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:40:14.1220554+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.600 - INFO - 10727c93-ff85-4da7-b26d-853c606a1bc2 - Received message: {"event_id":"7ee9975d-050a-437e-8ee5-400a899d5d96","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T17:55:57.0440825+07:00","data":{"code":"2@gFH+Th1Pj/3ZqM3Cpc9hsxP0Te8KnRFnbSjaKHcYsowNOf2cMjgmiFOtCG95fmxYacVjHAVdL4kN138G8B2f5IKNZahIYGNmeEI=,pzD3mZzUAV7bCwaboAQ2/3s7OUxjCjiMemfF314p4Tw=,m/qX38DUfUz6dwtyhjDETdcxhjoai2xk8Q6iuVwolHM=,7BDbZu+26ueYbAJhyLfXWob1sKnhJQ8fKuE0iKtZwEc="}}
+2025-09-03 11:52:43.600 - INFO - 42af48e0-c354-4596-b11c-8a731b06fe64 - Message acknowledged
+2025-09-03 11:52:43.602 - INFO - 169e9f14-9655-4d8a-93c9-d058c4137a7d - Received message: {"event_id":"4a6317bd-9820-4df8-87ef-f60dffc3e23b","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:53:48.2537545+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.662 - INFO - 38a85049-2e5a-4709-9c2d-dac85aaff2df - Message acknowledged
+2025-09-03 11:52:43.662 - INFO - 78c24a54-58c4-4240-af3d-720999db31d9 - Message acknowledged
+2025-09-03 11:52:43.663 - INFO - dfd4e062-908e-4123-9717-90d7d3bf5bf8 - Message acknowledged
+2025-09-03 11:52:43.667 - INFO - be7f6169-1f34-416d-9456-db3124481db1 - Received message: {"event_id":"27a56eec-689a-4242-a69a-d019b4b88421","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T17:58:46.2766776+07:00","data":{"code":"2@F9iYOlsZ5lTg08aPjdjVMWfv+PSQHqO/qpxEhA3Jtzd7egAfa2iKcILIZwviOhdG8QWKc2ZnSPEntbwuUGDUWFbMIDxQcm65WMc=,li7ejwO9G5UKv535Y+7fZ7W9a5k/bQROTxHjHvBzVRs=,R3VPP0WtFZRgx9g/FfXN1DnPfH3Xg2OPrMExooIk50E=,tyAVYnSXvrxTzkHP802d2sX4X9gHJkHu6enBbqu0T40="}}
+2025-09-03 11:52:43.667 - INFO - 617ac9a1-e00b-4f1e-8b41-1cc83dfd3f14 - Received message: {"event_id":"093526ac-196f-4cd6-aca0-cab540cee362","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:53:49.0700522+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.667 - INFO - ffaddafe-d27e-42fb-937a-70234f1bd875 - Received message: {"event_id":"461f8379-d48b-4b39-926a-19242c0bf05f","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T18:03:39.3336757+07:00","data":{"code":"2@HPsoVpHZ5L2IwZWwiHn1rb4hzwTM52M9mhVkgvPzJR8nsCg6cng1ihITwAg0mtqiS/AP0R3AwkiRFlELfayOkXGol/3f+doJbiY=,WgeV2Rl8fhkmomw0DiTmXyyBisGJuHMVQUxjswknsEY=,3RmFGb8UrPC/Q55kIe1DH23G6yVDZk6642Rc4Cqtujw=,daZpym2ThMvOBA/SHE/QFx6XrudTkbIL5vY8zFZdtZs="}}
+2025-09-03 11:52:43.684 - INFO - ea0482fd-9787-4d68-8aa2-363396a156d5 - Message acknowledged
+2025-09-03 11:52:43.685 - INFO - 4b7a3337-1610-4086-866d-28997219cb58 - Message acknowledged
+2025-09-03 11:52:43.685 - INFO - 222702c0-df8c-4a22-85dc-ec4539348baf - Message acknowledged
+2025-09-03 11:52:43.685 - INFO - e2754bcb-cfa3-438c-95b2-6e95ea54b1c2 - Message acknowledged
+2025-09-03 11:52:43.685 - INFO - 4367c4f5-52a6-4a50-9b14-4ce8a0189c1f - Message acknowledged
+2025-09-03 11:52:43.685 - INFO - 03c6e2dc-c912-4e80-a28b-fd7f92813179 - Message acknowledged
+2025-09-03 11:52:43.686 - INFO - ad1700ff-a25d-4750-a8ef-366825a30b00 - Message acknowledged
+2025-09-03 11:52:43.686 - INFO - 06cf172e-adeb-4b88-8cac-e950efd8697d - Message acknowledged
+2025-09-03 11:52:43.686 - INFO - afffe5ed-1f47-475e-8569-b6de337f8a4d - Message acknowledged
+2025-09-03 11:52:43.687 - INFO - 841a51ce-ce95-4d85-82b2-61a7c841ad80 - Message acknowledged
+2025-09-03 11:52:43.687 - INFO - c4392b9c-e905-474c-890c-209c1f4e860b - Message acknowledged
+2025-09-03 11:52:43.688 - INFO - 88cb6d71-9cff-41b3-9bad-26df76ca6e76 - Message acknowledged
+2025-09-03 11:52:43.690 - INFO - e939eb34-97f0-46a8-a53b-90789c77ed77 - Message acknowledged
+2025-09-03 11:52:43.711 - INFO - 956104c1-f21c-4826-a9d9-50a01b001143 - Received message: {"event_id":"be5f155b-f808-4f75-84c5-5869c18e5ca7","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T18:03:57.4446013+07:00","data":{"code":"2@F2SzJbf7Fy4CAx1+iGU5hJaVDdXO+RwWpQLVB4ospPxBQHqRZpy0zX4kvVibyOcmhE+A9WnV1uTxs2fxXXDpkCjTCo1mT/Ejin8=,xRiBu6eHeXbOpmFbe1bWzv6jgTea2oUzfArVlNcPcBA=,0D7+oTtIpuiOx1h8ioTZrqS8fKNtnu8HK4yTvtftw1w=,oaU92V1grpyLgJLmyVM4Tuu3QSHDFtK/I2y6/NsKEP0="}}
+2025-09-03 11:52:43.711 - INFO - 9b075e14-3747-4ed6-a6bf-e29c7e84a64d - Received message: {"event_id":"28800d4d-6504-438c-8ae3-904bdf88719b","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:58:57.3536262+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.712 - INFO - 3c0bbf08-505b-421a-9733-5f34f5b302f6 - Received message: {"event_id":"ba667d42-981e-4e0a-a784-7579b2039adb","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T18:12:23.528665+07:00","data":{"code":"2@TNdK6h64BWSuSC0fPLZhaYCWt356o1z26uyW28Ogpd5QR7Dql9YuT76ogI/tpHROv6XyNC0SCdKzxZtuGdfu08/qhL2j8QKCTWk=,/C5AuKj6SjeWcq+g4RfMMoFIPWbzGV1m48P7guQ9yh8=,5GCe1nJTQJUMZgpooEt07PCBeHDKoz/1kCnfXIsB/2Y=,a1jcSgRvZrlOTXK6Hqaus1VLk7YSxMFcFfteCwrC8qI="}}
+2025-09-03 11:52:43.712 - INFO - 28e8cfd3-31da-45a5-b1ff-4180b9a9d1bd - Received message: {"event_id":"1ef1d4d3-5ae6-421d-8af8-ff12213b9a21","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T20:58:59.2508912+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.712 - INFO - 8a437c28-876f-4952-9282-739ae872643b - Received message: {"event_id":"facfadc7-65e7-4910-865c-984f991e12d8","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T18:18:30.5147654+07:00","data":{"code":"2@FegIqBNt2/k3CJApu+KYBlYXWVzFtPpis6OcJ99xf/up813qu62veF8ZJe3ReynhTQUf98Xex9tVmCoI5eK2R/DHyjDxnE6cExM=,f0k0lSw9g3C2RoDokW2QnD0mYcm9KLW8tkRDZPRe3mc=,cAxwT1U+isurd2EoriIQaay3aKL0c3wkXAPB+owRqR0=,R97PRzz87PECiw/ZPbb5q486y70byxFlc1JTG4MrbjI="}}
+2025-09-03 11:52:43.712 - INFO - e0517694-ba18-4e89-96c2-62c181dc2dfa - Received message: {"event_id":"c543b2ad-5a12-415b-88c0-f07654c10fa0","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T21:02:30.7916021+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.712 - INFO - c3390622-74fe-453e-952b-ad4d36df8343 - Received message: {"event_id":"70988b2a-113e-4f5e-ae36-5c30c8db3f68","sender_jid":"6289513689096:46@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-01T21:02:28.9413481+07:00","data":{"status":"connected"}}
+2025-09-03 11:52:43.712 - INFO - 1fe87e78-7ca0-41ed-be77-ef4ae56aee83 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.712 - INFO - 42f5f78c-5abf-4be4-ace0-0992ad77e05a - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:52:43.712 - INFO - 98792833-ff3f-437b-8b15-ed0430c118ed - Received message: {"event_id":"dbcc5100-d2cb-4dac-9c55-cd6e6b1d0d44","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:02:59.0614409+07:00","data":{"code":"2@fr9DpyY/SB7EtjPVrMNhxQZa0zOIXOOXWrbC1cTieMZYWg1Jt1BkFZqMtj6JPZpn/5n4c9rzanLTr0U1CNHLulzi82Rbmk9tXII=,2u51uBAlVwuRKX/l0s/eIFVE/RfVBe/PZS6vr2oWrig=,zri6C4ouw3S7SN32XHckYne+Yo0i6NoeNgsrkdUpPyg=,uPx8XQZoO3FzvZmoS9grqkzEOsHPH64LgGZyLUpyPlg="}}
+2025-09-03 11:52:43.712 - INFO - 62dc57be-ed10-4a3b-9c23-29599b553a8d - Received message: {"event_id":"e74d50aa-af2f-4b40-a7c0-f83775ad0883","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:02:59.0665715+07:00","data":{"code":"2@fr9DpyY/SB7EtjPVrMNhxQZa0zOIXOOXWrbC1cTieMZYWg1Jt1BkFZqMtj6JPZpn/5n4c9rzanLTr0U1CNHLulzi82Rbmk9tXII=,2u51uBAlVwuRKX/l0s/eIFVE/RfVBe/PZS6vr2oWrig=,zri6C4ouw3S7SN32XHckYne+Yo0i6NoeNgsrkdUpPyg=,uPx8XQZoO3FzvZmoS9grqkzEOsHPH64LgGZyLUpyPlg="}}
+2025-09-03 11:52:43.745 - INFO - 1ba78cb9-621b-4a56-b4d2-fae20771bec6 - Message acknowledged
+2025-09-03 11:52:43.745 - INFO - 766e307d-f4f2-4aef-a681-bddc4e4ee92a - Message acknowledged
+2025-09-03 11:52:43.745 - INFO - 10727c93-ff85-4da7-b26d-853c606a1bc2 - Message acknowledged
+2025-09-03 11:52:43.745 - INFO - 047911a4-4d5e-4799-937f-f823d6dd5d58 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.746 - INFO - b343f047-2011-4d37-8c8d-74d03fbdf51f - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.765 - INFO - 169e9f14-9655-4d8a-93c9-d058c4137a7d - Message acknowledged
+2025-09-03 11:52:43.765 - INFO - ffaddafe-d27e-42fb-937a-70234f1bd875 - Message acknowledged
+2025-09-03 11:52:43.765 - INFO - 617ac9a1-e00b-4f1e-8b41-1cc83dfd3f14 - Message acknowledged
+2025-09-03 11:52:43.766 - INFO - be7f6169-1f34-416d-9456-db3124481db1 - Message acknowledged
+2025-09-03 11:52:43.767 - INFO - 207c7076-4fce-4bdc-ab0d-df6bcf6e612a - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.767 - INFO - 27128e0c-1b98-4f17-9308-b2507040450a - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.779 - INFO - 8a437c28-876f-4952-9282-739ae872643b - Message acknowledged
+2025-09-03 11:52:43.779 - INFO - c3390622-74fe-453e-952b-ad4d36df8343 - Message acknowledged
+2025-09-03 11:52:43.780 - INFO - b1de0528-b9d8-4b85-94dd-1740826d2b68 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.801 - INFO - e0517694-ba18-4e89-96c2-62c181dc2dfa - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 9b075e14-3747-4ed6-a6bf-e29c7e84a64d - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 956104c1-f21c-4826-a9d9-50a01b001143 - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - b343f047-2011-4d37-8c8d-74d03fbdf51f - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 62dc57be-ed10-4a3b-9c23-29599b553a8d - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 3c0bbf08-505b-421a-9733-5f34f5b302f6 - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 28e8cfd3-31da-45a5-b1ff-4180b9a9d1bd - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 1fe87e78-7ca0-41ed-be77-ef4ae56aee83 - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 42f5f78c-5abf-4be4-ace0-0992ad77e05a - Message acknowledged
+2025-09-03 11:52:43.852 - INFO - 98792833-ff3f-437b-8b15-ed0430c118ed - Message acknowledged
+2025-09-03 11:52:43.863 - INFO - 0a11acb5-dbbf-48fe-a0de-e0db1e321e4c - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.863 - INFO - 2997576f-1346-4b4c-862a-982ec3cbe298 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.864 - INFO - 19345ced-f748-40d5-ab42-3ce377bc995d - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.864 - INFO - 32d1d850-63eb-4743-8355-2ee90680adcc - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.865 - INFO - c9029dd9-2bd5-4177-a2b0-fa7a8bf23dff - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.865 - INFO - b1de0528-b9d8-4b85-94dd-1740826d2b68 - Message acknowledged
+2025-09-03 11:52:43.865 - INFO - fc6a7936-3ebc-4d57-b8b2-a077372d3964 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.865 - INFO - 5c02d0f9-c726-4aa8-b02a-9eb1000104bf - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.927 - INFO - 27128e0c-1b98-4f17-9308-b2507040450a - Message acknowledged
+2025-09-03 11:52:43.927 - INFO - 207c7076-4fce-4bdc-ab0d-df6bcf6e612a - Message acknowledged
+2025-09-03 11:52:43.927 - INFO - 047911a4-4d5e-4799-937f-f823d6dd5d58 - Message acknowledged
+2025-09-03 11:52:43.928 - INFO - c107d079-aafb-4d70-ab1d-27210161a66e - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.928 - INFO - ad112074-e0e0-4400-87cd-821aeb700565 - Received message: {"event_id":"707f79c5-a69c-4b3b-bbc4-bba675939ed2","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:05:56.506696+07:00","data":{"code":"2@QfmVxNFDkV6Qm/NsIL3LvWg211OMDPwSwI+Zcznxv1wcCmwWu8LXt9XKQE8cQvEZlE9+QIscpLGqU7AzRMaiJ09oaPNZij+6N5s=,bc+AfvAZBxXEkNvXij8eixq+dRWXDt3rIZcEmgP96nU=,ETClNmvOmc3XWPijdxX58hv9aRER7Kct5EmqFcGf6mk=,UccG6vD7KNE3NeC6Yy2lGtDE2bppn0Ei90BxeVh//Do="}}
+2025-09-03 11:52:43.929 - INFO - b00af3f4-a2fc-4676-b6df-b9beb16e2c94 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.935 - INFO - 0a11acb5-dbbf-48fe-a0de-e0db1e321e4c - Message acknowledged
+2025-09-03 11:52:43.935 - INFO - cdf550ce-85ec-4d4a-a935-53c47df76d27 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.941 - INFO - 2997576f-1346-4b4c-862a-982ec3cbe298 - Message acknowledged
+2025-09-03 11:52:43.942 - INFO - 33f93f15-9c09-4b7c-a034-df3e11f50ffe - Received message: {"event_id":"dc6166a6-7685-42a9-ac0f-2c74ef8b6003","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:05:56.511446+07:00","data":{"code":"2@QfmVxNFDkV6Qm/NsIL3LvWg211OMDPwSwI+Zcznxv1wcCmwWu8LXt9XKQE8cQvEZlE9+QIscpLGqU7AzRMaiJ09oaPNZij+6N5s=,bc+AfvAZBxXEkNvXij8eixq+dRWXDt3rIZcEmgP96nU=,ETClNmvOmc3XWPijdxX58hv9aRER7Kct5EmqFcGf6mk=,UccG6vD7KNE3NeC6Yy2lGtDE2bppn0Ei90BxeVh//Do="}}
+2025-09-03 11:52:43.942 - INFO - 32d1d850-63eb-4743-8355-2ee90680adcc - Message acknowledged
+2025-09-03 11:52:43.943 - INFO - 1adb2cda-5afc-491d-b1aa-1b3b6275d158 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.943 - INFO - c9029dd9-2bd5-4177-a2b0-fa7a8bf23dff - Message acknowledged
+2025-09-03 11:52:43.944 - INFO - b8a36b3e-aff5-4796-9551-1e0f229f9bb1 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.947 - INFO - 19345ced-f748-40d5-ab42-3ce377bc995d - Message acknowledged
+2025-09-03 11:52:43.951 - INFO - 321db5f8-3b45-40bc-9aa9-4130c676ea2b - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.975 - INFO - fc6a7936-3ebc-4d57-b8b2-a077372d3964 - Message acknowledged
+2025-09-03 11:52:43.975 - INFO - 5c02d0f9-c726-4aa8-b02a-9eb1000104bf - Message acknowledged
+2025-09-03 11:52:43.976 - INFO - 02f305be-2123-4ceb-be7d-2e0ea7dbf73f - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:43.976 - INFO - 0cfebda7-40ef-463e-b747-76b81c503450 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.009 - INFO - ad112074-e0e0-4400-87cd-821aeb700565 - Message acknowledged
+2025-09-03 11:52:44.010 - INFO - 34441645-8f35-45b4-86f2-4a22914ee4ec - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.010 - INFO - c107d079-aafb-4d70-ab1d-27210161a66e - Message acknowledged
+2025-09-03 11:52:44.011 - INFO - 4c118c8e-9d5c-4551-a583-696683bcf763 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.013 - INFO - cdf550ce-85ec-4d4a-a935-53c47df76d27 - Message acknowledged
+2025-09-03 11:52:44.013 - INFO - 33f93f15-9c09-4b7c-a034-df3e11f50ffe - Message acknowledged
+2025-09-03 11:52:44.013 - INFO - 1adb2cda-5afc-491d-b1aa-1b3b6275d158 - Message acknowledged
+2025-09-03 11:52:44.014 - INFO - 5a5f7945-a642-4a2c-940a-a53fa871d23f - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.015 - INFO - 3b695c9c-2789-4b8b-b325-84a52afc0631 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.015 - INFO - 4f27402e-2459-49d2-8bd6-2262edd6259e - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.018 - INFO - b00af3f4-a2fc-4676-b6df-b9beb16e2c94 - Message acknowledged
+2025-09-03 11:52:44.019 - INFO - b8a36b3e-aff5-4796-9551-1e0f229f9bb1 - Message acknowledged
+2025-09-03 11:52:44.019 - INFO - b5ad296a-43f1-4d02-a30b-2c27282e6abd - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.020 - INFO - d670b41a-b8ac-4e4a-aa29-92b645dd02db - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.029 - INFO - 321db5f8-3b45-40bc-9aa9-4130c676ea2b - Message acknowledged
+2025-09-03 11:52:44.030 - INFO - f27cc63a-cdaa-439b-b3ab-f9c3bc6cfa25 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.052 - INFO - 02f305be-2123-4ceb-be7d-2e0ea7dbf73f - Message acknowledged
+2025-09-03 11:52:44.052 - INFO - 0cfebda7-40ef-463e-b747-76b81c503450 - Message acknowledged
+2025-09-03 11:52:44.054 - INFO - d01f8355-b4a9-4176-a69a-c507eed753be - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.054 - INFO - 6a151641-7f29-44f3-a054-26780491ede2 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.097 - INFO - b5ad296a-43f1-4d02-a30b-2c27282e6abd - Message acknowledged
+2025-09-03 11:52:44.097 - INFO - 4f27402e-2459-49d2-8bd6-2262edd6259e - Message acknowledged
+2025-09-03 11:52:44.097 - INFO - 3b695c9c-2789-4b8b-b325-84a52afc0631 - Message acknowledged
+2025-09-03 11:52:44.097 - INFO - d670b41a-b8ac-4e4a-aa29-92b645dd02db - Message acknowledged
+2025-09-03 11:52:44.098 - INFO - 4c118c8e-9d5c-4551-a583-696683bcf763 - Message acknowledged
+2025-09-03 11:52:44.098 - INFO - 5a5f7945-a642-4a2c-940a-a53fa871d23f - Message acknowledged
+2025-09-03 11:52:44.098 - INFO - 34441645-8f35-45b4-86f2-4a22914ee4ec - Message acknowledged
+2025-09-03 11:52:44.098 - INFO - 24855371-1e7a-4745-9be2-5e4bfe2b786a - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.099 - INFO - ab46e357-acca-4379-ae2f-3f2755c45356 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.100 - INFO - 38be8443-cad8-40dd-a3ee-d0762732fbc0 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.100 - INFO - 3317b9ec-11a2-4786-81e6-06a5d08f8250 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.100 - INFO - e76664ce-6d8a-4a99-b649-07cebd1f1798 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.101 - INFO - 5df83649-869a-4725-a4de-399a8268a39e - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.101 - INFO - 9afd96c4-e2a0-4f75-920e-f089acbe7a6e - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.113 - INFO - f27cc63a-cdaa-439b-b3ab-f9c3bc6cfa25 - Message acknowledged
+2025-09-03 11:52:44.113 - INFO - 0f0a4eaf-00e6-4be0-8f4d-be5825f1dae9 - Received message: {"event_id":"cdc21a44-01e4-4df5-9649-e4a7cee995cb","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:07:22.7327587+07:00","data":{"code":"2@UbR1SZf+j5vrL6EhjVJnoEQ7WJCRf4zIw6DBD5IIoS9NZX5t6Pao9colZGvlqZvsUnmXuHcmrPPGPyRS1THwOqRLWMpCm8RRcDs=,jmGmcp4zarTELRP38MRbpJDpXH08PXrPGBWmVedK6CE=,I6Fdie538Hn+8qbvW4YZHMW0ZB/8rETmW9awQlnBGSg=,SSxy1ObEvHlX+k6r8dfBBiVMdqfAGNM1ZOvoiBMH2jM="}}
+2025-09-03 11:52:44.124 - INFO - d01f8355-b4a9-4176-a69a-c507eed753be - Message acknowledged
+2025-09-03 11:52:44.125 - INFO - 3dd2e7da-139d-44b5-a564-8e45e75073b3 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.135 - INFO - 6a151641-7f29-44f3-a054-26780491ede2 - Message acknowledged
+2025-09-03 11:52:44.136 - INFO - 5f0b30b8-017a-4109-aa2d-7b18aac5dc94 - Received message: {"event_id":"060cd496-a183-4f45-ac2f-cc9245e9c596","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:07:22.7365775+07:00","data":{"code":"2@UbR1SZf+j5vrL6EhjVJnoEQ7WJCRf4zIw6DBD5IIoS9NZX5t6Pao9colZGvlqZvsUnmXuHcmrPPGPyRS1THwOqRLWMpCm8RRcDs=,jmGmcp4zarTELRP38MRbpJDpXH08PXrPGBWmVedK6CE=,I6Fdie538Hn+8qbvW4YZHMW0ZB/8rETmW9awQlnBGSg=,SSxy1ObEvHlX+k6r8dfBBiVMdqfAGNM1ZOvoiBMH2jM="}}
+2025-09-03 11:52:44.173 - INFO - 24855371-1e7a-4745-9be2-5e4bfe2b786a - Message acknowledged
+2025-09-03 11:52:44.173 - INFO - ab46e357-acca-4379-ae2f-3f2755c45356 - Message acknowledged
+2025-09-03 11:52:44.175 - INFO - c9212f07-840e-40c3-aa53-9f2337522352 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.175 - INFO - faadc1f8-0505-4d6b-bdff-2e96559514e4 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.185 - INFO - 9afd96c4-e2a0-4f75-920e-f089acbe7a6e - Message acknowledged
+2025-09-03 11:52:44.185 - INFO - 5df83649-869a-4725-a4de-399a8268a39e - Message acknowledged
+2025-09-03 11:52:44.185 - INFO - 38be8443-cad8-40dd-a3ee-d0762732fbc0 - Message acknowledged
+2025-09-03 11:52:44.186 - INFO - 7f15b684-fd57-4069-bc82-76d9e5bbb3bf - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.186 - INFO - 73ce4871-ea12-467d-b667-9fd951ed5852 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.186 - INFO - 5e4b5a43-2693-4468-af8e-f47b35c6b62c - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.187 - INFO - 3317b9ec-11a2-4786-81e6-06a5d08f8250 - Message acknowledged
+2025-09-03 11:52:44.187 - INFO - e76664ce-6d8a-4a99-b649-07cebd1f1798 - Message acknowledged
+2025-09-03 11:52:44.187 - INFO - 0f0a4eaf-00e6-4be0-8f4d-be5825f1dae9 - Message acknowledged
+2025-09-03 11:52:44.188 - INFO - 240b557c-cdca-48de-ad11-cb1f9e8a9a41 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.189 - INFO - 5d01c6ae-1cf4-4896-8f2a-6d85099f4299 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.189 - INFO - 8c9c737b-c113-45c0-8614-9eb4a87f2722 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.194 - INFO - 3dd2e7da-139d-44b5-a564-8e45e75073b3 - Message acknowledged
+2025-09-03 11:52:44.196 - INFO - df1f86ed-75d9-49b6-8ad7-884e9fe4bedb - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.230 - INFO - 5f0b30b8-017a-4109-aa2d-7b18aac5dc94 - Message acknowledged
+2025-09-03 11:52:44.231 - INFO - 01484f69-ca9e-471a-8672-6de73a26fc62 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.252 - INFO - c9212f07-840e-40c3-aa53-9f2337522352 - Message acknowledged
+2025-09-03 11:52:44.252 - INFO - faadc1f8-0505-4d6b-bdff-2e96559514e4 - Message acknowledged
+2025-09-03 11:52:44.253 - INFO - 78ec69a2-47d2-4c2f-bf40-5489cdfc0a2f - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.254 - INFO - cb55de31-4312-4231-83c8-6eb36c420995 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.280 - INFO - 73ce4871-ea12-467d-b667-9fd951ed5852 - Message acknowledged
+2025-09-03 11:52:44.281 - INFO - 4145e88b-9ece-45b2-aa03-b418c5dc158b - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.284 - INFO - 5e4b5a43-2693-4468-af8e-f47b35c6b62c - Message acknowledged
+2025-09-03 11:52:44.286 - INFO - 74f2ac0d-d3ea-4b24-a3a7-9c763e402115 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.287 - INFO - 7f15b684-fd57-4069-bc82-76d9e5bbb3bf - Message acknowledged
+2025-09-03 11:52:44.290 - INFO - f2061695-6654-42fc-ace5-ca2bc399bcd7 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.292 - INFO - 5d01c6ae-1cf4-4896-8f2a-6d85099f4299 - Message acknowledged
+2025-09-03 11:52:44.292 - INFO - 240b557c-cdca-48de-ad11-cb1f9e8a9a41 - Message acknowledged
+2025-09-03 11:52:44.292 - INFO - df1f86ed-75d9-49b6-8ad7-884e9fe4bedb - Message acknowledged
+2025-09-03 11:52:44.292 - INFO - 8c9c737b-c113-45c0-8614-9eb4a87f2722 - Message acknowledged
+2025-09-03 11:52:44.293 - INFO - bd0f3491-f7bd-4e4c-bf93-15f662e62dbd - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.293 - INFO - 80cd1c39-9f1e-45ee-8bc0-93ad10a8d6ae - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.294 - INFO - ffd0a52f-650c-4b7e-ad40-aa0d36901fe6 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.294 - INFO - 46ab5771-f021-4b20-ad6c-ceda1ab55eca - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.341 - INFO - cb55de31-4312-4231-83c8-6eb36c420995 - Message acknowledged
+2025-09-03 11:52:44.342 - INFO - 01484f69-ca9e-471a-8672-6de73a26fc62 - Message acknowledged
+2025-09-03 11:52:44.342 - INFO - 78ec69a2-47d2-4c2f-bf40-5489cdfc0a2f - Message acknowledged
+2025-09-03 11:52:44.342 - INFO - 6b1236ca-7fdb-4066-b00d-9ecb19a2e985 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.342 - INFO - 7669527a-fda7-4d18-85de-f9806483cac7 - Received message: {"event_id":"","sender_jid":"","event_type":"","timestamp":"0001-01-01T00:00:00Z","data":null}
+2025-09-03 11:52:44.343 - INFO - 056de521-f090-4340-9183-a5210eb48edf - Received message: {"event_id":"6e3bd3bb-d3f8-4562-a260-1f35933e0cd0","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:09:55.5038655+07:00","data":{"code":"2@OEeAiTE2/Bb6b9QLzRu+mzM/pawLc/p0w+dipUR2etYrhV1AwpfxTvDYLATFmqQvLhsIT0Yo8qOml/WRHvK1Wq+RiCehSruQRIE=,Hw9fYW3aQqTmND8C0pvx38X54sxbiOSaWHG263D3xiY=,Ee4qwoVNcNcebDKCbRDwPgv/BynmA2Q5TmH2/v8uN1M=,D+bu1sMIuSWJ7rWeLzln00hv+I+S+UbM2SGNFVaELoA="}}
+2025-09-03 11:52:44.353 - INFO - 4145e88b-9ece-45b2-aa03-b418c5dc158b - Message acknowledged
+2025-09-03 11:52:44.354 - INFO - fa4e9a9c-7d9a-462e-89ae-e1ee701e3cd9 - Received message: {"event_id":"ba1688e4-d361-4132-a3ae-e3e6b2087bd9","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:09:55.5117753+07:00","data":{"code":"2@OEeAiTE2/Bb6b9QLzRu+mzM/pawLc/p0w+dipUR2etYrhV1AwpfxTvDYLATFmqQvLhsIT0Yo8qOml/WRHvK1Wq+RiCehSruQRIE=,Hw9fYW3aQqTmND8C0pvx38X54sxbiOSaWHG263D3xiY=,Ee4qwoVNcNcebDKCbRDwPgv/BynmA2Q5TmH2/v8uN1M=,D+bu1sMIuSWJ7rWeLzln00hv+I+S+UbM2SGNFVaELoA="}}
+2025-09-03 11:52:44.357 - INFO - f2061695-6654-42fc-ace5-ca2bc399bcd7 - Message acknowledged
+2025-09-03 11:52:44.358 - INFO - 74f2ac0d-d3ea-4b24-a3a7-9c763e402115 - Message acknowledged
+2025-09-03 11:52:44.358 - INFO - 9cb56c5d-6134-4263-84a2-d1c52753e03b - Received message: {"event_id":"f7e99636-b395-443d-8559-02fa9341a4e3","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:26:00.9078826+07:00","data":{"code":"2@KNzk7Ch1VXXShM6rfj+23Xp2nXchGbirGDQ5/FOQWwuJcwwfu/NaJRbWKJzjXfGZjVipqsD/YdDb1nIB1q/GvkjeoPFLi+vGnQs=,4/o+4bxK+pJRCmxCKFOIyOuLJaeRf2jaAsJ5qXVtBWc=,tq4EFGhOLIJLDF+FigeRFHdqWZg+GS7bLCpzHgBd1ko=,IaW8c+D6gBleFDaoE0xuoLGVnqYynm2vETmQ5IdSqLc="}}
+2025-09-03 11:52:44.359 - INFO - 40fd3beb-d8a5-4b66-857e-05c47bcce3d7 - Received message: {"event_id":"4a4afa20-1455-4750-91c5-43066250d2d1","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:26:00.9113222+07:00","data":{"code":"2@KNzk7Ch1VXXShM6rfj+23Xp2nXchGbirGDQ5/FOQWwuJcwwfu/NaJRbWKJzjXfGZjVipqsD/YdDb1nIB1q/GvkjeoPFLi+vGnQs=,4/o+4bxK+pJRCmxCKFOIyOuLJaeRf2jaAsJ5qXVtBWc=,tq4EFGhOLIJLDF+FigeRFHdqWZg+GS7bLCpzHgBd1ko=,IaW8c+D6gBleFDaoE0xuoLGVnqYynm2vETmQ5IdSqLc="}}
+2025-09-03 11:52:44.376 - INFO - 46ab5771-f021-4b20-ad6c-ceda1ab55eca - Message acknowledged
+2025-09-03 11:52:44.376 - INFO - ffd0a52f-650c-4b7e-ad40-aa0d36901fe6 - Message acknowledged
+2025-09-03 11:52:44.376 - INFO - bd0f3491-f7bd-4e4c-bf93-15f662e62dbd - Message acknowledged
+2025-09-03 11:52:44.376 - INFO - 80cd1c39-9f1e-45ee-8bc0-93ad10a8d6ae - Message acknowledged
+2025-09-03 11:52:44.377 - INFO - 6a9460e5-bab5-45e8-ae09-86f9e38ea24a - Received message: {"event_id":"0cc460d4-a6ce-447e-9384-a7807ccf0d7c","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:52:10.0002301+07:00","data":{"code":"2@kvjGuTMzONv6pwFUo4sSRJ0BLV/31AN6fsLVyPbf+i9w+0y+ptnpalhbERmKLfNVzlV8nVjNl9CvNdF28HRbrbqvP6ZC/uQhkyk=,8b8duPMliXbZ69BWUGJqCOjwfEhEsL4sYvnmW1QaPls=,eIFcV6jRUoDSb7wqugt0kSEA6cWWjEPqeJkAOsd2fmc=,9eNZH8Kg72f0Tb7I6+WAdMX3biouZKv9AhPUi9nEpXQ="}}
+2025-09-03 11:52:44.378 - INFO - e4a9f533-6d89-4acc-919d-81cd3bafe1e6 - Received message: {"event_id":"ba3ba073-7415-4cc7-8055-977e3f740a4b","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T19:52:10.0064274+07:00","data":{"code":"2@kvjGuTMzONv6pwFUo4sSRJ0BLV/31AN6fsLVyPbf+i9w+0y+ptnpalhbERmKLfNVzlV8nVjNl9CvNdF28HRbrbqvP6ZC/uQhkyk=,8b8duPMliXbZ69BWUGJqCOjwfEhEsL4sYvnmW1QaPls=,eIFcV6jRUoDSb7wqugt0kSEA6cWWjEPqeJkAOsd2fmc=,9eNZH8Kg72f0Tb7I6+WAdMX3biouZKv9AhPUi9nEpXQ="}}
+2025-09-03 11:52:44.378 - INFO - 6a2b2af0-a4e4-439c-9c9e-3eac9b2f6f8f - Received message: {"event_id":"496426e6-aec1-487b-a4ef-0dce3dac9c32","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T20:59:59.5860649+07:00","data":{"code":"2@PijPymQAI7LP56Ryc+tEW6cLi8/1PS0nas9Pujvinn+px1b8xO/6LROt8L8mJiUmcIBB/SH6T4PePhlG7xyewJ3rdKCf2kJQgkA=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.379 - INFO - 33201a62-796b-45df-8b4a-3263f7a021a5 - Received message: {"event_id":"a66d3a21-0d88-455c-9935-78d330b21cc9","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T20:59:59.5886866+07:00","data":{"code":"2@PijPymQAI7LP56Ryc+tEW6cLi8/1PS0nas9Pujvinn+px1b8xO/6LROt8L8mJiUmcIBB/SH6T4PePhlG7xyewJ3rdKCf2kJQgkA=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.413 - INFO - 6b1236ca-7fdb-4066-b00d-9ecb19a2e985 - Message acknowledged
+2025-09-03 11:52:44.414 - INFO - 0a5da309-dc77-4df5-872f-b366436e8cf9 - Received message: {"event_id":"8ab5004e-1e30-4df5-83bb-86656011382d","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T21:00:59.5911899+07:00","data":{"code":"2@T1iTGbU9m/RA96EpsZY3kMwtEMnKcDbuVQGQ8LIN+nCyV2XuhCqVLkddxep0j2+N2N/g+TD/ovezcV6EtbBdJgL8ZSo/nYfaQf0=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.424 - INFO - 7669527a-fda7-4d18-85de-f9806483cac7 - Message acknowledged
+2025-09-03 11:52:44.424 - INFO - 056de521-f090-4340-9183-a5210eb48edf - Message acknowledged
+2025-09-03 11:52:44.426 - INFO - d2de5b8c-3a02-452d-9322-36a9b6f27d00 - Received message: {"event_id":"909b9c90-d97f-4bf2-83c7-2f87d14b0645","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T21:01:19.5933657+07:00","data":{"code":"2@y4lLOIPQ75s01lE5yNXq1m49fUrDfRXGKulMWqvxYD8plNIjEpP2cBxjbLLcBKOtWH1DPJ8Ru2a5A/ENSALLP9gXAZEMcQ5Zil0=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.426 - INFO - bb3745d5-46be-4dc2-9832-550409c2a46b - Received message: {"event_id":"caec14c4-4eab-4c7a-8d29-dd1007bda43b","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T21:01:39.5924478+07:00","data":{"code":"2@gBxQRjCr6zdQmVo5jGxXJkvfkl/kdmgo8rLmvOpwowkouWrMOgs7yVMU3IvnYJdfMwwd1WrroXAM3jHU4rBiF9QlcJnyV9HS6zI=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.432 - INFO - 40fd3beb-d8a5-4b66-857e-05c47bcce3d7 - Message acknowledged
+2025-09-03 11:52:44.432 - INFO - fa4e9a9c-7d9a-462e-89ae-e1ee701e3cd9 - Message acknowledged
+2025-09-03 11:52:44.433 - INFO - d7c409a2-e721-44b1-9fa9-1857be791951 - Received message: {"event_id":"d7d23345-ce86-4e10-ba99-de67cf3b718d","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-01T21:01:59.5929803+07:00","data":{"code":"2@37iKuSfXRtI6gb2QuZniuQCF9qIopdzBzNtvDeKA7zsCz4ww3YKBy6e4SsND2lFm7tH0KEmeZ6xfsnOCtsBiSC3x+3qL6v516IM=,eoh2iTodQkeBq+GW0BG+5MLgrXFvadRen37cGBwoFyk=,1xeJDjF9OOH+CANCcY/c0VYpjqiNHjXF3RjWPbnfbh0=,N0BUrZO8+m2jiBq1WPTsOi+lPBJzqCBxjPPn67Htb88="}}
+2025-09-03 11:52:44.433 - INFO - 9cb56c5d-6134-4263-84a2-d1c52753e03b - Message acknowledged
+2025-09-03 11:52:44.454 - INFO - e4a9f533-6d89-4acc-919d-81cd3bafe1e6 - Message acknowledged
+2025-09-03 11:52:44.457 - INFO - 33201a62-796b-45df-8b4a-3263f7a021a5 - Message acknowledged
+2025-09-03 11:52:44.466 - INFO - 6a2b2af0-a4e4-439c-9c9e-3eac9b2f6f8f - Message acknowledged
+2025-09-03 11:52:44.466 - INFO - 6a9460e5-bab5-45e8-ae09-86f9e38ea24a - Message acknowledged
+2025-09-03 11:52:44.503 - INFO - 0a5da309-dc77-4df5-872f-b366436e8cf9 - Message acknowledged
+2025-09-03 11:52:44.503 - INFO - d2de5b8c-3a02-452d-9322-36a9b6f27d00 - Message acknowledged
+2025-09-03 11:52:44.503 - INFO - bb3745d5-46be-4dc2-9832-550409c2a46b - Message acknowledged
+2025-09-03 11:52:44.503 - INFO - d7c409a2-e721-44b1-9fa9-1857be791951 - Message acknowledged
+2025-09-03 11:52:57.365 - INFO - MAIN - Application started
+2025-09-03 11:52:57.374 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 11:52:57.376 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 11:52:57.378 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 11:53:03.376 - INFO - c97530ff-2de1-4e7e-beaf-9ef84658a919 - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:53:03.675 - INFO - c97530ff-2de1-4e7e-beaf-9ef84658a919 - Message acknowledged
+2025-09-03 11:53:28.197 - INFO - 71356624-60f2-4d28-8264-cd2c1f79dcc3 - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:57:51.936 - INFO - MAIN - Application started
+2025-09-03 11:57:51.941 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 11:57:51.941 - INFO - 4d9269a6-b6b6-4265-a7a9-73fab69314d1 - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:57:51.942 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 11:57:51.943 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 11:57:52.104 - INFO - 4d9269a6-b6b6-4265-a7a9-73fab69314d1 - Message acknowledged
+2025-09-03 11:57:56.752 - INFO - 93153c48-d818-4154-826c-5205ce984b0e - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:57:56.940 - INFO - 93153c48-d818-4154-826c-5205ce984b0e - Message acknowledged
+2025-09-03 11:59:20.205 - INFO - 62eb8c31-5783-464b-9ab8-767a112be4a9 - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 11:59:20.367 - INFO - 62eb8c31-5783-464b-9ab8-767a112be4a9 - Message acknowledged
+2025-09-03 12:00:46.431 - INFO - MAIN - Application started
+2025-09-03 12:00:46.436 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-03 12:00:46.437 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-03 12:00:46.439 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-03 12:00:55.697 - INFO - a287b2d6-e02d-41d2-a4cb-59fdad6ce6ca - Received message: {"event_id":"81408747-64b1-4072-a15d-279f750f5603","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"pair_success","timestamp":"2025-09-03T11:45:39.513708479+07:00","data":{"account_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","device_info":{"ID":"6289513689096:49@s.whatsapp.net","LID":"167069949632675:49@lid","BusinessName":"Hehe","Platform":"smba"},"phone_number":"6289513689096"}}
+
+2025-09-03 12:00:55.994 - INFO - a287b2d6-e02d-41d2-a4cb-59fdad6ce6ca - Pair success event for senderJID 6289513689096:49@s.whatsapp.net updated in database
+2025-09-03 12:00:55.994 - INFO - a287b2d6-e02d-41d2-a4cb-59fdad6ce6ca - Message acknowledged
+2025-09-03 12:01:32.366 - INFO - 055731b7-e56e-4180-a397-831d5e1b2f91 - Received message: {"event_id":"238bdaeb-a42b-4e58-a6fc-b8f787dbfe08","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T11:45:53.259878699+07:00","data":{"status":"connected"}}
+
+
+2025-09-03 12:01:32.624 - INFO - 055731b7-e56e-4180-a397-831d5e1b2f91 - Message acknowledged
+2025-09-03 12:01:59.296 - INFO - ee5a1c1b-3b4f-4807-aefd-0c2c7310ce21 - Received message: {"event_id":"238bdaeb-a42b-4e58-a6fc-b8f787dbfe08","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T11:45:53.259878699+07:00","data":{"status":"connected"}}
+
+
+2025-09-03 12:01:59.726 - INFO - ee5a1c1b-3b4f-4807-aefd-0c2c7310ce21 - WhatsApp account cached in Redis for JID: 6289513689096:49@s.whatsapp.net
+2025-09-03 12:01:59.726 - INFO - ee5a1c1b-3b4f-4807-aefd-0c2c7310ce21 - WhatsApp account found in database for JID: 6289513689096:49@s.whatsapp.net
+2025-09-03 12:01:59.887 - INFO - ee5a1c1b-3b4f-4807-aefd-0c2c7310ce21 - Connected event for senderJID 6289513689096:49@s.whatsapp.net updated in database
+2025-09-03 12:01:59.887 - INFO - ee5a1c1b-3b4f-4807-aefd-0c2c7310ce21 - Message acknowledged
+2025-09-03 12:03:15.810 - INFO - 00334870-9c6c-40fe-ab1d-4c23d9db6e3c - Received message: {"event_id":"27353c60-f686-4784-852f-385a6e375364","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"logged_out","timestamp":"2025-09-03T11:45:19.297588875+07:00","data":{"status":"logged_out"}}
+
+
+2025-09-03 12:03:15.813 - INFO - 00334870-9c6c-40fe-ab1d-4c23d9db6e3c - WhatsApp account found in Redis for JID: 6289513689096:49@s.whatsapp.net
+2025-09-03 12:03:16.056 - INFO - 00334870-9c6c-40fe-ab1d-4c23d9db6e3c - Logged out event for senderJID 6289513689096:49@s.whatsapp.net updated in database
+2025-09-03 12:03:16.057 - INFO - 00334870-9c6c-40fe-ab1d-4c23d9db6e3c - Message acknowledged

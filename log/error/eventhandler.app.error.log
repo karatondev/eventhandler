@@ -1,0 +1,82 @@
+2025-09-03 11:23:57.585 - ERROR - 3892da2f-2a52-4614-91a6-5ab8e848565a - Failed to get account from database: conn busy
+2025-09-03 11:23:57.587 - ERROR - 11d520b6-c7da-43d8-87cc-095309ada979 - Failed to get account from database: conn busy
+2025-09-03 11:23:57.592 - ERROR - 3892da2f-2a52-4614-91a6-5ab8e848565a - Failed to process queue: conn busy
+2025-09-03 11:23:57.594 - ERROR - 11d520b6-c7da-43d8-87cc-095309ada979 - Failed to process queue: conn busy
+2025-09-03 11:23:58.249 - ERROR - 832220ec-5677-46c6-94d8-c035c7c0dd43 - Failed to get account from database: no rows in result set
+2025-09-03 11:23:58.250 - ERROR - 832220ec-5677-46c6-94d8-c035c7c0dd43 - Failed to process queue: no rows in result set
+2025-09-03 11:25:24.254 - ERROR - ea0ea7bf-2118-4e6c-a88d-6a50f52dca24 - Failed to get account from database: no rows in result set
+2025-09-03 11:25:24.260 - ERROR - ea0ea7bf-2118-4e6c-a88d-6a50f52dca24 - Failed to process queue: no rows in result set
+2025-09-03 11:25:25.192 - ERROR - 1591a940-52a5-4d23-aa06-0f2c3fe3f4cf - Failed to get account from database: no rows in result set
+2025-09-03 11:25:25.193 - ERROR - 1591a940-52a5-4d23-aa06-0f2c3fe3f4cf - Failed to process queue: no rows in result set
+2025-09-03 11:26:33.244 - ERROR - 1cd09b03-7da4-407d-adc3-9de94788e0e3 - Failed to get account from database: conn busy
+2025-09-03 11:26:33.244 - ERROR - 1cd09b03-7da4-407d-adc3-9de94788e0e3 - Failed to process queue: conn busy
+2025-09-03 11:26:33.320 - ERROR - 065b5951-112f-40dc-aab8-eb0dd1e2a104 - Failed to get account from database: conn busy
+2025-09-03 11:26:33.320 - ERROR - 065b5951-112f-40dc-aab8-eb0dd1e2a104 - Failed to process queue: conn busy
+2025-09-03 11:27:33.416 - ERROR - e51aedc1-f667-4a12-af15-8113583ee47c - Failed to get account from database: no rows in result set
+2025-09-03 11:27:33.419 - ERROR - e51aedc1-f667-4a12-af15-8113583ee47c - Failed to process queue: no rows in result set
+2025-09-03 11:27:53.343 - ERROR - 922dd629-49d7-44de-b322-d0c9c1c5f647 - Failed to get account from database: no rows in result set
+2025-09-03 11:27:53.343 - ERROR - 922dd629-49d7-44de-b322-d0c9c1c5f647 - Failed to process queue: no rows in result set
+2025-09-03 11:28:19.590 - ERROR - 5a3aeff8-bf88-4e9d-bbeb-fc6cf2c72bea - Failed to get account from database: conn busy
+2025-09-03 11:28:19.591 - ERROR - 5a3aeff8-bf88-4e9d-bbeb-fc6cf2c72bea - Failed to process queue: conn busy
+2025-09-03 11:28:19.684 - ERROR - a926002a-17fa-4c23-9584-0c30b1a35c45 - Failed to get account from database: conn busy
+2025-09-03 11:28:19.685 - ERROR - a926002a-17fa-4c23-9584-0c30b1a35c45 - Failed to process queue: conn busy
+2025-09-03 11:29:19.589 - ERROR - 0793174e-f6dd-4811-bc58-40d7dd19015f - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:19.589 - ERROR - 0793174e-f6dd-4811-bc58-40d7dd19015f - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:22.626 - ERROR - cd7da757-b68c-4347-b781-7ddb8d5cf1b6 - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:22.628 - ERROR - cd7da757-b68c-4347-b781-7ddb8d5cf1b6 - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:35.021 - ERROR - 5e3a7ee7-72cc-4236-bb4a-3f411a3ade19 - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:35.021 - ERROR - 5e3a7ee7-72cc-4236-bb4a-3f411a3ade19 - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:42.075 - ERROR - ad7ecd88-3e36-41d3-9f1c-d502aeee0972 - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:42.075 - ERROR - ad7ecd88-3e36-41d3-9f1c-d502aeee0972 - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:42.771 - ERROR - cb57f6ee-94a4-4a1e-9a7d-56e54871dd3e - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:42.772 - ERROR - cb57f6ee-94a4-4a1e-9a7d-56e54871dd3e - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:43.643 - ERROR - 696ecc5f-af28-4169-bd67-5b1455e48d6e - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:43.643 - ERROR - 696ecc5f-af28-4169-bd67-5b1455e48d6e - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:44.389 - ERROR - c28319f4-a406-435a-840c-8f664e7dd698 - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:44.389 - ERROR - c28319f4-a406-435a-840c-8f664e7dd698 - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:45.141 - ERROR - 96830b95-5f2b-468d-aced-9175299855a1 - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:45.142 - ERROR - 96830b95-5f2b-468d-aced-9175299855a1 - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:45.946 - ERROR - ffe565d4-dbdf-441d-912a-1856c1c5e97e - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:45.947 - ERROR - ffe565d4-dbdf-441d-912a-1856c1c5e97e - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:49.264 - ERROR - 3f0662b2-9a81-449d-8bce-cca1bd83136e - Failed to get account from database: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:29:49.264 - ERROR - 3f0662b2-9a81-449d-8bce-cca1bd83136e - Failed to process queue: failed to deallocate cached statement(s): conn busy
+2025-09-03 11:37:59.213 - ERROR - c09e7656-ee6c-4d9b-8032-442ef41fbaca - Failed to get account from database: no rows in result set
+2025-09-03 11:37:59.217 - ERROR - c09e7656-ee6c-4d9b-8032-442ef41fbaca - Failed to process queue: no rows in result set
+2025-09-03 11:37:59.491 - ERROR - b90dff84-a5d1-41ff-8209-ed2cec13eead - Failed to get account from database: no rows in result set
+2025-09-03 11:37:59.491 - ERROR - b90dff84-a5d1-41ff-8209-ed2cec13eead - Failed to process queue: no rows in result set
+2025-09-03 11:38:35.122 - ERROR - 2ca32c27-960d-4052-b654-69f40f6a52bd - Failed to get account from database: no rows in result set
+2025-09-03 11:38:35.123 - ERROR - 2ca32c27-960d-4052-b654-69f40f6a52bd - Failed to process queue: no rows in result set
+2025-09-03 11:38:35.284 - ERROR - 73708e89-64be-4ada-9da0-523121d4728a - Failed to get account from database: no rows in result set
+2025-09-03 11:38:35.284 - ERROR - 73708e89-64be-4ada-9da0-523121d4728a - Failed to process queue: no rows in result set
+2025-09-03 11:38:35.780 - ERROR - 13b05cea-ba4f-4614-b351-9eeb9635002c - Failed to get account from database: no rows in result set
+2025-09-03 11:38:35.781 - ERROR - 13b05cea-ba4f-4614-b351-9eeb9635002c - Failed to process queue: no rows in result set
+2025-09-03 11:38:35.943 - ERROR - ba6afca6-697d-44bf-b06f-e6fcc3043117 - Failed to get account from database: no rows in result set
+2025-09-03 11:38:35.944 - ERROR - ba6afca6-697d-44bf-b06f-e6fcc3043117 - Failed to process queue: no rows in result set
+2025-09-03 11:38:36.684 - ERROR - 0e619bef-0007-4b44-b4f9-0b6f871b48d7 - Failed to get account from database: no rows in result set
+2025-09-03 11:38:36.684 - ERROR - 0e619bef-0007-4b44-b4f9-0b6f871b48d7 - Failed to process queue: no rows in result set
+2025-09-03 11:38:40.685 - ERROR - b1e7f216-9230-42d2-950c-4e2fe42eabd6 - Failed to get account from database: no rows in result set
+2025-09-03 11:38:40.686 - ERROR - b1e7f216-9230-42d2-950c-4e2fe42eabd6 - Failed to process queue: no rows in result set
+2025-09-03 11:38:59.116 - ERROR - 110602a5-7acd-4194-bd78-d31256238961 - Failed to get account from database: no rows in result set
+2025-09-03 11:38:59.116 - ERROR - 110602a5-7acd-4194-bd78-d31256238961 - Failed to process queue: no rows in result set
+2025-09-03 11:39:08.243 - ERROR - d5c8ca03-8214-4ffa-ab4b-efc55f2814eb - Failed to get account from database: no rows in result set
+2025-09-03 11:39:08.244 - ERROR - db635664-12b3-4fa0-a5fc-a8c25b5e9aa2 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:08.244 - ERROR - d5c8ca03-8214-4ffa-ab4b-efc55f2814eb - Failed to process queue: no rows in result set
+2025-09-03 11:39:08.244 - ERROR - db635664-12b3-4fa0-a5fc-a8c25b5e9aa2 - Failed to process queue: no rows in result set
+2025-09-03 11:39:15.462 - ERROR - e43a7b43-e32d-4d4a-95aa-2607d641d080 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:15.462 - ERROR - e43a7b43-e32d-4d4a-95aa-2607d641d080 - Failed to process queue: no rows in result set
+2025-09-03 11:39:28.860 - ERROR - 959e02e8-afa0-46a4-8b67-57649e3fb77c - Failed to get account from database: no rows in result set
+2025-09-03 11:39:28.861 - ERROR - 959e02e8-afa0-46a4-8b67-57649e3fb77c - Failed to process queue: no rows in result set
+2025-09-03 11:39:35.822 - ERROR - 66269d94-16bc-4a2c-bea2-a1cbc02ff41a - Failed to get account from database: no rows in result set
+2025-09-03 11:39:35.822 - ERROR - 66269d94-16bc-4a2c-bea2-a1cbc02ff41a - Failed to process queue: no rows in result set
+2025-09-03 11:39:36.432 - ERROR - 62f17ee8-7969-4aa5-bccc-4dd3176ffebc - Failed to get account from database: no rows in result set
+2025-09-03 11:39:36.432 - ERROR - 62f17ee8-7969-4aa5-bccc-4dd3176ffebc - Failed to process queue: no rows in result set
+2025-09-03 11:39:37.187 - ERROR - 007653bd-8899-46a4-ac3e-e6beadff953d - Failed to get account from database: no rows in result set
+2025-09-03 11:39:37.187 - ERROR - 007653bd-8899-46a4-ac3e-e6beadff953d - Failed to process queue: no rows in result set
+2025-09-03 11:39:37.799 - ERROR - 9e1c2c91-75fd-46e3-8abd-62993761a5b8 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:37.799 - ERROR - 9e1c2c91-75fd-46e3-8abd-62993761a5b8 - Failed to process queue: no rows in result set
+2025-09-03 11:39:38.418 - ERROR - 6408ec2c-baab-4cd3-85d7-6924d1b758b4 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:38.419 - ERROR - 6408ec2c-baab-4cd3-85d7-6924d1b758b4 - Failed to process queue: no rows in result set
+2025-09-03 11:39:39.080 - ERROR - 049c453e-ec67-4153-bcd9-9fe23e939571 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:39.080 - ERROR - 049c453e-ec67-4153-bcd9-9fe23e939571 - Failed to process queue: no rows in result set
+2025-09-03 11:39:40.548 - ERROR - bd501fdb-0ec2-4768-a7f9-f962da51ed05 - Failed to get account from database: no rows in result set
+2025-09-03 11:39:40.548 - ERROR - bd501fdb-0ec2-4768-a7f9-f962da51ed05 - Failed to process queue: no rows in result set

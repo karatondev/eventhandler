@@ -12,9 +12,6 @@ const ConfigType = "yaml"
 var Configuration Config
 
 type Config struct {
-	Server struct {
-		Port int `mapstructure:"port"`
-	}
 	Logger struct {
 		Dir        string `mapstructure:"dir"`
 		FileName   string `mapstructure:"file_name"`
@@ -55,8 +52,9 @@ type Config struct {
 		Concurrency   int    `mapstructure:"concurrency"`
 	} `mapstructure:"amqp"`
 	Queues struct {
-		EventHandlerQueue string `mapstructure:"event_handler_queue"`
-		QRHandlerQueue    string `mapstructure:"qr_handler_queue"`
+		EventHandlerQueue  string `mapstructure:"event_handler_queue"`
+		MessagesEventQueue string `mapstructure:"messages_event_queue"`
+		QRHandlerQueue     string `mapstructure:"qr_handler_queue"`
 	} `mapstructure:"queues"`
 }
 

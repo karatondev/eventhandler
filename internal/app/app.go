@@ -40,8 +40,9 @@ func Run(cfg *util.Config) {
 	}
 	logger.Infofctx(provider.AppLog, ctx, "Application started")
 
-	repo := repository.NewEventRepository(logger, db)
-	svc := service.NewService(logger, repo, redis)
+	repo := repository.NewEventInboundRepository(logger, db)
+	whatsappRepo := repository.NewWhatsAppAccountRepository(db)
+	svc := service.NewService(logger, redis, repo, whatsappRepo)
 	consumerHandler := handler.NewConsumerHandler(logger, svc)
 
 	consumers := []*messaging.AMQPWorkerConsumer{}

@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-func NewPostgresConnection(ctx context.Context) (*pgx.Conn, error) {
+func NewPostgresConnection(ctx context.Context) (*pgxpool.Pool, error) {
 	cfg := util.Configuration.Postgres
 
 	dsn := fmt.Sprintf(
@@ -22,9 +22,16 @@ func NewPostgresConnection(ctx context.Context) (*pgx.Conn, error) {
 		strings.Join(cfg.Options, "&"),
 	)
 
-	conn, err := pgx.Connect(ctx, dsn)
+	pool, err := pgxpool.New(ctx, dsn)
 	if err != nil {
 		return nil, err
 	}
-	return conn, nil
+
+	// Test the connection
+	if err := pool.Ping(ctx); err != nil {
+		pool.Close()
+		return nil, err
+	}
+
+	return pool, nil
 }

@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"encoding/json"
+	"eventhandler/entity"
 	"eventhandler/internal/provider"
 	"eventhandler/model"
 	"eventhandler/util"
@@ -10,7 +11,12 @@ import (
 	"time"
 )
 
+const (
+	waaKeyPrefix = "waa:%s"
+)
+
 func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error {
+
 	switch data.EventType {
 	case model.EventTypeQR:
 		var qe model.QREventData
@@ -18,34 +24,229 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			return err
 		}
 
-		key := "qr:" + data.DeviceID
+		key := "qr:" + data.SenderJID
 		err := s.redis.Set(ctx, key, qe.Code, time.Duration(util.Configuration.Redis.QRSpan)*time.Second).Err()
 		if err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save QR event to redis: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "QR event for device %s saved to redis", data.DeviceID)
+		s.logger.Infofctx(provider.AppLog, ctx, "QR event for senderJID %s saved to redis", data.SenderJID)
 		return nil
 
 	case model.EventTypeMessage:
-		if err := s.repo.SaveInbound(ctx, data); err != nil {
+
+		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		if err != nil {
+			return err
+		}
+
+		var message model.MessageEventData
+		if err := json.Unmarshal(data.Data, &message); err != nil {
+			return err
+		}
+		req := entity.CreateMessageInboundRequest{}
+		switch message.MessageType {
+		case model.MessageTypeText:
+
+			msgbyte, err := util.MarshalToJSON(message)
+			if err != nil {
+				return err
+			}
+			req = entity.CreateMessageInboundRequest{
+				EventID:     data.EventID,
+				AccountID:   account.AccountID,
+				FromMe:      message.Metadata.FromMe,
+				MessageID:   message.Metadata.MessageID,
+				Sender:      message.Sender,
+				MessageType: string(message.MessageType),
+				ReceivedAt:  data.Timestamp,
+				Data:        msgbyte,
+			}
+
+		case model.MessageTypeImage:
+
+		default:
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Unsupported message type: %s", message.MessageType)
+			return nil
+		}
+
+		if err := s.eventInboundRepo.SaveMessageInbound(ctx, &req); err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save inbound event: %v", err)
 			return err
 		}
-		s.logger.Infofctx(provider.AppLog, ctx, "Inbound event for device %s saved", data.DeviceID)
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Inbound event for senderJID %s saved", data.SenderJID)
 		return nil
 
-	case model.EventTypeConnected, model.EventTypeDisconnected, model.EventTypeLoggedOut, model.EventTypePairSuccess, model.EventTypeReceipt, model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
-		if err := s.repo.SaveEvent(ctx, data); err != nil {
+	case model.EventTypePairSuccess:
+		// Handle pair success event
+		var pairEvent model.PairSuccessEventData
+		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
+			return err
+		}
+
+		accountID := util.ExtractJIDPrefix(pairEvent.AccountJID)
+		req := entity.WhatsAppAccountReq{
+			AccountID:     accountID,
+			PhoneNumber:   &pairEvent.PhoneNumber,
+			SenderJID:     &data.SenderJID,
+			ConnectStatus: data.EventType,
+			ConnectedAt:   &data.Timestamp,
+		}
+
+		if err := s.whatsappRepo.UpdatePairingSuccess(ctx, req); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update pairing success: %v", err)
+			return err
+		}
+
+		// Invalidate cache in Redis
+		if err := s.redis.Del(ctx, fmt.Sprintf(waaKeyPrefix, data.SenderJID)).Err(); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to invalidate cache for sender JID %s: %v", data.SenderJID, err)
+			return err
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Pair success event for senderJID %s updated in database", data.SenderJID)
+		return nil
+
+	case model.EventTypeConnected:
+
+		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		if err != nil {
+			return err
+		}
+
+		// Handle connected event
+		var pairEvent model.ConnectionEventData
+		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
+			return err
+		}
+
+		req := entity.WhatsAppAccountReq{
+			AccountID:     account.AccountID,
+			ConnectStatus: data.EventType,
+			ConnectedAt:   &data.Timestamp,
+		}
+
+		if err := s.whatsappRepo.UpdateConnected(ctx, req); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update connected status: %v", err)
+			return err
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Connected event for senderJID %s updated in database", data.SenderJID)
+		return nil
+
+	case model.EventTypeDisconnected:
+
+		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		if err != nil {
+			return err
+		}
+
+		// Handle disconnected event
+		var pairEvent model.ConnectionEventData
+		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
+			return err
+		}
+
+		req := entity.WhatsAppAccountReq{
+			AccountID:      account.AccountID,
+			ConnectStatus:  data.EventType,
+			DisconnectedAt: &data.Timestamp,
+		}
+
+		if err := s.whatsappRepo.UpdateDisconnected(ctx, req); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update disconnected status: %v", err)
+			return err
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Disconnected event for senderJID %s updated in database", data.SenderJID)
+		return nil
+
+	case model.EventTypeLoggedOut:
+
+		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		if err != nil {
+			return err
+		}
+
+		// Handle logged out event - same as disconnected
+		var pairEvent model.ConnectionEventData
+		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
+			return err
+		}
+
+		req := entity.WhatsAppAccountReq{
+			AccountID:      account.AccountID,
+			ConnectStatus:  data.EventType,
+			DisconnectedAt: &data.Timestamp,
+		}
+
+		if err := s.whatsappRepo.UpdateDisconnected(ctx, req); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update logged out status: %v", err)
+			return err
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Logged out event for senderJID %s updated in database", data.SenderJID)
+		return nil
+
+	case model.EventTypeReceipt, model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
+
+		account, err := s.GetAccountBySenderJID(ctx, data.SenderJID)
+		if err != nil {
+			return err
+		}
+
+		req := entity.CreateAccountEventRequest{
+			EventID:   data.EventID,
+			AccountID: account.AccountID,
+			EventType: string(data.EventType),
+			Timestamp: data.Timestamp,
+			Data:      data.Data,
+		}
+
+		if err := s.eventInboundRepo.SaveEvent(ctx, &req); err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save event: %v", err)
 			return err
 		}
-		s.logger.Infofctx(provider.AppLog, ctx, "Event %s for device %s saved", data.EventType, data.DeviceID)
+		s.logger.Infofctx(provider.AppLog, ctx, "Event %s for device %s saved", data.EventType, account.AccountID)
 		return nil
 
 	default:
 		return fmt.Errorf("unknown event type: %s", data.EventType)
 
 	}
+}
+
+func (s *service) GetAccountBySenderJID(ctx context.Context, senderJID string) (*entity.WhatsAppAccount, error) {
+	// Try to get from Redis first
+	key := fmt.Sprintf(waaKeyPrefix, senderJID)
+	cachedData, err := s.redis.Get(ctx, key).Result()
+	if err == nil {
+		// Data found in Redis, unmarshal and return
+		var account entity.WhatsAppAccount
+		if err := json.Unmarshal([]byte(cachedData), &account); err == nil {
+			s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account found in Redis for JID: %s", senderJID)
+			return &account, nil
+		}
+		// If unmarshal fails, continue to database fetch
+		s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to unmarshal cached account data: %v", err)
+	}
+
+	// Data not found in Redis or unmarshal failed, fetch from database
+	account, err := s.whatsappRepo.GetAccountBySenderJID(ctx, senderJID)
+	if err != nil {
+		s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to get account from database: %v", err)
+		return nil, err
+	}
+
+	// Cache the result in Redis for future use (cache for 1 hour)
+	accountData, err := json.Marshal(account)
+	if err == nil {
+		s.redis.Set(ctx, key, accountData, time.Second).Err()
+		s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account cached in Redis for JID: %s", senderJID)
+	}
+
+	s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account found in database for JID: %s", senderJID)
+	return account, nil
 }

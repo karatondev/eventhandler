@@ -10,6 +10,7 @@ type EventType string
 
 const (
 	// Connection Events
+	EventTypeOffline      EventType = "offline"
 	EventTypeConnected    EventType = "connected"
 	EventTypeDisconnected EventType = "disconnected"
 	EventTypeLoggedOut    EventType = "logged_out"
@@ -52,7 +53,7 @@ const (
 // QueueEvent is the main structure for all events sent to RabbitMQ
 type QueueEvent struct {
 	EventID   string          `json:"event_id"`
-	DeviceID  string          `json:"device_id"`
+	SenderJID string          `json:"sender_jid"`
 	EventType EventType       `json:"event_type"`
 	Timestamp time.Time       `json:"timestamp"`
 	Data      json.RawMessage `json:"data"`
@@ -71,11 +72,11 @@ type QREventData struct {
 
 // MessageEventData represents message events
 type MessageEventData struct {
-	Sender      string                 `json:"sender"`
-	MessageType MessageType            `json:"message_type"`
-	Content     string                 `json:"content,omitempty"`
-	Caption     string                 `json:"caption,omitempty"`
-	Metadata    map[string]interface{} `json:"metadata"`
+	Sender      string      `json:"sender"`
+	MessageType MessageType `json:"message_type"`
+	Content     string      `json:"content,omitempty"`
+	Caption     string      `json:"caption,omitempty"`
+	Metadata    *Metadata   `json:"metadata"`
 }
 
 // ImageMessageData represents image message specific data
@@ -84,6 +85,7 @@ type ImageMessageData struct {
 	Caption  string `json:"caption,omitempty"`
 	MimeType string `json:"mime_type,omitempty"`
 	FileSize uint64 `json:"file_size,omitempty"`
+	FileURL  string `json:"file_url,omitempty"`
 }
 
 // AudioMessageData represents audio message specific data
@@ -92,6 +94,7 @@ type AudioMessageData struct {
 	Duration uint32 `json:"duration,omitempty"` // in seconds
 	MimeType string `json:"mime_type,omitempty"`
 	FileSize uint64 `json:"file_size,omitempty"`
+	FileURL  string `json:"file_url,omitempty"`
 }
 
 // VideoMessageData represents video message specific data
@@ -101,6 +104,7 @@ type VideoMessageData struct {
 	Duration uint32 `json:"duration,omitempty"`
 	MimeType string `json:"mime_type,omitempty"`
 	FileSize uint64 `json:"file_size,omitempty"`
+	FileURL  string `json:"file_url,omitempty"`
 }
 
 // DocumentMessageData represents document message specific data
@@ -109,6 +113,7 @@ type DocumentMessageData struct {
 	FileName string `json:"file_name,omitempty"`
 	MimeType string `json:"mime_type,omitempty"`
 	FileSize uint64 `json:"file_size,omitempty"`
+	FileURL  string `json:"file_url,omitempty"`
 }
 
 // LocationMessageData represents location message specific data
@@ -172,6 +177,14 @@ type MediaRetryErrorEventData struct {
 
 // PairSuccessEventData represents successful pairing events
 type PairSuccessEventData struct {
-	DeviceInfo string `json:"device_info,omitempty"`
-	JID        string `json:"jid,omitempty"`
+	AccountJID  string      `json:"account_jid,omitempty"`
+	DeviceInfo  interface{} `json:"device_info,omitempty"`
+	PhoneNumber string      `json:"phone_number,omitempty"`
+}
+
+type Metadata struct {
+	Chat      string `json:"chat,omitempty"`
+	FromMe    *bool  `json:"from_me,omitempty"`
+	Timestamp int64  `json:"timestamp,omitempty"`
+	MessageID string `json:"message_id,omitempty"`
 }

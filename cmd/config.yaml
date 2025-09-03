@@ -1,6 +1,3 @@
-server:
-  port: 50051
-
 logger:
   dir: log                                  # DO NOT EDIT!
   file_name: eventhandler
@@ -19,7 +16,6 @@ postgres:
   database: trusty_employ_cav_db
   options:
     - sslmode=disable
-    - search_path=whatsmeow
 
 redis:
   host: 127.0.0.1
@@ -31,6 +27,10 @@ redis:
 
 amqp:
   scheme: "amqp"
+  # host: 172.26.90.92
+  # port: 5672
+  # username: faisol
+  # password: faisol123
   host: localhost
   port: 5672
   username: guest
@@ -43,4 +43,5 @@ amqp:
 
 queues:
   event_handler_queue: "event_handler.events"
+  messages_event_queue: "message.events"
   qr_handler_queue: "qr_handler.events"

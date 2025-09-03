@@ -3,6 +3,7 @@ package util
 import (
 	"encoding/json"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -27,4 +28,13 @@ func CreateDirectory(paths ...string) (err error) {
 		}
 	}
 	return
+}
+
+// ExtractJIDPrefix extracts the part before @ from a JID string
+// Example: "a81bc81b-dead-4e5d-abff-90865d1e13b1@s.whatsapp.net" -> "a81bc81b-dead-4e5d-abff-90865d1e13b1"
+func ExtractJIDPrefix(jid string) string {
+	if idx := strings.Index(jid, "@"); idx != -1 {
+		return jid[:idx]
+	}
+	return jid // Return original if no @ found
 }
