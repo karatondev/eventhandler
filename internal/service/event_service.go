@@ -13,6 +13,7 @@ import (
 
 const (
 	waaKeyPrefix = "waa:%s"
+	qrKeyPrefix  = "qr:%s"
 )
 
 func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error {
@@ -26,7 +27,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			return err
 		}
 
-		key := "qr:" + data.SenderJID
+		key := fmt.Sprintf(qrKeyPrefix, data.SenderJID)
 		err := s.redis.Set(ctx, key, qe.Code, time.Duration(util.Configuration.Redis.QRSpan)*time.Second).Err()
 		if err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save QR event to redis: %v", err)
@@ -36,7 +37,42 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		s.logger.Infofctx(provider.AppLog, ctx, "QR event for senderJID %s saved to redis", data.SenderJID)
 		return nil
 
-	case model.EventTypeMessage:
+	case model.EventTypeOutboundMessage:
+
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
+		if err != nil {
+			return err
+		}
+
+		var message model.OutboundMessageData
+		if err := json.Unmarshal(data.Data, &message); err != nil {
+			return err
+		}
+
+		messageData, err := json.Marshal(message.Message)
+		if err != nil {
+			return err
+		}
+
+		req := entity.CreateMessageOutboundRequest{
+			EventID:     data.EventID,
+			AccountID:   account.AccountID,
+			MessageID:   message.MessageID,
+			Recipient:   message.To,
+			MessageType: string(message.MessageType),
+			SentAt:      data.Timestamp,
+			Data:        messageData,
+		}
+
+		if err := s.inboundOutbound.SaveMessageOutbound(ctx, &req); err != nil {
+			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save outbound event: %v", err)
+			return err
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Outbound event for senderJID %s saved", data.SenderJID)
+		return nil
+
+	case model.EventTypeInboundMessage:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
@@ -203,7 +239,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			return nil
 		}
 
-		if err := s.eventInboundRepo.SaveMessageInbound(ctx, &req); err != nil {
+		if err := s.inboundOutbound.SaveMessageInbound(ctx, &req); err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save inbound event: %v", err)
 			return err
 		}
@@ -337,7 +373,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			Data:      data.Data,
 		}
 
-		if err := s.eventInboundRepo.SaveEvent(ctx, &req); err != nil {
+		if err := s.inboundOutbound.SaveEvent(ctx, &req); err != nil {
 			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save event: %v", err)
 			return err
 		}

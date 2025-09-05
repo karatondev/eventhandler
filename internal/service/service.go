@@ -16,17 +16,17 @@ type Events interface {
 }
 
 type service struct {
-	logger           provider.ILogger
-	redis            *redis.Client
-	eventInboundRepo repository.EventInboundRepository
-	whatsappRepo     repository.WhatsAppAccountRepository
+	logger          provider.ILogger
+	redis           *redis.Client
+	inboundOutbound repository.InboundOutboundRepository
+	whatsappRepo    repository.WhatsAppAccountRepository
 }
 
-func NewService(logger provider.ILogger, redis *redis.Client, eventInboundRepo repository.EventInboundRepository, whatsappRepo repository.WhatsAppAccountRepository) Events {
+func NewService(logger provider.ILogger, redis *redis.Client, inboundOutbound repository.InboundOutboundRepository, whatsappRepo repository.WhatsAppAccountRepository) Events {
 	return &service{
-		logger:           logger,
-		redis:            redis,
-		eventInboundRepo: eventInboundRepo,
-		whatsappRepo:     whatsappRepo,
+		logger:          logger,
+		redis:           redis,
+		inboundOutbound: inboundOutbound,
+		whatsappRepo:    whatsappRepo,
 	}
 }

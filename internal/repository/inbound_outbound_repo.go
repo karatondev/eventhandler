@@ -11,18 +11,19 @@ import (
 )
 
 // SaveEvent saves an inbound event to the database
-type EventInboundRepository interface {
+type InboundOutboundRepository interface {
 	SaveEvent(ctx context.Context, req *entity.CreateAccountEventRequest) error
 	SaveMessageInbound(ctx context.Context, req *entity.CreateMessageInboundRequest) error
+	SaveMessageOutbound(ctx context.Context, req *entity.CreateMessageOutboundRequest) error
 }
 
-type eventInboundRepo struct {
+type inboundOutboundRepo struct {
 	logger provider.ILogger
 	pool   *pgxpool.Pool
 }
 
-func NewEventInboundRepository(logger provider.ILogger, pool *pgxpool.Pool) EventInboundRepository {
-	return &eventInboundRepo{
+func NewInboundOutboundRepository(logger provider.ILogger, pool *pgxpool.Pool) InboundOutboundRepository {
+	return &inboundOutboundRepo{
 		logger: logger,
 		pool:   pool,
 	}
@@ -38,9 +39,14 @@ const (
 		INSERT INTO whatsapp_web.message_inbounds 
 			(account_id, from_me, message_id, sender, message_type, received_at, data, created_at, updated_at) 
 		VALUES (@account_id, @from_me, @message_id, @sender, @message_type, @received_at, @data, @created_at, @updated_at)`
+
+	insertMessageOutboundQuery = `
+		INSERT INTO whatsapp_web.message_outbounds 
+			(account_id, message_id, recipient, message_type, sent_at, data, created_at, updated_at) 
+		VALUES (@account_id, @message_id, @recipient, @message_type, @sent_at, @data, @created_at, @updated_at)`
 )
 
-func (r *eventInboundRepo) SaveEvent(ctx context.Context, req *entity.CreateAccountEventRequest) error {
+func (r *inboundOutboundRepo) SaveEvent(ctx context.Context, req *entity.CreateAccountEventRequest) error {
 	params := pgx.NamedArgs{
 		"event_id":   req.EventID,
 		"account_id": req.AccountID,
@@ -55,7 +61,7 @@ func (r *eventInboundRepo) SaveEvent(ctx context.Context, req *entity.CreateAcco
 	return err
 }
 
-func (r *eventInboundRepo) SaveMessageInbound(ctx context.Context, req *entity.CreateMessageInboundRequest) error {
+func (r *inboundOutboundRepo) SaveMessageInbound(ctx context.Context, req *entity.CreateMessageInboundRequest) error {
 	params := pgx.NamedArgs{
 		"event_id":     req.EventID,
 		"account_id":   req.AccountID,
@@ -70,5 +76,21 @@ func (r *eventInboundRepo) SaveMessageInbound(ctx context.Context, req *entity.C
 	}
 
 	_, err := r.pool.Exec(ctx, insertMessageInboundQuery, params)
+	return err
+}
+
+func (r *inboundOutboundRepo) SaveMessageOutbound(ctx context.Context, req *entity.CreateMessageOutboundRequest) error {
+	params := pgx.NamedArgs{
+		"account_id":   req.AccountID,
+		"message_id":   req.MessageID,
+		"recipient":    req.Recipient,
+		"message_type": req.MessageType,
+		"sent_at":      req.SentAt,
+		"data":         req.Data,
+		"created_at":   util.NowUTC(),
+		"updated_at":   util.NowUTC(),
+	}
+
+	_, err := r.pool.Exec(ctx, insertMessageOutboundQuery, params)
 	return err
 }

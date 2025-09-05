@@ -40,7 +40,7 @@ func Run(cfg *util.Config) {
 	}
 	logger.Infofctx(provider.AppLog, ctx, "Application started")
 
-	repo := repository.NewEventInboundRepository(logger, db)
+	repo := repository.NewInboundOutboundRepository(logger, db)
 	whatsappRepo := repository.NewWhatsAppAccountRepository(db)
 	svc := service.NewService(logger, redis, repo, whatsappRepo)
 	consumerHandler := handler.NewConsumerHandler(logger, svc)

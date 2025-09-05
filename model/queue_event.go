@@ -17,7 +17,8 @@ const (
 	EventTypePairSuccess  EventType = "pair_success"
 
 	// Message Events
-	EventTypeMessage EventType = "message"
+	EventTypeInboundMessage  EventType = "inbound_message"
+	EventTypeOutboundMessage EventType = "outbound_message"
 
 	// QR Events
 	EventTypeQR EventType = "qr"
@@ -187,4 +188,12 @@ type Metadata struct {
 	FromMe    *bool  `json:"from_me,omitempty"`
 	Timestamp int64  `json:"timestamp,omitempty"`
 	MessageID string `json:"message_id,omitempty"`
+}
+
+// OutboundMessageData represents data for outbound message events
+type OutboundMessageData struct {
+	MessageID   string      `json:"message_id"`
+	MessageType string      `json:"message_type"`
+	To          string      `json:"to"`
+	Message     interface{} `json:"message"`
 }
