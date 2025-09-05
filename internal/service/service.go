@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	"eventhandler/entity"
 	"eventhandler/internal/provider"
 	"eventhandler/internal/repository"
 	"eventhandler/model"
+	"eventhandler/model/entity"
 
 	"github.com/redis/go-redis/v9"
 )

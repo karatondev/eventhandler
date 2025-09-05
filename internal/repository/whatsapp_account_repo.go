@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"eventhandler/entity"
+	"eventhandler/model/entity"
 	"eventhandler/util"
 
 	"github.com/jackc/pgx/v5"

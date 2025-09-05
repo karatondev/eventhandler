@@ -3,9 +3,9 @@ package service
 import (
 	"context"
 	"encoding/json"
-	"eventhandler/entity"
 	"eventhandler/internal/provider"
 	"eventhandler/model"
+	"eventhandler/model/entity"
 	"eventhandler/util"
 	"fmt"
 	"time"

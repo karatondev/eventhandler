@@ -2,8 +2,8 @@ package repository
 
 import (
 	"context"
-	"eventhandler/entity"
 	"eventhandler/internal/provider"
+	"eventhandler/model/entity"
 	"eventhandler/util"
 
 	"github.com/jackc/pgx/v5"
@@ -37,13 +37,13 @@ const (
 
 	insertMessageInboundQuery = `
 		INSERT INTO whatsapp_web.message_inbounds 
-			(account_id, from_me, message_id, sender, message_type, received_at, data, created_at, updated_at) 
-		VALUES (@account_id, @from_me, @message_id, @sender, @message_type, @received_at, @data, @created_at, @updated_at)`
+			(inbound_id, account_id, from_me, message_id, sender, message_type, received_at, data, created_at, updated_at) 
+		VALUES (@inbound_id, @account_id, @from_me, @message_id, @sender, @message_type, @received_at, @data, @created_at, @updated_at)`
 
 	insertMessageOutboundQuery = `
 		INSERT INTO whatsapp_web.message_outbounds 
-			(account_id, message_id, recipient, message_type, sent_at, data, created_at, updated_at) 
-		VALUES (@account_id, @message_id, @recipient, @message_type, @sent_at, @data, @created_at, @updated_at)`
+			(outbound_id, account_id, message_id, recipient, message_type, sent_at, data, created_at, updated_at) 
+		VALUES (@outbound_id, @account_id, @message_id, @recipient, @message_type, @sent_at, @data, @created_at, @updated_at)`
 )
 
 func (r *inboundOutboundRepo) SaveEvent(ctx context.Context, req *entity.CreateAccountEventRequest) error {
@@ -63,7 +63,7 @@ func (r *inboundOutboundRepo) SaveEvent(ctx context.Context, req *entity.CreateA
 
 func (r *inboundOutboundRepo) SaveMessageInbound(ctx context.Context, req *entity.CreateMessageInboundRequest) error {
 	params := pgx.NamedArgs{
-		"event_id":     req.EventID,
+		"inbound_id":   req.EventID,
 		"account_id":   req.AccountID,
 		"from_me":      req.FromMe,
 		"message_id":   req.MessageID,
@@ -81,6 +81,7 @@ func (r *inboundOutboundRepo) SaveMessageInbound(ctx context.Context, req *entit
 
 func (r *inboundOutboundRepo) SaveMessageOutbound(ctx context.Context, req *entity.CreateMessageOutboundRequest) error {
 	params := pgx.NamedArgs{
+		"outbound_id":  req.EventID,
 		"account_id":   req.AccountID,
 		"message_id":   req.MessageID,
 		"recipient":    req.Recipient,
