@@ -1,308 +1,132 @@
-2025-09-05 20:07:15.033 - INFO - MAIN - Application started
-2025-09-05 20:07:15.058 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:07:15.065 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:07:15.071 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:13:20.028 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:13:20.031 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:13:28.491 - INFO - MAIN - Application started
-2025-09-05 20:13:28.499 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:13:28.502 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:13:31.518 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:13:54.827 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:13:54.830 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:21:57.732 - INFO - MAIN - Application started
-2025-09-05 20:21:57.748 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:21:57.751 - INFO - f471b858-884a-42f1-975b-cbf4574a5369 - Received message: {"event_id":"b7ad29f8-892f-44e4-9182-082e9fcce422","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:07:49.006643028+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.751 - INFO - 6e3a21fc-300f-45a8-8a85-36b5006d6b79 - Received message: {"event_id":"dfdcec7f-fef6-4fb9-a058-90bec00ce528","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:08:38.731137144+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.751 - INFO - 9809b56c-75d2-438f-8303-3ea5db2b2c20 - Received message: {"event_id":"d71254ab-95a4-4bed-a895-331795b300c8","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:07:50.302889334+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.751 - INFO - 2ed3125f-4ddd-44a3-9cca-c512bb51ed70 - Received message: {"event_id":"971cb013-fb50-4543-9f6d-e41bcb514695","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:18:38.427590878+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.751 - INFO - eadfdb14-92e1-420f-83b0-e2c6fde60c53 - Received message: {"event_id":"e82d7200-1486-47d9-bb72-aeb0b6ba6eb2","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:08:39.635368207+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.753 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:21:57.751 - INFO - 1d1dbe9b-92dc-4568-990d-b021dc025451 - Received message: {"event_id":"d62153f5-7e4e-4efe-83e9-371958c99cdb","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T20:18:38.813083964+07:00","data":{"status":"connected"}}
-2025-09-05 20:21:57.766 - INFO - 7251198e-d671-40fc-80cd-7db7da8e923b - Received message: {"event_id":"e2160b6f-18ae-4467-9211-a5ca0a80922f","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:09:02.046873497+07:00","data":{"message_id":"3EB09178EF7597199DEC92","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:21:57.766 - INFO - 4b1611a7-db9b-4498-94cb-837124d56b66 - Received message: {"event_id":"3daefacb-b196-414a-915f-9784ee14285d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:09:03.256553286+07:00","data":{"message_ids":["3EB09178EF7597199DEC92"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757077885}}
-2025-09-05 20:21:57.768 - INFO - 7251198e-d671-40fc-80cd-7db7da8e923b - Outbound message event received for senderJID 6289513689096:54@s.whatsapp.net - no action taken
-2025-09-05 20:21:57.766 - INFO - b803fa11-1507-481e-837f-2fcfdfd1bf9d - Received message: {"event_id":"8fa3e634-b8e9-4a3a-a157-a166e56dd101","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:11:54.908879882+07:00","data":{"message_id":"3EB0D5996F6C3F6AFB0A2E","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:21:57.766 - INFO - 67d1c44a-8ecd-49d3-981d-3ff2d71fe911 - Received message: {"event_id":"d50807bb-4672-4104-8445-6213eac1a4ab","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:11:56.04311807+07:00","data":{"message_ids":["3EB0D5996F6C3F6AFB0A2E"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757078058}}
-2025-09-05 20:21:57.770 - INFO - 7251198e-d671-40fc-80cd-7db7da8e923b - Message acknowledged
-2025-09-05 20:21:57.766 - INFO - 723325c2-69a1-4066-a710-c3a09aae6bcd - Received message: {"event_id":"b3faed06-e276-4e78-b658-32a4203eef2e","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:15:45.925914371+07:00","data":{"message_ids":["3EB0A9F305FBC9B9A180BB"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757078288}}
-2025-09-05 20:21:57.766 - INFO - d6fc8daf-d169-4d0e-9f03-6bab95d51e26 - Received message: {"event_id":"427eb514-c9d1-4ead-83ca-78cad60f79db","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:15:44.811883981+07:00","data":{"message_id":"3EB0A9F305FBC9B9A180BB","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:21:57.774 - INFO - d6fc8daf-d169-4d0e-9f03-6bab95d51e26 - Outbound message event received for senderJID 6289513689096:54@s.whatsapp.net - no action taken
-2025-09-05 20:21:57.771 - INFO - b803fa11-1507-481e-837f-2fcfdfd1bf9d - Outbound message event received for senderJID 6289513689096:54@s.whatsapp.net - no action taken
-2025-09-05 20:21:57.775 - INFO - d6fc8daf-d169-4d0e-9f03-6bab95d51e26 - Message acknowledged
-2025-09-05 20:21:57.775 - INFO - b803fa11-1507-481e-837f-2fcfdfd1bf9d - Message acknowledged
-2025-09-05 20:21:57.785 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:21:57.792 - INFO - 950d36f0-e0ec-4b69-b733-0f0533e3e062 - Received message: {"event_id":"a17108d4-9d60-4b27-9ece-e90478803e86","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:17:12.388187228+07:00","data":{"code":"2@EreZNiTo7tcHJPllHizO1TRDGbCJuEetKgpuzGZPNorlgcZbC9gmKDnUXG0byc9vL4AD8OcbnizjbfZGXWOHwVHGK1iIv7HnNNQ=,InXES1o6abC1UDC8t303s+Y3TLnvye9Ly03bdxLIu1c=,mz0g2dHVt0JHKaU09d4EpgU8+b5sbElBujyi803bQk4=,AIWYYmRKJtaXWHr6Mtu9r276uzQ3/TO5beRaxBvYv4Y="}}
-2025-09-05 20:21:57.793 - INFO - a0219817-50a9-49d3-a1c8-d08d34739356 - Received message: {"event_id":"1f52d1db-8f84-4d19-a9a6-7b960651f9a0","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:19:09.309269682+07:00","data":{"code":"2@OErLVT05cUjp0ZG8DGhhMp02w3R/E9VK/LeFoWHUwsI2oTLNes9Rcd8AemtSf/TZuGrUJRXd+VmbXWfhCyzu33AC/0NoeqDt6kk=,OgVigWpEF79vH6YrGnocEKxD6Nimm584YgckoDXXgCE=,CH8Ui7r/Gkzgvx29RDQSlbUCNugaMPF0crMbq37OuhQ=,HXSAOWDsmToiTeWgGeXE0NY5TGQ2K5ghTTMsZY69X4c="}}
-2025-09-05 20:21:57.794 - INFO - 950d36f0-e0ec-4b69-b733-0f0533e3e062 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:21:57.793 - INFO - 9f19e27f-a43b-461f-9980-4abc9a71ec58 - Received message: {"event_id":"c3dd10e5-21f4-49b6-bf51-8518106167e5","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:19:09.304128802+07:00","data":{"code":"2@OErLVT05cUjp0ZG8DGhhMp02w3R/E9VK/LeFoWHUwsI2oTLNes9Rcd8AemtSf/TZuGrUJRXd+VmbXWfhCyzu33AC/0NoeqDt6kk=,OgVigWpEF79vH6YrGnocEKxD6Nimm584YgckoDXXgCE=,CH8Ui7r/Gkzgvx29RDQSlbUCNugaMPF0crMbq37OuhQ=,HXSAOWDsmToiTeWgGeXE0NY5TGQ2K5ghTTMsZY69X4c="}}
-2025-09-05 20:21:57.793 - INFO - 0f249e5c-44d3-498d-bc7a-1cd86372e0fd - Received message: {"event_id":"47714e14-9502-4e8b-9530-348badd22383","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:17:12.393640255+07:00","data":{"code":"2@EreZNiTo7tcHJPllHizO1TRDGbCJuEetKgpuzGZPNorlgcZbC9gmKDnUXG0byc9vL4AD8OcbnizjbfZGXWOHwVHGK1iIv7HnNNQ=,InXES1o6abC1UDC8t303s+Y3TLnvye9Ly03bdxLIu1c=,mz0g2dHVt0JHKaU09d4EpgU8+b5sbElBujyi803bQk4=,AIWYYmRKJtaXWHr6Mtu9r276uzQ3/TO5beRaxBvYv4Y="}}
-2025-09-05 20:21:57.796 - INFO - a0219817-50a9-49d3-a1c8-d08d34739356 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:21:57.798 - INFO - a0219817-50a9-49d3-a1c8-d08d34739356 - Message acknowledged
-2025-09-05 20:21:57.796 - INFO - 950d36f0-e0ec-4b69-b733-0f0533e3e062 - Message acknowledged
-2025-09-05 20:21:57.798 - INFO - 9f19e27f-a43b-461f-9980-4abc9a71ec58 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:21:57.798 - INFO - 0f249e5c-44d3-498d-bc7a-1cd86372e0fd - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:21:57.799 - INFO - 9f19e27f-a43b-461f-9980-4abc9a71ec58 - Message acknowledged
-2025-09-05 20:21:57.799 - INFO - 0f249e5c-44d3-498d-bc7a-1cd86372e0fd - Message acknowledged
-2025-09-05 20:21:57.811 - INFO - f471b858-884a-42f1-975b-cbf4574a5369 - Message acknowledged
-2025-09-05 20:21:57.885 - INFO - 2ed3125f-4ddd-44a3-9cca-c512bb51ed70 - Message acknowledged
-2025-09-05 20:21:57.899 - INFO - eadfdb14-92e1-420f-83b0-e2c6fde60c53 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.900 - INFO - eadfdb14-92e1-420f-83b0-e2c6fde60c53 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.920 - INFO - 9809b56c-75d2-438f-8303-3ea5db2b2c20 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.920 - INFO - 9809b56c-75d2-438f-8303-3ea5db2b2c20 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.927 - INFO - 4b1611a7-db9b-4498-94cb-837124d56b66 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.928 - INFO - 4b1611a7-db9b-4498-94cb-837124d56b66 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.941 - INFO - 1d1dbe9b-92dc-4568-990d-b021dc025451 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.941 - INFO - 723325c2-69a1-4066-a710-c3a09aae6bcd - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.942 - INFO - 1d1dbe9b-92dc-4568-990d-b021dc025451 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.942 - INFO - 723325c2-69a1-4066-a710-c3a09aae6bcd - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.941 - INFO - 67d1c44a-8ecd-49d3-981d-3ff2d71fe911 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.943 - INFO - 67d1c44a-8ecd-49d3-981d-3ff2d71fe911 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:21:57.945 - INFO - 6e3a21fc-300f-45a8-8a85-36b5006d6b79 - Message acknowledged
-2025-09-05 20:21:57.952 - INFO - eadfdb14-92e1-420f-83b0-e2c6fde60c53 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
-2025-09-05 20:21:57.952 - INFO - eadfdb14-92e1-420f-83b0-e2c6fde60c53 - Message acknowledged
-2025-09-05 20:21:57.971 - INFO - 9809b56c-75d2-438f-8303-3ea5db2b2c20 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
-2025-09-05 20:21:57.971 - INFO - 9809b56c-75d2-438f-8303-3ea5db2b2c20 - Message acknowledged
-2025-09-05 20:21:57.983 - INFO - 4b1611a7-db9b-4498-94cb-837124d56b66 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:21:57.984 - INFO - 4b1611a7-db9b-4498-94cb-837124d56b66 - Message acknowledged
-2025-09-05 20:21:57.988 - INFO - 1d1dbe9b-92dc-4568-990d-b021dc025451 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
-2025-09-05 20:21:57.989 - INFO - 1d1dbe9b-92dc-4568-990d-b021dc025451 - Message acknowledged
-2025-09-05 20:21:57.989 - INFO - 67d1c44a-8ecd-49d3-981d-3ff2d71fe911 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:21:57.989 - INFO - 723325c2-69a1-4066-a710-c3a09aae6bcd - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:21:57.991 - INFO - 67d1c44a-8ecd-49d3-981d-3ff2d71fe911 - Message acknowledged
-2025-09-05 20:21:57.991 - INFO - 723325c2-69a1-4066-a710-c3a09aae6bcd - Message acknowledged
-2025-09-05 20:22:10.447 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:22:10.450 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:23:16.558 - INFO - MAIN - Application started
-2025-09-05 20:23:16.575 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:23:16.579 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:23:16.583 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:23:35.294 - INFO - 7267870a-c4ce-402b-9677-0e6a742e8d29 - Received message: {"event_id":"ce6f6640-8c72-4a79-9bba-95eb252b3e12","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:23:35.289895506+07:00","data":{"message_ids":["3EB02BD88E39258AE82F2F","3EB0823795852DE0C9E68A","3EB09178EF7597199DEC92","3EB0D5996F6C3F6AFB0A2E","3EB0A9F305FBC9B9A180BB"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757078757}}
-2025-09-05 20:23:35.366 - INFO - 7267870a-c4ce-402b-9677-0e6a742e8d29 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:23:35.368 - INFO - 7267870a-c4ce-402b-9677-0e6a742e8d29 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:23:35.419 - INFO - 7267870a-c4ce-402b-9677-0e6a742e8d29 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:23:35.420 - INFO - 7267870a-c4ce-402b-9677-0e6a742e8d29 - Message acknowledged
-2025-09-05 20:25:01.601 - INFO - 634879ec-afcb-4926-a2aa-c49c5a16366e - Received message: {"event_id":"e7182cec-0392-4ccd-a91d-8a3daa510578","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:25:01.597050767+07:00","data":{"code":"2@oaQ3CbG+t1rSLaIaW4w1rw/cE7fKxbAyR0wXmn3Ruwv87j0QYcXGmihpG7vxulGTD6Xle3CoKbW0QeeFyIpWInXDSdiC/i4bFwo=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:25:01.603 - INFO - 634879ec-afcb-4926-a2aa-c49c5a16366e - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:25:01.603 - INFO - f11f588b-0e5a-4f44-80c3-f0df67eaf5f2 - Received message: {"event_id":"ec33494b-dae3-4ac0-a107-76308472fa19","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:25:01.60102039+07:00","data":{"code":"2@oaQ3CbG+t1rSLaIaW4w1rw/cE7fKxbAyR0wXmn3Ruwv87j0QYcXGmihpG7vxulGTD6Xle3CoKbW0QeeFyIpWInXDSdiC/i4bFwo=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:25:01.603 - INFO - 634879ec-afcb-4926-a2aa-c49c5a16366e - Message acknowledged
-2025-09-05 20:25:01.604 - INFO - f11f588b-0e5a-4f44-80c3-f0df67eaf5f2 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:25:01.605 - INFO - f11f588b-0e5a-4f44-80c3-f0df67eaf5f2 - Message acknowledged
-2025-09-05 20:25:18.742 - INFO - 054b940c-5b2b-427b-8783-aaf5f7367745 - Received message: {"event_id":"d6cc1831-3e61-41f2-85d1-45a912b51d48","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:25:18.672676145+07:00","data":{"message_id":"3EB0EDB92B9C2B0DA68F82","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:25:18.756 - INFO - 054b940c-5b2b-427b-8783-aaf5f7367745 - Outbound message event received &{d6cc1831-3e61-41f2-85d1-45a912b51d48 6289513689096:54@s.whatsapp.net outbound_message 2025-09-05 20:25:18.672676145 +0700 +07 [123 34 109 101 115 115 97 103 101 95 105 100 34 58 34 51 69 66 48 69 68 66 57 50 66 57 67 50 66 48 68 65 54 56 70 56 50 34 44 34 109 101 115 115 97 103 101 95 116 121 112 101 34 58 34 116 101 120 116 34 44 34 116 111 34 58 34 54 50 56 50 51 51 53 54 56 53 49 51 56 64 115 46 119 104 97 116 115 97 112 112 46 110 101 116 34 44 34 109 101 115 115 97 103 101 34 58 123 34 99 111 110 118 101 114 115 97 116 105 111 110 34 58 34 105 110 105 32 112 101 115 97 110 32 100 101 110 103 97 110 32 65 80 73 34 125 125]}
-2025-09-05 20:25:18.792 - INFO - 054b940c-5b2b-427b-8783-aaf5f7367745 - Message acknowledged
-2025-09-05 20:25:19.849 - INFO - a9401a11-6a91-4046-8d3b-e0a3ccb5b3d6 - Received message: {"event_id":"f39d2ab8-d0b7-4db3-a96e-dbfcd2068a8c","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:25:19.844599605+07:00","data":{"message_ids":["3EB0EDB92B9C2B0DA68F82"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757078862}}
-2025-09-05 20:25:19.929 - INFO - a9401a11-6a91-4046-8d3b-e0a3ccb5b3d6 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:25:19.930 - INFO - a9401a11-6a91-4046-8d3b-e0a3ccb5b3d6 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:25:19.954 - INFO - a9401a11-6a91-4046-8d3b-e0a3ccb5b3d6 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:25:19.954 - INFO - a9401a11-6a91-4046-8d3b-e0a3ccb5b3d6 - Message acknowledged
-2025-09-05 20:25:39.284 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:25:39.290 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:26:03.201 - INFO - MAIN - Application started
-2025-09-05 20:26:03.213 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:26:03.217 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:26:03.221 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:26:03.224 - INFO - 6c7aee5f-79ce-47ed-933f-2b3a52a21a10 - Received message: {"event_id":"fab484be-13fb-4058-aa9d-fccdbb2f31fc","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:26:01.601614173+07:00","data":{"code":"2@/SDRYh4ETY7bXc0l+qPCjqRsGTmPOS4hcxr+mdMJ+5aEoMlQgfAg6m3lWfp8RJqD99IE8pfTMwJAPB8j1y00YBNJrXiEbxpVxww=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:26:03.225 - INFO - 6c7aee5f-79ce-47ed-933f-2b3a52a21a10 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:26:03.226 - INFO - 6c7aee5f-79ce-47ed-933f-2b3a52a21a10 - Message acknowledged
-2025-09-05 20:26:18.009 - INFO - 05e3bce8-e9e5-463f-b695-aefd0bd26d62 - Received message: {"event_id":"8c1a5665-3bea-4727-8f44-273d95640d2d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:26:18.005513494+07:00","data":{"message_ids":["3EB0EDB92B9C2B0DA68F82"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757078920}}
-2025-09-05 20:26:18.075 - INFO - 05e3bce8-e9e5-463f-b695-aefd0bd26d62 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:26:18.076 - INFO - 05e3bce8-e9e5-463f-b695-aefd0bd26d62 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:26:18.118 - INFO - 05e3bce8-e9e5-463f-b695-aefd0bd26d62 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:26:18.119 - INFO - 05e3bce8-e9e5-463f-b695-aefd0bd26d62 - Message acknowledged
-2025-09-05 20:26:21.609 - INFO - 2f0564c8-b2f1-4bf7-a6bf-a037588598e1 - Received message: {"event_id":"2449b843-f40d-4a27-8ddb-0e8ba0c58e08","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:26:21.60512657+07:00","data":{"code":"2@s0KKaP8bJE1+KM2AgZBnRt96DrNxzozaxs5bpnc8E9UHR+KRFzhp7TqYaARTVwzC9b0Bri2smAc7vFxqd9VRUwvGE7o4rA3jxek=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:26:21.611 - INFO - 2f0564c8-b2f1-4bf7-a6bf-a037588598e1 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:26:21.612 - INFO - 2f0564c8-b2f1-4bf7-a6bf-a037588598e1 - Message acknowledged
-2025-09-05 20:26:41.613 - INFO - 30a7c706-5968-4020-8e2b-4325165caeb5 - Received message: {"event_id":"6d2bd70c-f133-495d-8b09-1e54cc5a94d6","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:26:41.609367081+07:00","data":{"code":"2@r2rZFYZe39LKS7G12fd26odoDM68ows0H0q6MnbEUO8Wj8kgNg0mYhnKDKhsLAJdkJxFwWiwUpWD7YUH3dF5ZMmsamqW9K1kaaI=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:26:41.616 - INFO - 30a7c706-5968-4020-8e2b-4325165caeb5 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:26:41.616 - INFO - 30a7c706-5968-4020-8e2b-4325165caeb5 - Message acknowledged
-2025-09-05 20:26:51.525 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:26:51.528 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:29:17.705 - INFO - MAIN - Application started
-2025-09-05 20:29:17.721 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:29:17.726 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:29:17.731 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:29:17.733 - INFO - b76ee26b-2f32-4607-ac11-a2465824bd4d - Received message: {"event_id":"99292bc4-325c-4504-8d8d-981075309a97","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:27:21.615365515+07:00","data":{"code":"2@jM5OhIQagFFg6hZnoZeRLAO4bERbF5BnyOj35FCN7ba+QRSx52MrywIk8CuV0g7dNjRt+FEjkKVcAwlcfn35bO9ncKguPDobMz4=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:29:17.733 - INFO - 1f6a51f0-6b38-4cb1-b86d-98c46982c869 - Received message: {"event_id":"5487e4ca-620a-49f0-b15e-546fb78c4d5b","sender_jid":"cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net","event_type":"qr","timestamp":"2025-09-05T20:27:01.61049117+07:00","data":{"code":"2@F8SMyd7NLn+R9wRFaRL1B7hJMMGr67yDV9KRlO+qYG1atwH8jdNSSmicDR81J96vPjXeGOn8lew1VP2fdQZmCqQErOfUiREJ4ls=,fWwznpGEQepy8hoHrGbQxVVey6WmwTRzGkTYXKFRGEA=,tvvsQE5fOimn2xXiZhDBURKi0grujQo3+hTM89a62Co=,caf03CcISzLtmpsDK1mxfPEvdq+rSMvD7/tbstJGIpw="}}
-2025-09-05 20:29:17.734 - INFO - b76ee26b-2f32-4607-ac11-a2465824bd4d - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:29:17.737 - INFO - b76ee26b-2f32-4607-ac11-a2465824bd4d - Message acknowledged
-2025-09-05 20:29:17.743 - INFO - 1f6a51f0-6b38-4cb1-b86d-98c46982c869 - QR event for senderJID cf93d43c-6c70-4739-a73a-7beee236a1b6@s.whatsapp.net saved to redis
-2025-09-05 20:29:17.743 - INFO - 1f6a51f0-6b38-4cb1-b86d-98c46982c869 - Message acknowledged
-2025-09-05 20:29:23.227 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:29:23.230 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:29:29.699 - INFO - MAIN - Application started
-2025-09-05 20:29:29.710 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:29:29.714 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:29:29.717 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:29:42.342 - INFO - 90a727f4-1023-4b9b-a345-a810431e1dd9 - Received message: {"event_id":"7836b835-383c-422a-9471-16304cad17bb","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:29:42.336639151+07:00","data":{"message_id":"3EB0A4CAA10789BB388D5E","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:29:42.343 - INFO - 90a727f4-1023-4b9b-a345-a810431e1dd9 - Outbound message event received &{7836b835-383c-422a-9471-16304cad17bb 6289513689096:54@s.whatsapp.net outbound_message 2025-09-05 20:29:42.336639151 +0700 +07 [123 34 109 101 115 115 97 103 101 95 105 100 34 58 34 51 69 66 48 65 52 67 65 65 49 48 55 56 57 66 66 51 56 56 68 53 69 34 44 34 109 101 115 115 97 103 101 95 116 121 112 101 34 58 34 116 101 120 116 34 44 34 116 111 34 58 34 54 50 56 50 51 51 53 54 56 53 49 51 56 64 115 46 119 104 97 116 115 97 112 112 46 110 101 116 34 44 34 109 101 115 115 97 103 101 34 58 123 34 99 111 110 118 101 114 115 97 116 105 111 110 34 58 34 105 110 105 32 112 101 115 97 110 32 100 101 110 103 97 110 32 65 80 73 34 125 125]}, message: {3EB0A4CAA10789BB388D5E text 6282335685138@s.whatsapp.net map[conversation:ini pesan dengan API]}
-2025-09-05 20:29:42.346 - INFO - 90a727f4-1023-4b9b-a345-a810431e1dd9 - Message acknowledged
-2025-09-05 20:29:43.453 - INFO - c040c462-f9c9-4a77-9375-274c1bfcd91b - Received message: {"event_id":"f543fdcd-5826-4c4c-aa3e-61ac103e6d72","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:29:43.448997777+07:00","data":{"message_ids":["3EB0A4CAA10789BB388D5E"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757079125}}
-2025-09-05 20:29:43.518 - INFO - c040c462-f9c9-4a77-9375-274c1bfcd91b - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:29:43.519 - INFO - c040c462-f9c9-4a77-9375-274c1bfcd91b - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:29:43.564 - INFO - c040c462-f9c9-4a77-9375-274c1bfcd91b - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:29:43.565 - INFO - c040c462-f9c9-4a77-9375-274c1bfcd91b - Message acknowledged
-2025-09-05 20:30:55.960 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:30:55.963 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:31:05.631 - INFO - MAIN - Application started
-2025-09-05 20:31:05.643 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:31:05.646 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:31:05.649 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:31:12.108 - INFO - 15a3ae4e-ed1a-430e-b500-9654f2e16706 - Received message: {"event_id":"10154aee-7d6f-420e-bac8-4ea3f7d316ab","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:31:12.103432121+07:00","data":{"message_id":"3EB05C27F5CC920B405C0C","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:31:12.109 - INFO - 15a3ae4e-ed1a-430e-b500-9654f2e16706 - Outbound message event received message: {3EB05C27F5CC920B405C0C text 6282335685138@s.whatsapp.net map[conversation:ini pesan dengan API]}
-2025-09-05 20:31:12.110 - INFO - 15a3ae4e-ed1a-430e-b500-9654f2e16706 - Message acknowledged
-2025-09-05 20:31:13.371 - INFO - 0dccd34c-b567-4225-a4ea-afc69559d480 - Received message: {"event_id":"dfcae196-6137-4508-a259-0b9540ce6173","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:31:13.357294128+07:00","data":{"message_ids":["3EB05C27F5CC920B405C0C"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757079215}}
-2025-09-05 20:31:13.438 - INFO - 0dccd34c-b567-4225-a4ea-afc69559d480 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:31:13.438 - INFO - 0dccd34c-b567-4225-a4ea-afc69559d480 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:31:13.480 - INFO - 0dccd34c-b567-4225-a4ea-afc69559d480 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:31:13.480 - INFO - 0dccd34c-b567-4225-a4ea-afc69559d480 - Message acknowledged
-2025-09-05 20:45:10.545 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 20:45:10.550 - INFO - MAIN - Successfully stop Application.
-2025-09-05 20:46:09.818 - INFO - MAIN - Application started
-2025-09-05 20:46:09.829 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 20:46:09.833 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 20:46:09.838 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 20:46:19.858 - INFO - 1cc9adba-4f73-40c2-8111-f633af572652 - Received message: {"event_id":"dfe59629-a037-4b89-b264-6cd2b1d0be5e","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T20:46:19.853201349+07:00","data":{"message_id":"3EB0E24B01ADB8E1C28F6C","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 20:46:19.859 - INFO - 1cc9adba-4f73-40c2-8111-f633af572652 - Outbound message event received message: {3EB0E24B01ADB8E1C28F6C text 6282335685138@s.whatsapp.net map[conversation:ini pesan dengan API]}
-2025-09-05 20:46:19.859 - INFO - 1cc9adba-4f73-40c2-8111-f633af572652 - Message acknowledged
-2025-09-05 20:47:41.332 - INFO - 2244c716-b70e-400b-9b06-7df220f9f5a5 - Received message: {"event_id":"aa22dc60-9aea-43b5-9b46-25bbc4cf56a5","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:47:41.327994495+07:00","data":{"message_ids":["3EB0E24B01ADB8E1C28F6C"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757080203}}
-2025-09-05 20:47:41.411 - INFO - 2244c716-b70e-400b-9b06-7df220f9f5a5 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:47:41.412 - INFO - 2244c716-b70e-400b-9b06-7df220f9f5a5 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:47:41.468 - INFO - 2244c716-b70e-400b-9b06-7df220f9f5a5 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:47:41.469 - INFO - 2244c716-b70e-400b-9b06-7df220f9f5a5 - Message acknowledged
-2025-09-05 20:48:38.005 - INFO - bcd268e4-175f-40b7-97a5-1072b165ab55 - Received message: {"event_id":"645e96fd-0a79-4ee7-9981-f3e4ca453ce7","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T20:48:38.001148101+07:00","data":{"message_ids":["3EB0A4CAA10789BB388D5E","3EB05C27F5CC920B405C0C","3EB0E24B01ADB8E1C28F6C"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757080260}}
-2025-09-05 20:48:38.060 - INFO - bcd268e4-175f-40b7-97a5-1072b165ab55 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:48:38.061 - INFO - bcd268e4-175f-40b7-97a5-1072b165ab55 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 20:48:38.083 - INFO - bcd268e4-175f-40b7-97a5-1072b165ab55 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 20:48:38.084 - INFO - bcd268e4-175f-40b7-97a5-1072b165ab55 - Message acknowledged
-2025-09-05 22:12:21.037 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 22:12:21.041 - INFO - MAIN - Successfully stop Application.
-2025-09-05 22:12:29.497 - INFO - MAIN - Application started
-2025-09-05 22:12:29.510 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 22:12:29.515 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 22:12:29.520 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 22:13:00.539 - INFO - fa23eb73-b53e-40fd-b35e-9d2771f470c6 - Received message: {"event_id":"4a1127b8-b553-4c85-ba2e-efd001be6297","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T22:13:00.536081286+07:00","data":{"status":"connected"}}
-2025-09-05 22:13:00.841 - INFO - fa23eb73-b53e-40fd-b35e-9d2771f470c6 - Message acknowledged
-2025-09-05 22:13:17.092 - INFO - b4f39b51-0dac-4787-80d4-3ed85e52335f - Received message: {"event_id":"11b6b88b-a6fe-44dc-8b39-8f0409e4b1be","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T22:13:17.088162561+07:00","data":{"status":"connected"}}
-2025-09-05 22:13:17.246 - INFO - b4f39b51-0dac-4787-80d4-3ed85e52335f - Message acknowledged
-2025-09-05 22:13:17.953 - INFO - ae6c75d4-9c51-422c-a361-63b7b7b0c2a0 - Received message: {"event_id":"7dc05fa3-e759-4710-9cc8-92e21c2a1323","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-05T22:13:17.948260601+07:00","data":{"status":"connected"}}
-2025-09-05 22:13:18.033 - INFO - ae6c75d4-9c51-422c-a361-63b7b7b0c2a0 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.034 - INFO - ae6c75d4-9c51-422c-a361-63b7b7b0c2a0 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.246 - INFO - ae6c75d4-9c51-422c-a361-63b7b7b0c2a0 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
-2025-09-05 22:13:18.248 - INFO - ae6c75d4-9c51-422c-a361-63b7b7b0c2a0 - Message acknowledged
-2025-09-05 22:13:18.360 - INFO - 29f53fca-b629-4cba-b6e9-3d7d51ab597e - Received message: {"event_id":"93c3a745-0d76-4f51-a76b-9a216f9ae5fe","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.35591678+07:00","data":{"message_ids":["3EB02BD88E39258AE82F2F"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085175}}
-2025-09-05 22:13:18.362 - INFO - 29f53fca-b629-4cba-b6e9-3d7d51ab597e - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.364 - INFO - 676be608-e3a0-42e1-a12f-0577d479d275 - Received message: {"event_id":"80359617-e36a-4598-b365-178f1b6fb917","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.360342415+07:00","data":{"message_ids":["3EB0823795852DE0C9E68A"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085175}}
-2025-09-05 22:13:18.366 - INFO - 676be608-e3a0-42e1-a12f-0577d479d275 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.379 - INFO - e5713e19-2872-4a82-b2cd-79740edfbc84 - Received message: {"event_id":"caad7529-972a-4b0c-8d6b-7ef7e0fa44df","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.374959645+07:00","data":{"message_ids":["3EB09178EF7597199DEC92"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085175}}
-2025-09-05 22:13:18.387 - INFO - 575d7da8-a61c-489f-bc51-7ae198845632 - Received message: {"event_id":"cffd3293-081e-4b7d-ad28-4e662669c844","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.38012418+07:00","data":{"message_ids":["3EB0D5996F6C3F6AFB0A2E"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085176}}
-2025-09-05 22:13:18.389 - INFO - e5713e19-2872-4a82-b2cd-79740edfbc84 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.399 - INFO - 4d4bfbfc-8163-4499-b682-b3acdd61d59d - Received message: {"event_id":"89022ebc-64ae-4329-af29-a61095943826","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.39233273+07:00","data":{"message_ids":["3EB0A9F305FBC9B9A180BB"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085176}}
-2025-09-05 22:13:18.401 - INFO - 4d4bfbfc-8163-4499-b682-b3acdd61d59d - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.402 - INFO - 575d7da8-a61c-489f-bc51-7ae198845632 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.563 - INFO - 29f53fca-b629-4cba-b6e9-3d7d51ab597e - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.564 - INFO - 29f53fca-b629-4cba-b6e9-3d7d51ab597e - Message acknowledged
-2025-09-05 22:13:18.634 - INFO - ca8754c9-86f6-4ba5-a7d3-6322df22b34a - Received message: {"event_id":"cbfa091a-5ed7-4ed9-bbac-1d90b85d5e31","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.628288337+07:00","data":{"message_ids":["3EB0EDB92B9C2B0DA68F82"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085176}}
-2025-09-05 22:13:18.638 - INFO - ca8754c9-86f6-4ba5-a7d3-6322df22b34a - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.641 - INFO - ecd0514b-1fb4-4dd5-a944-f165f934aff3 - Received message: {"event_id":"9922b5f7-0d44-454f-8390-aabd45b84960","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.634879253+07:00","data":{"message_ids":["3EB0A4CAA10789BB388D5E"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085176}}
-2025-09-05 22:13:18.643 - INFO - ecd0514b-1fb4-4dd5-a944-f165f934aff3 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.659 - INFO - 51309598-6ac4-4f6b-a24d-afa9e2719f82 - Received message: {"event_id":"136bf25e-1dd2-42b2-897e-f4366b692446","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.656412439+07:00","data":{"message_ids":["3EB05C27F5CC920B405C0C"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085176}}
-2025-09-05 22:13:18.661 - INFO - 51309598-6ac4-4f6b-a24d-afa9e2719f82 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.662 - INFO - a198b9b0-7f53-4618-aec6-821d550f6c68 - Received message: {"event_id":"7032beb4-9418-49ce-aab0-746612e0d8fe","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.65950073+07:00","data":{"message_ids":["3EB0E24B01ADB8E1C28F6C"],"sender":"6289513689096@s.whatsapp.net","timestamp":1757085177}}
-2025-09-05 22:13:18.664 - INFO - a198b9b0-7f53-4618-aec6-821d550f6c68 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.670 - INFO - a248bcb2-8c07-4ac8-9e39-a1a2116e95d8 - Received message: {"event_id":"97c4a6cd-7f53-41bc-b022-87296fe2be02","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.667526668+07:00","data":{"message_ids":["3EB02BD88E39258AE82F2F"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085196}}
-2025-09-05 22:13:18.671 - INFO - a248bcb2-8c07-4ac8-9e39-a1a2116e95d8 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.715 - INFO - ca8754c9-86f6-4ba5-a7d3-6322df22b34a - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.716 - INFO - ca8754c9-86f6-4ba5-a7d3-6322df22b34a - Message acknowledged
-2025-09-05 22:13:18.870 - INFO - 4d4bfbfc-8163-4499-b682-b3acdd61d59d - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.870 - INFO - 575d7da8-a61c-489f-bc51-7ae198845632 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.873 - INFO - 4d4bfbfc-8163-4499-b682-b3acdd61d59d - Message acknowledged
-2025-09-05 22:13:18.873 - INFO - 575d7da8-a61c-489f-bc51-7ae198845632 - Message acknowledged
-2025-09-05 22:13:18.877 - INFO - e5713e19-2872-4a82-b2cd-79740edfbc84 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.877 - INFO - 676be608-e3a0-42e1-a12f-0577d479d275 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:18.878 - INFO - 676be608-e3a0-42e1-a12f-0577d479d275 - Message acknowledged
-2025-09-05 22:13:18.878 - INFO - e5713e19-2872-4a82-b2cd-79740edfbc84 - Message acknowledged
-2025-09-05 22:13:18.901 - INFO - abd0f6ff-a6f6-42db-85bd-b57541891337 - Received message: {"event_id":"cce17fd5-5654-49a3-a454-499c7d14e7e3","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.896827767+07:00","data":{"message_ids":["3EB0823795852DE0C9E68A"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085196}}
-2025-09-05 22:13:18.903 - INFO - abd0f6ff-a6f6-42db-85bd-b57541891337 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.915 - INFO - 06ffad7d-e567-464c-95d1-a013c7c53c30 - Received message: {"event_id":"06b697c1-adf3-4b84-862d-30d7676a1e0e","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.910175747+07:00","data":{"message_ids":["3EB09178EF7597199DEC92"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085197}}
-2025-09-05 22:13:18.918 - INFO - 06ffad7d-e567-464c-95d1-a013c7c53c30 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.940 - INFO - 9dd79581-e9e8-430c-9eed-851b9cdbaafc - Received message: {"event_id":"f794e7e1-5fbc-4649-bf00-c8a260e02259","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.931489077+07:00","data":{"message_ids":["3EB0D5996F6C3F6AFB0A2E"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085197}}
-2025-09-05 22:13:18.943 - INFO - 9dd79581-e9e8-430c-9eed-851b9cdbaafc - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.943 - INFO - 9b8e8fb9-1aa9-4f7c-9d8a-8721951466ec - Received message: {"event_id":"821b97e1-dd73-41b7-aa97-756013a7dae3","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.938080693+07:00","data":{"message_ids":["3EB0A9F305FBC9B9A180BB"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085197}}
-2025-09-05 22:13:18.944 - INFO - 9b8e8fb9-1aa9-4f7c-9d8a-8721951466ec - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.953 - INFO - a9c50761-5600-451d-bf0f-474e6e4539c9 - Received message: {"event_id":"c89425cb-dfa8-478c-8a1f-efe474c46e51","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:18.947651648+07:00","data":{"message_ids":["3EB0EDB92B9C2B0DA68F82"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085197}}
-2025-09-05 22:13:18.955 - INFO - a9c50761-5600-451d-bf0f-474e6e4539c9 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:18.999 - INFO - abd0f6ff-a6f6-42db-85bd-b57541891337 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.001 - INFO - abd0f6ff-a6f6-42db-85bd-b57541891337 - Message acknowledged
-2025-09-05 22:13:19.027 - INFO - 06ffad7d-e567-464c-95d1-a013c7c53c30 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.028 - INFO - 06ffad7d-e567-464c-95d1-a013c7c53c30 - Message acknowledged
-2025-09-05 22:13:19.035 - INFO - 9dd79581-e9e8-430c-9eed-851b9cdbaafc - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.036 - INFO - 9dd79581-e9e8-430c-9eed-851b9cdbaafc - Message acknowledged
-2025-09-05 22:13:19.036 - INFO - a9c50761-5600-451d-bf0f-474e6e4539c9 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.036 - INFO - 9b8e8fb9-1aa9-4f7c-9d8a-8721951466ec - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.039 - INFO - 9b8e8fb9-1aa9-4f7c-9d8a-8721951466ec - Message acknowledged
-2025-09-05 22:13:19.038 - INFO - a9c50761-5600-451d-bf0f-474e6e4539c9 - Message acknowledged
-2025-09-05 22:13:19.174 - INFO - 5db70410-b90a-498a-9d81-0c8da04293ba - Received message: {"event_id":"7e78aaaf-244f-4f98-9bac-6d0f44daf8f9","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:19.166652875+07:00","data":{"message_ids":["3EB0A4CAA10789BB388D5E"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085197}}
-2025-09-05 22:13:19.186 - INFO - a198b9b0-7f53-4618-aec6-821d550f6c68 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.187 - INFO - a198b9b0-7f53-4618-aec6-821d550f6c68 - Message acknowledged
-2025-09-05 22:13:19.201 - INFO - a248bcb2-8c07-4ac8-9e39-a1a2116e95d8 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.201 - INFO - a248bcb2-8c07-4ac8-9e39-a1a2116e95d8 - Message acknowledged
-2025-09-05 22:13:19.204 - INFO - ecd0514b-1fb4-4dd5-a944-f165f934aff3 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.205 - INFO - ecd0514b-1fb4-4dd5-a944-f165f934aff3 - Message acknowledged
-2025-09-05 22:13:19.206 - INFO - 03fe83c7-d2f5-4483-9e44-7ac50cd77637 - Received message: {"event_id":"be716118-0b2e-4ecb-b95c-b97f5522878c","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:19.202046734+07:00","data":{"message_ids":["3EB05C27F5CC920B405C0C"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085198}}
-2025-09-05 22:13:19.223 - INFO - d4e39234-1413-4775-a5a7-ffb0426b476d - Received message: {"event_id":"147555a0-5fe5-492f-821a-c97394ccffeb","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:13:19.217863507+07:00","data":{"message_ids":["3EB0E24B01ADB8E1C28F6C"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085198}}
-2025-09-05 22:13:19.229 - INFO - 51309598-6ac4-4f6b-a24d-afa9e2719f82 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.229 - INFO - 51309598-6ac4-4f6b-a24d-afa9e2719f82 - Message acknowledged
-2025-09-05 22:13:19.360 - INFO - 5db70410-b90a-498a-9d81-0c8da04293ba - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.361 - INFO - 5db70410-b90a-498a-9d81-0c8da04293ba - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.395 - INFO - 03fe83c7-d2f5-4483-9e44-7ac50cd77637 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.397 - INFO - 03fe83c7-d2f5-4483-9e44-7ac50cd77637 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.400 - INFO - d4e39234-1413-4775-a5a7-ffb0426b476d - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.401 - INFO - d4e39234-1413-4775-a5a7-ffb0426b476d - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:13:19.446 - INFO - 5db70410-b90a-498a-9d81-0c8da04293ba - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.447 - INFO - 5db70410-b90a-498a-9d81-0c8da04293ba - Message acknowledged
-2025-09-05 22:13:19.480 - INFO - d4e39234-1413-4775-a5a7-ffb0426b476d - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.481 - INFO - d4e39234-1413-4775-a5a7-ffb0426b476d - Message acknowledged
-2025-09-05 22:13:19.486 - INFO - 03fe83c7-d2f5-4483-9e44-7ac50cd77637 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:13:19.487 - INFO - 03fe83c7-d2f5-4483-9e44-7ac50cd77637 - Message acknowledged
-2025-09-05 22:13:39.737 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 22:13:39.740 - INFO - MAIN - Successfully stop Application.
-2025-09-05 22:13:57.591 - INFO - MAIN - Application started
-2025-09-05 22:13:57.599 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
-2025-09-05 22:13:57.602 - INFO - MAIN - Successfully creating consumer for queue: message.events
-2025-09-05 22:13:57.605 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
-2025-09-05 22:14:05.609 - INFO - 9fa33dee-74b3-412e-b28d-f908621d16d3 - Received message: {"event_id":"75fc7514-66a2-4774-b5c5-faa94f55868d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T22:14:05.596621338+07:00","data":{"message_id":"3EB0923EF1823EA8C5B8CE","message_type":"text","to":"6282335685138@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
-2025-09-05 22:14:05.834 - INFO - 9fa33dee-74b3-412e-b28d-f908621d16d3 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:05.835 - INFO - 9fa33dee-74b3-412e-b28d-f908621d16d3 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:06.014 - INFO - 9fa33dee-74b3-412e-b28d-f908621d16d3 - Outbound message event received message: {3EB0923EF1823EA8C5B8CE text 6282335685138@s.whatsapp.net map[conversation:ini pesan dengan API]}
-2025-09-05 22:14:06.015 - INFO - 9fa33dee-74b3-412e-b28d-f908621d16d3 - Message acknowledged
-2025-09-05 22:14:06.893 - INFO - c8e5aae0-1699-4c6c-9055-acdc3b938a4c - Received message: {"event_id":"1de98f6c-5fea-414f-9361-cef869623115","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:14:06.891324716+07:00","data":{"message_ids":["3EB0923EF1823EA8C5B8CE"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757085389}}
-2025-09-05 22:14:06.980 - INFO - c8e5aae0-1699-4c6c-9055-acdc3b938a4c - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:06.980 - INFO - c8e5aae0-1699-4c6c-9055-acdc3b938a4c - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:07.126 - INFO - c8e5aae0-1699-4c6c-9055-acdc3b938a4c - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:14:07.126 - INFO - c8e5aae0-1699-4c6c-9055-acdc3b938a4c - Message acknowledged
-2025-09-05 22:14:13.809 - INFO - b869ef3c-783b-49bf-b24c-78f238d2606a - Received message: {"event_id":"589bd1ab-3fa2-46c0-916f-0db4658a8d76","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:14:13.805019523+07:00","data":{"message_ids":["3EB0923EF1823EA8C5B8CE"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085396}}
-2025-09-05 22:14:13.978 - INFO - b869ef3c-783b-49bf-b24c-78f238d2606a - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:13.979 - INFO - b869ef3c-783b-49bf-b24c-78f238d2606a - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:14:14.061 - INFO - b869ef3c-783b-49bf-b24c-78f238d2606a - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:14:14.063 - INFO - b869ef3c-783b-49bf-b24c-78f238d2606a - Message acknowledged
-2025-09-05 22:15:38.369 - INFO - c53dd6e2-f0ef-46d6-a8c7-6124456caca2 - Received message: {"event_id":"f3aae1e7-b0a3-44de-b8ef-ef8dbf19bf3c","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-05T22:15:38.36205203+07:00","data":{"message_id":"3EB04E03866559ACD9B180","message_type":"image","to":"6282335685138@s.whatsapp.net","message":{"imageMessage":{"URL":"https://mmg.whatsapp.net/o1/v/t24/f2/m269/AQOSojN7OdA1yQMIW_YX5DXCZXOuiyphL-y0OS7ZP2erMYkc14lP3eAFghY2Auz6aT60zr6E1pnINWCS9_W-SKc9xUhmMmAQBtwYROI2vQ?ccb=9-4\u0026oh=01_Q5Aa2QEHfMiesWP4CA4qBqR-atj6U_QH5hhQh0zuEV3G2k_qZw\u0026oe=68E273C6\u0026_nc_sid=e6ed6c\u0026mms3=true","mimetype":"image/jpeg","caption":"Ini kucingku","fileSHA256":"QNu2v6qwG6G4TrdsC9H/rgc/FRwA68riwBGfniiMCos=","fileLength":38454,"mediaKey":"ramT/M7X2HpXMbR8xqRNSkf3FgiqScHL30s70fytcOY=","fileEncSHA256":"VDZNXR4/+iG4FwLzSdw4rXdGdBI7uyvKVooD+mr6Wug=","directPath":"/o1/v/t24/f2/m269/AQOSojN7OdA1yQMIW_YX5DXCZXOuiyphL-y0OS7ZP2erMYkc14lP3eAFghY2Auz6aT60zr6E1pnINWCS9_W-SKc9xUhmMmAQBtwYROI2vQ?ccb=9-4\u0026oh=01_Q5Aa2QEHfMiesWP4CA4qBqR-atj6U_QH5hhQh0zuEV3G2k_qZw\u0026oe=68E273C6\u0026_nc_sid=e6ed6c"}}}}
-2025-09-05 22:15:38.512 - INFO - c53dd6e2-f0ef-46d6-a8c7-6124456caca2 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:38.514 - INFO - c53dd6e2-f0ef-46d6-a8c7-6124456caca2 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:38.593 - INFO - c53dd6e2-f0ef-46d6-a8c7-6124456caca2 - Outbound message event received message: {3EB04E03866559ACD9B180 image 6282335685138@s.whatsapp.net map[imageMessage:map[URL:https://mmg.whatsapp.net/o1/v/t24/f2/m269/AQOSojN7OdA1yQMIW_YX5DXCZXOuiyphL-y0OS7ZP2erMYkc14lP3eAFghY2Auz6aT60zr6E1pnINWCS9_W-SKc9xUhmMmAQBtwYROI2vQ?ccb=9-4&oh=01_Q5Aa2QEHfMiesWP4CA4qBqR-atj6U_QH5hhQh0zuEV3G2k_qZw&oe=68E273C6&_nc_sid=e6ed6c&mms3=true caption:Ini kucingku directPath:/o1/v/t24/f2/m269/AQOSojN7OdA1yQMIW_YX5DXCZXOuiyphL-y0OS7ZP2erMYkc14lP3eAFghY2Auz6aT60zr6E1pnINWCS9_W-SKc9xUhmMmAQBtwYROI2vQ?ccb=9-4&oh=01_Q5Aa2QEHfMiesWP4CA4qBqR-atj6U_QH5hhQh0zuEV3G2k_qZw&oe=68E273C6&_nc_sid=e6ed6c fileEncSHA256:VDZNXR4/+iG4FwLzSdw4rXdGdBI7uyvKVooD+mr6Wug= fileLength:38454 fileSHA256:QNu2v6qwG6G4TrdsC9H/rgc/FRwA68riwBGfniiMCos= mediaKey:ramT/M7X2HpXMbR8xqRNSkf3FgiqScHL30s70fytcOY= mimetype:image/jpeg]]}
-2025-09-05 22:15:38.594 - INFO - c53dd6e2-f0ef-46d6-a8c7-6124456caca2 - Message acknowledged
-2025-09-05 22:15:39.415 - INFO - fef7ca87-270a-4797-9b09-6757981fd636 - Received message: {"event_id":"aa1f5085-fbc2-4619-8a49-0c1de7c333eb","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:15:39.410923668+07:00","data":{"message_ids":["3EB0923EF1823EA8C5B8CE"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085481}}
-2025-09-05 22:15:39.419 - INFO - fef7ca87-270a-4797-9b09-6757981fd636 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:39.532 - INFO - fef7ca87-270a-4797-9b09-6757981fd636 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:15:39.533 - INFO - fef7ca87-270a-4797-9b09-6757981fd636 - Message acknowledged
-2025-09-05 22:15:39.662 - INFO - ece0070f-8856-4559-9b1b-e5773386f4e2 - Received message: {"event_id":"83b4e6dc-c792-487a-ad20-ea8d8e7ad4f1","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:15:39.657728412+07:00","data":{"message_ids":["3EB04E03866559ACD9B180"],"sender":"6282335685138@s.whatsapp.net","timestamp":1757085482}}
-2025-09-05 22:15:39.758 - INFO - ece0070f-8856-4559-9b1b-e5773386f4e2 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:39.759 - INFO - ece0070f-8856-4559-9b1b-e5773386f4e2 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:39.858 - INFO - ece0070f-8856-4559-9b1b-e5773386f4e2 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:15:39.859 - INFO - ece0070f-8856-4559-9b1b-e5773386f4e2 - Message acknowledged
-2025-09-05 22:15:40.010 - INFO - 03f1ec37-e5c3-4fdc-850a-dd2f307da642 - Received message: {"event_id":"79f77ef2-cd82-4e8c-92e2-e0ca27db513e","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-05T22:15:40.005345153+07:00","data":{"message_ids":["3EB04E03866559ACD9B180"],"sender":"6282335685138:35@s.whatsapp.net","timestamp":1757085482}}
-2025-09-05 22:15:40.011 - INFO - 03f1ec37-e5c3-4fdc-850a-dd2f307da642 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
-2025-09-05 22:15:40.141 - INFO - 03f1ec37-e5c3-4fdc-850a-dd2f307da642 - Event receipt for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved
-2025-09-05 22:15:40.142 - INFO - 03f1ec37-e5c3-4fdc-850a-dd2f307da642 - Message acknowledged
-2025-09-05 22:20:32.466 - INFO - MAIN - Receiving signal: interrupt
-2025-09-05 22:20:32.469 - INFO - MAIN - Successfully stop Application.
+2025-09-15 11:15:23.163 - INFO - MAIN - Application started
+2025-09-15 11:15:23.172 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-15 11:15:23.175 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-15 11:15:23.177 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-15 11:16:37.545 - INFO - MAIN - Receiving signal: interrupt
+2025-09-15 11:16:37.548 - INFO - MAIN - Successfully stop Application.
+2025-09-15 11:16:44.401 - INFO - MAIN - Application started
+2025-09-15 11:16:44.410 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-15 11:16:44.413 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-15 11:16:44.414 - INFO - 394a8e65-50fa-48e6-a08e-ee9cfad6a2b0 - Received message: {"event_id":"da2729be-cdee-4b37-85b6-09e0e360dc11","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-12T20:49:13.3315273+07:00","data":{"message_id":"3EB08AD3D9EA51E137F590","message_type":"text","to":"6289685227426@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
+2025-09-15 11:16:44.414 - INFO - 7d9952dd-32a9-4a4f-88cd-1836c71b08f9 - Received message: {"event_id":"abfc73fb-6a9b-4b2b-adc2-943496bd377c","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"inbound_message","timestamp":"2025-09-12T20:49:14.1237955+07:00","data":{"sender":"6289513689096:54@s.whatsapp.net","message_type":"text","content":"ini pesan dengan API","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":false,"message_id":"3EB08AD3D9EA51E137F590","timestamp":1757685102}}}
+2025-09-15 11:16:44.414 - INFO - d4fb78dc-29bd-488f-b887-5a1b7ac6533c - Received message: {"event_id":"5b0f905b-ece8-4563-a56b-e078ab3473f9","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:49:14.3901389+07:00","data":{"message_ids":["3EB08AD3D9EA51E137F590"],"sender":"6289685227426:16@s.whatsapp.net","type":"inactive","timestamp":1757685103}}
+2025-09-15 11:16:44.414 - INFO - f726c6cb-4bf0-4254-9410-0758a9633bc7 - Received message: {"event_id":"8579dd2d-a018-4bce-9e88-6a02a15ab4f1","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:50:45.5830625+07:00","data":{"message_ids":["3EB08AD3D9EA51E137F590"],"sender":"6289685227426@s.whatsapp.net","type":"","timestamp":1757685194}}
+2025-09-15 11:16:44.417 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-15 11:16:44.414 - INFO - 7fffc707-c413-4a63-b088-5025cd83390d - Received message: {"event_id":"8324e6cc-d109-4a7b-85a8-da5e66f8396d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:57:09.4082776+07:00","data":{"message_ids":["3EB07F8CD3B7AF39E4FF8C"],"sender":"6289685227426:16@s.whatsapp.net","type":"inactive","timestamp":1757685578}}
+2025-09-15 11:16:44.414 - INFO - 53a8b18c-c0b0-4c2d-9b7d-81b093a06097 - Received message: {"event_id":"a08ae1b8-37b6-4f4d-86e7-018df074f3c8","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"outbound_message","timestamp":"2025-09-12T20:57:07.3249328+07:00","data":{"message_id":"3EB07F8CD3B7AF39E4FF8C","message_type":"text","to":"6289685227426@s.whatsapp.net","message":{"conversation":"ini pesan dengan API"}}}
+2025-09-15 11:16:44.414 - INFO - 2c275a2f-bfa0-46db-a1d7-e7b17d116e8d - Received message: {"event_id":"606268b0-9fb5-4b50-ba8a-4b9ded53a651","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"inbound_message","timestamp":"2025-09-12T20:57:09.1383342+07:00","data":{"sender":"6289513689096:54@s.whatsapp.net","message_type":"text","content":"ini pesan dengan API","metadata":{"chat":"6289513689096@s.whatsapp.net","from_me":false,"message_id":"3EB07F8CD3B7AF39E4FF8C","timestamp":1757685576}}}
+2025-09-15 11:16:44.414 - INFO - fcfe7ce3-8a75-4e24-8dda-9186b2b65b4d - Received message: {"event_id":"ee2cd976-c62c-4e15-aeaf-19d7ef8e0787","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:57:26.5874362+07:00","data":{"message_ids":["3EB07F8CD3B7AF39E4FF8C"],"sender":"6289685227426@s.whatsapp.net","type":"delivered","timestamp":1757685595}}
+2025-09-15 11:16:44.414 - INFO - 26a865be-3c17-4e53-a3c8-d680fb727c03 - Received message: {"event_id":"6df9f9c4-7617-4872-9d6a-35cf7bb1c5a4","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:51:44.0204498+07:00","data":{"message_ids":["3EB08AD3D9EA51E137F590"],"sender":"6289685227426@s.whatsapp.net","type":"read","timestamp":1757685252}}
+2025-09-15 11:16:44.414 - INFO - f4defda4-d4ad-4f6f-b14a-5e62f87cd6ce - Received message: {"event_id":"cc255275-0e80-43aa-85ae-cd8b353d6d03","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:51:43.988716+07:00","data":{"message_ids":["3EB08AD3D9EA51E137F590"],"sender":"6289685227426@s.whatsapp.net","type":"read","timestamp":1757685252}}
+2025-09-15 11:16:44.692 - INFO - 4739d785-38bf-470f-afb8-e8bbcc59e427 - Received message: {"event_id":"7b2a4571-5759-4397-9251-99c228944c2d","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T20:15:00.8040381+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - e9231308-0417-4d8e-a555-26ff8231dd9c - Received message: {"event_id":"fa406e73-e912-4544-bfa9-eff8ab3107be","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T19:45:23.9898473+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - b4e86af6-d431-41e6-9e11-078b7d37e8c9 - Received message: {"event_id":"29791d8d-db69-442b-84ff-6fdda47803ac","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T20:15:01.8764417+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 99fb0b40-a753-4aa8-ac15-e70225ee3ca0 - Received message: {"event_id":"a3ed3904-a68c-48c6-8ce2-58052653d763","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-03T20:17:52.2729776+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 2d4cdf05-c229-49ee-8861-1aa2d074d19c - Received message: {"event_id":"9b9470b2-7d14-4d4a-8182-58c932166b6d","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:42:11.9069771+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 763a1919-1cb6-4b6b-93de-266246f52e7c - Received message: {"event_id":"da676c49-3575-4469-acb5-2f37f0511c13","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T19:45:25.1284732+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 5d3172c7-ce98-4bdd-9e14-f1db9a33169c - Received message: {"event_id":"7ff4a717-f484-49a8-86ad-c53064cc5d1b","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:43:14.9498135+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 6b10e1be-f14e-4774-8b3f-425b580ce6f6 - Received message: {"event_id":"06219cf5-613f-4982-8e49-4ed1c97f8d0d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:43:15.931052+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.692 - INFO - 777cc10a-9685-44a5-8aa1-d3d3846d9007 - Received message: {"event_id":"ef23a797-a199-41d1-8e25-b86f56693e78","sender_jid":"6289513689096:49@s.whatsapp.net","event_type":"logged_out","timestamp":"2025-09-03T20:17:19.6908192+07:00","data":{"status":"logged_out"}}
+2025-09-15 11:16:44.692 - INFO - d454146d-fa6d-4bc4-b373-fb40d3f792e4 - Received message: {"event_id":"ddcacb12-ebab-48f2-a577-1304c3823a56","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:42:12.8114931+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:44.739 - INFO - 394a8e65-50fa-48e6-a08e-ee9cfad6a2b0 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:44.740 - INFO - 394a8e65-50fa-48e6-a08e-ee9cfad6a2b0 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:44.836 - INFO - 5d3172c7-ce98-4bdd-9e14-f1db9a33169c - Message acknowledged
+2025-09-15 11:16:44.837 - INFO - 2a86a160-66ec-4825-9995-ca73858814db - Received message: {"event_id":"b07f5b15-9484-4242-a70d-19f25f17f815","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:45:32.1276544+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:45.005 - INFO - 6b10e1be-f14e-4774-8b3f-425b580ce6f6 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.006 - INFO - 6b10e1be-f14e-4774-8b3f-425b580ce6f6 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.005 - INFO - d4fb78dc-29bd-488f-b887-5a1b7ac6533c - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.005 - INFO - 7fffc707-c413-4a63-b088-5025cd83390d - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.005 - INFO - fcfe7ce3-8a75-4e24-8dda-9186b2b65b4d - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.005 - INFO - 26a865be-3c17-4e53-a3c8-d680fb727c03 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.006 - INFO - 53a8b18c-c0b0-4c2d-9b7d-81b093a06097 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.006 - INFO - d4fb78dc-29bd-488f-b887-5a1b7ac6533c - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.006 - INFO - 7fffc707-c413-4a63-b088-5025cd83390d - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.006 - INFO - fcfe7ce3-8a75-4e24-8dda-9186b2b65b4d - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.007 - INFO - 26a865be-3c17-4e53-a3c8-d680fb727c03 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.007 - INFO - 53a8b18c-c0b0-4c2d-9b7d-81b093a06097 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.008 - INFO - f4defda4-d4ad-4f6f-b14a-5e62f87cd6ce - Message acknowledged
+2025-09-15 11:16:45.080 - INFO - 2a86a160-66ec-4825-9995-ca73858814db - Message acknowledged
+2025-09-15 11:16:45.081 - INFO - 68fdd0f1-7117-4eb3-af0b-0040a9e788f5 - Received message: {"event_id":"26770303-9ce8-49d7-980d-813d9773e724","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:45:33.1296302+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:45.082 - INFO - d454146d-fa6d-4bc4-b373-fb40d3f792e4 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.082 - INFO - d454146d-fa6d-4bc4-b373-fb40d3f792e4 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.082 - INFO - 68fdd0f1-7117-4eb3-af0b-0040a9e788f5 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.083 - INFO - 777cc10a-9685-44a5-8aa1-d3d3846d9007 - Message acknowledged
+2025-09-15 11:16:45.084 - INFO - 350dca6d-a6b6-44f2-a126-5b154329ee72 - Received message: {"event_id":"0498f4c5-6305-4a39-9732-d9e39174eab3","sender_jid":"6289685227426:16@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:56:58.2465966+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:45.085 - INFO - f726c6cb-4bf0-4254-9410-0758a9633bc7 - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.086 - INFO - f726c6cb-4bf0-4254-9410-0758a9633bc7 - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.089 - INFO - 2c275a2f-bfa0-46db-a1d7-e7b17d116e8d - Message acknowledged
+2025-09-15 11:16:45.116 - INFO - 7d9952dd-32a9-4a4f-88cd-1836c71b08f9 - Message acknowledged
+2025-09-15 11:16:45.166 - INFO - 394a8e65-50fa-48e6-a08e-ee9cfad6a2b0 - Outbound event for senderJID 6289513689096:54@s.whatsapp.net saved
+2025-09-15 11:16:45.166 - INFO - 394a8e65-50fa-48e6-a08e-ee9cfad6a2b0 - Message acknowledged
+2025-09-15 11:16:45.175 - INFO - fcfe7ce3-8a75-4e24-8dda-9186b2b65b4d - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:16:45.175 - INFO - 6b10e1be-f14e-4774-8b3f-425b580ce6f6 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
+2025-09-15 11:16:45.175 - INFO - 6b10e1be-f14e-4774-8b3f-425b580ce6f6 - Message acknowledged
+2025-09-15 11:16:45.175 - INFO - fcfe7ce3-8a75-4e24-8dda-9186b2b65b4d - Message acknowledged
+2025-09-15 11:16:45.176 - INFO - cdc70a4f-0f93-4615-bd78-d432cb16b3a7 - Received message: {"event_id":"d12c10cf-642f-4b48-8849-2d4d527af000","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"connected","timestamp":"2025-09-12T20:56:59.245486+07:00","data":{"status":"connected"}}
+2025-09-15 11:16:45.177 - INFO - cdc70a4f-0f93-4615-bd78-d432cb16b3a7 - WhatsApp account found in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.199 - INFO - 7fffc707-c413-4a63-b088-5025cd83390d - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:16:45.199 - INFO - 7fffc707-c413-4a63-b088-5025cd83390d - Message acknowledged
+2025-09-15 11:16:45.203 - INFO - 350dca6d-a6b6-44f2-a126-5b154329ee72 - Message acknowledged
+2025-09-15 11:16:45.221 - INFO - d4fb78dc-29bd-488f-b887-5a1b7ac6533c - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:16:45.221 - INFO - d4fb78dc-29bd-488f-b887-5a1b7ac6533c - Message acknowledged
+2025-09-15 11:16:45.225 - INFO - 53a8b18c-c0b0-4c2d-9b7d-81b093a06097 - Outbound event for senderJID 6289513689096:54@s.whatsapp.net saved
+2025-09-15 11:16:45.225 - INFO - 26a865be-3c17-4e53-a3c8-d680fb727c03 - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:16:45.225 - INFO - 26a865be-3c17-4e53-a3c8-d680fb727c03 - Message acknowledged
+2025-09-15 11:16:45.225 - INFO - 53a8b18c-c0b0-4c2d-9b7d-81b093a06097 - Message acknowledged
+2025-09-15 11:16:45.245 - INFO - e9231308-0417-4d8e-a555-26ff8231dd9c - Message acknowledged
+2025-09-15 11:16:45.250 - INFO - d454146d-fa6d-4bc4-b373-fb40d3f792e4 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
+2025-09-15 11:16:45.250 - INFO - d454146d-fa6d-4bc4-b373-fb40d3f792e4 - Message acknowledged
+2025-09-15 11:16:45.252 - INFO - 68fdd0f1-7117-4eb3-af0b-0040a9e788f5 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
+2025-09-15 11:16:45.252 - INFO - 68fdd0f1-7117-4eb3-af0b-0040a9e788f5 - Message acknowledged
+2025-09-15 11:16:45.252 - INFO - cdc70a4f-0f93-4615-bd78-d432cb16b3a7 - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
+2025-09-15 11:16:45.253 - INFO - cdc70a4f-0f93-4615-bd78-d432cb16b3a7 - Message acknowledged
+2025-09-15 11:16:45.258 - INFO - 2d4cdf05-c229-49ee-8861-1aa2d074d19c - Message acknowledged
+2025-09-15 11:16:45.274 - INFO - 99fb0b40-a753-4aa8-ac15-e70225ee3ca0 - Message acknowledged
+2025-09-15 11:16:45.274 - INFO - 4739d785-38bf-470f-afb8-e8bbcc59e427 - Message acknowledged
+2025-09-15 11:16:45.274 - INFO - b4e86af6-d431-41e6-9e11-078b7d37e8c9 - Message acknowledged
+2025-09-15 11:16:45.283 - INFO - 763a1919-1cb6-4b6b-93de-266246f52e7c - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.284 - INFO - 763a1919-1cb6-4b6b-93de-266246f52e7c - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:16:45.334 - INFO - f726c6cb-4bf0-4254-9410-0758a9633bc7 - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:16:45.335 - INFO - f726c6cb-4bf0-4254-9410-0758a9633bc7 - Message acknowledged
+2025-09-15 11:16:45.480 - INFO - 763a1919-1cb6-4b6b-93de-266246f52e7c - Connected event for senderJID 6289513689096:54@s.whatsapp.net updated in database
+2025-09-15 11:16:45.481 - INFO - 763a1919-1cb6-4b6b-93de-266246f52e7c - Message acknowledged
+2025-09-15 11:18:28.377 - INFO - 34970427-aff5-4c3a-bb08-8dde85d580df - Received message: 
+
+{"event_id":"8324e6cc-d109-4a7b-85a8-da5e66f8396d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:57:09.4082776+07:00","data":{"message_ids":["3EB07F8CD3B7AF39E4FF8C"],"sender":"6289685227426:16@s.whatsapp.net","type":"inactive","timestamp":1757685578}}
+
+
+2025-09-15 11:18:28.601 - INFO - 34970427-aff5-4c3a-bb08-8dde85d580df - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:18:28.601 - INFO - 34970427-aff5-4c3a-bb08-8dde85d580df - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:18:28.700 - INFO - 34970427-aff5-4c3a-bb08-8dde85d580df - Message acknowledged
+2025-09-15 11:18:39.555 - INFO - 9a8593f2-d45a-4964-a599-c2f8ebbd6e2e - Received message: 
+
+{"event_id":"8324e6cc-d109-4a7b-85a8-da5e66f8396d","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:57:09.4082776+07:00","data":{"message_ids":["3EB07F8CD3B7AF39E4FF8C1"],"sender":"6289685227426:16@s.whatsapp.net","type":"inactive","timestamp":1757685578}}
+
+
+2025-09-15 11:18:39.730 - INFO - 9a8593f2-d45a-4964-a599-c2f8ebbd6e2e - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:18:39.731 - INFO - 9a8593f2-d45a-4964-a599-c2f8ebbd6e2e - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:18:39.823 - INFO - 9a8593f2-d45a-4964-a599-c2f8ebbd6e2e - Message acknowledged
+2025-09-15 11:19:16.363 - INFO - 1ce13de0-6b9d-46b5-9d1e-22113ce7467d - Received message: 
+
+{"event_id":"8324e6cc-d109-4a7b-85a8-da5e66f8396e","sender_jid":"6289513689096:54@s.whatsapp.net","event_type":"receipt","timestamp":"2025-09-12T20:57:09.4082776+07:00","data":{"message_ids":["3EB07F8CD3B7AF39E4FF8C"],"sender":"6289685227426:16@s.whatsapp.net","type":"inactive","timestamp":1757685578}}
+
+
+2025-09-15 11:19:16.663 - INFO - 1ce13de0-6b9d-46b5-9d1e-22113ce7467d - WhatsApp account cached in Redis for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:19:16.663 - INFO - 1ce13de0-6b9d-46b5-9d1e-22113ce7467d - WhatsApp account found in database for JID: 6289513689096:54@s.whatsapp.net
+2025-09-15 11:19:16.837 - INFO - 1ce13de0-6b9d-46b5-9d1e-22113ce7467d - Receipt event for accountID cf93d43c-6c70-4739-a73a-7beee236a1b6 saved (1 receipts)
+2025-09-15 11:19:16.837 - INFO - 1ce13de0-6b9d-46b5-9d1e-22113ce7467d - Message acknowledged
+2025-09-15 11:24:03.281 - INFO - MAIN - Receiving signal: interrupt
+2025-09-15 11:24:03.282 - INFO - MAIN - Successfully stop Application.
+2025-09-15 11:25:09.012 - INFO - MAIN - Application started
+2025-09-15 11:25:09.018 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-15 11:25:09.022 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-15 11:25:09.026 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-15 11:25:12.840 - INFO - MAIN - Receiving signal: interrupt
+2025-09-15 11:25:12.841 - INFO - MAIN - Successfully stop Application.
+2025-09-15 11:25:37.558 - INFO - MAIN - Application started
+2025-09-15 11:25:37.564 - INFO - MAIN - Successfully creating consumer for queue: event_handler.events
+2025-09-15 11:25:37.567 - INFO - MAIN - Successfully creating consumer for queue: message.events
+2025-09-15 11:25:37.599 - INFO - MAIN - Successfully creating consumer for queue: receipt.events
+2025-09-15 11:25:37.601 - INFO - MAIN - Successfully creating consumer for queue: qr_handler.events
+2025-09-15 11:25:39.859 - INFO - MAIN - Receiving signal: interrupt
+2025-09-15 11:25:39.861 - INFO - MAIN - Successfully stop Application.

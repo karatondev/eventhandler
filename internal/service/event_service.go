@@ -358,7 +358,37 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		s.logger.Infofctx(provider.AppLog, ctx, "Logged out event for senderJID %s updated in database", data.SenderJID)
 		return nil
 
-	case model.EventTypeReceipt, model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
+	case model.EventTypeReceipt:
+
+		account, err := s.GetAccountBySenderJID(ctx, senderJID)
+		if err != nil {
+			return err
+		}
+
+		var receipt model.ReceiptEventData
+		if err := json.Unmarshal(data.Data, &receipt); err != nil {
+			return err
+		}
+
+		for _, messageID := range receipt.MessageIDs {
+			req := entity.CreateMessageReceiptRequest{
+				ReceiptID: data.EventID,
+				AccountID: account.AccountID,
+				MessageID: messageID,
+				Timestamp: time.Unix(receipt.Timestamp, 0),
+				Status:    receipt.Type,
+			}
+
+			if err := s.inboundOutbound.SaveMessageReceipt(ctx, &req); err != nil {
+				s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save message receipt: %v", err)
+				return err
+			}
+		}
+
+		s.logger.Infofctx(provider.AppLog, ctx, "Receipt event for accountID %s saved (%d receipts)", account.AccountID, len(receipt.MessageIDs))
+		return nil
+
+	case model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {

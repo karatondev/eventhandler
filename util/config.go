@@ -54,6 +54,7 @@ type Config struct {
 	Queues struct {
 		EventHandlerQueue  string `mapstructure:"event_handler_queue"`
 		MessagesEventQueue string `mapstructure:"messages_event_queue"`
+		ReceiptEventQueue  string `mapstructure:"receipt_event_queue"`
 		QRHandlerQueue     string `mapstructure:"qr_handler_queue"`
 	} `mapstructure:"queues"`
 }
