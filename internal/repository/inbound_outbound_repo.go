@@ -2,9 +2,10 @@ package repository
 
 import (
 	"context"
-	"eventhandler/internal/provider"
 	"eventhandler/model/entity"
 	"eventhandler/util"
+
+	"zaplio/shared/pkg/logger"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -19,13 +20,13 @@ type InboundOutboundRepository interface {
 }
 
 type inboundOutboundRepo struct {
-	logger provider.ILogger
+	logger logger.ILogger
 	pool   *pgxpool.Pool
 }
 
-func NewInboundOutboundRepository(logger provider.ILogger, pool *pgxpool.Pool) InboundOutboundRepository {
+func NewInboundOutboundRepository(log logger.ILogger, pool *pgxpool.Pool) InboundOutboundRepository {
 	return &inboundOutboundRepo{
-		logger: logger,
+		logger: log,
 		pool:   pool,
 	}
 }

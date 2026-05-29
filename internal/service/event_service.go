@@ -3,12 +3,14 @@ package service
 import (
 	"context"
 	"encoding/json"
-	"eventhandler/internal/provider"
 	"eventhandler/model"
 	"eventhandler/model/entity"
 	"eventhandler/util"
 	"fmt"
 	"time"
+
+	sharedmodel "zaplio/shared/model"
+	"zaplio/shared/pkg/logger"
 )
 
 const (
@@ -16,13 +18,13 @@ const (
 	qrKeyPrefix  = "qr:%s"
 )
 
-func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error {
+func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent) error {
 
 	senderJID := util.ExtractJIDPrefix(data.SenderJID)
 
 	switch data.EventType {
-	case model.EventTypeQR:
-		var qe model.QREventData
+	case sharedmodel.EventTypeQR:
+		var qe sharedmodel.QREventData
 		if err := json.Unmarshal(data.Data, &qe); err != nil {
 			return err
 		}
@@ -30,21 +32,21 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		key := fmt.Sprintf(qrKeyPrefix, data.SenderJID)
 		err := s.redis.Set(ctx, key, qe.Code, time.Duration(util.Configuration.Redis.QRSpan)*time.Second).Err()
 		if err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save QR event to redis: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save QR event to redis: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "QR event for senderJID %s saved to redis", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "QR event for senderJID %s saved to redis", data.SenderJID)
 		return nil
 
-	case model.EventTypeOutboundMessage:
+	case sharedmodel.EventTypeOutboundMessage:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
 
-		var message model.OutboundMessageData
+		var message sharedmodel.OutboundMessageData
 		if err := json.Unmarshal(data.Data, &message); err != nil {
 			return err
 		}
@@ -65,21 +67,21 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.inboundOutbound.SaveMessageOutbound(ctx, &req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save outbound event: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save outbound event: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Outbound event for senderJID %s saved", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Outbound event for senderJID %s saved", data.SenderJID)
 		return nil
 
-	case model.EventTypeInboundMessage:
+	case sharedmodel.EventTypeInboundMessage:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
 
-		var message model.MessageEventData
+		var message sharedmodel.MessageEventData
 		if err := json.Unmarshal(data.Data, &message); err != nil {
 			return err
 		}
@@ -95,7 +97,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		switch message.MessageType {
-		case model.MessageTypeText:
+		case sharedmodel.MessageTypeText:
 			// Create a clean message data without sender and metadata
 			messageData := model.MessageData{
 				Content: message.Content,
@@ -103,8 +105,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeImage:
-			var imageMessage model.ImageMessageData
+		case sharedmodel.MessageTypeImage:
+			var imageMessage sharedmodel.ImageMessageData
 			if err := json.Unmarshal(data.Data, &imageMessage); err != nil {
 				return err
 			}
@@ -119,8 +121,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeAudio:
-			var audioMessage model.AudioMessageData
+		case sharedmodel.MessageTypeAudio:
+			var audioMessage sharedmodel.AudioMessageData
 			if err := json.Unmarshal(data.Data, &audioMessage); err != nil {
 				return err
 			}
@@ -136,8 +138,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeVideo:
-			var videoMessage model.VideoMessageData
+		case sharedmodel.MessageTypeVideo:
+			var videoMessage sharedmodel.VideoMessageData
 			if err := json.Unmarshal(data.Data, &videoMessage); err != nil {
 				return err
 			}
@@ -153,8 +155,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeDocument:
-			var documentMessage model.DocumentMessageData
+		case sharedmodel.MessageTypeDocument:
+			var documentMessage sharedmodel.DocumentMessageData
 			if err := json.Unmarshal(data.Data, &documentMessage); err != nil {
 				return err
 			}
@@ -170,8 +172,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeLocation:
-			var locationMessage model.LocationMessageData
+		case sharedmodel.MessageTypeLocation:
+			var locationMessage sharedmodel.LocationMessageData
 			if err := json.Unmarshal(data.Data, &locationMessage); err != nil {
 				return err
 			}
@@ -187,8 +189,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeReaction:
-			var reactionMessage model.ReactionMessageData
+		case sharedmodel.MessageTypeReaction:
+			var reactionMessage sharedmodel.ReactionMessageData
 			if err := json.Unmarshal(data.Data, &reactionMessage); err != nil {
 				return err
 			}
@@ -203,8 +205,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeButton:
-			var buttonMessage model.ButtonResponseMessageData
+		case sharedmodel.MessageTypeButton:
+			var buttonMessage sharedmodel.ButtonResponseMessageData
 			if err := json.Unmarshal(data.Data, &buttonMessage); err != nil {
 				return err
 			}
@@ -218,8 +220,8 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 
 			req.Data = messageData.MustToBytes()
 
-		case model.MessageTypeList:
-			var listMessage model.ListResponseMessageData
+		case sharedmodel.MessageTypeList:
+			var listMessage sharedmodel.ListResponseMessageData
 			if err := json.Unmarshal(data.Data, &listMessage); err != nil {
 				return err
 			}
@@ -235,21 +237,21 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			req.Data = messageData.MustToBytes()
 
 		default:
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Unsupported message type: %s", message.MessageType)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Unsupported message type: %s", message.MessageType)
 			return nil
 		}
 
 		if err := s.inboundOutbound.SaveMessageInbound(ctx, &req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save inbound event: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save inbound event: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Inbound event for senderJID %s saved", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Inbound event for senderJID %s saved", data.SenderJID)
 		return nil
 
-	case model.EventTypePairSuccess:
+	case sharedmodel.EventTypePairSuccess:
 		// Handle pair success event
-		var pairEvent model.PairSuccessEventData
+		var pairEvent sharedmodel.PairSuccessEventData
 		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
 			return err
 		}
@@ -264,20 +266,20 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.whatsappRepo.UpdatePairingSuccess(ctx, req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update pairing success: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to update pairing success: %v", err)
 			return err
 		}
 
 		// Invalidate cache in Redis
 		if err := s.redis.Del(ctx, fmt.Sprintf(waaKeyPrefix, data.SenderJID)).Err(); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to invalidate cache for sender JID %s: %v", data.SenderJID, err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to invalidate cache for sender JID %s: %v", data.SenderJID, err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Pair success event for senderJID %s updated in database", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Pair success event for senderJID %s updated in database", data.SenderJID)
 		return nil
 
-	case model.EventTypeConnected:
+	case sharedmodel.EventTypeConnected:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
@@ -285,7 +287,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		// Handle connected event
-		var pairEvent model.ConnectionEventData
+		var pairEvent sharedmodel.ConnectionEventData
 		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
 			return err
 		}
@@ -297,14 +299,14 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.whatsappRepo.UpdateConnected(ctx, req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update connected status: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to update connected status: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Connected event for senderJID %s updated in database", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Connected event for senderJID %s updated in database", data.SenderJID)
 		return nil
 
-	case model.EventTypeDisconnected:
+	case sharedmodel.EventTypeDisconnected:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
@@ -312,7 +314,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		// Handle disconnected event
-		var pairEvent model.ConnectionEventData
+		var pairEvent sharedmodel.ConnectionEventData
 		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
 			return err
 		}
@@ -324,14 +326,14 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.whatsappRepo.UpdateDisconnected(ctx, req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update disconnected status: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to update disconnected status: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Disconnected event for senderJID %s updated in database", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Disconnected event for senderJID %s updated in database", data.SenderJID)
 		return nil
 
-	case model.EventTypeLoggedOut:
+	case sharedmodel.EventTypeLoggedOut:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
@@ -339,7 +341,7 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		// Handle logged out event - same as disconnected
-		var pairEvent model.ConnectionEventData
+		var pairEvent sharedmodel.ConnectionEventData
 		if err := json.Unmarshal(data.Data, &pairEvent); err != nil {
 			return err
 		}
@@ -351,21 +353,21 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.whatsappRepo.UpdateDisconnected(ctx, req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to update logged out status: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to update logged out status: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Logged out event for senderJID %s updated in database", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Logged out event for senderJID %s updated in database", data.SenderJID)
 		return nil
 
-	case model.EventTypeReceipt:
+	case sharedmodel.EventTypeReceipt:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
 			return err
 		}
 
-		var receipt model.ReceiptEventData
+		var receipt sharedmodel.ReceiptEventData
 		if err := json.Unmarshal(data.Data, &receipt); err != nil {
 			return err
 		}
@@ -380,15 +382,15 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 			}
 
 			if err := s.inboundOutbound.SaveMessageReceipt(ctx, &req); err != nil {
-				s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save message receipt: %v", err)
+				s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save message receipt: %v", err)
 				return err
 			}
 		}
 
-		s.logger.Infofctx(provider.AppLog, ctx, "Receipt event for accountID %s saved (%d receipts)", account.AccountID, len(receipt.MessageIDs))
+		s.logger.Infofctx(logger.AppLog, ctx, "Receipt event for accountID %s saved (%d receipts)", account.AccountID, len(receipt.MessageIDs))
 		return nil
 
-	case model.EventTypePresence, model.EventTypeCallOffer, model.EventTypeMediaRetryError:
+	case sharedmodel.EventTypePresence, sharedmodel.EventTypeCallOffer, sharedmodel.EventTypeMediaRetryError:
 
 		account, err := s.GetAccountBySenderJID(ctx, senderJID)
 		if err != nil {
@@ -404,10 +406,10 @@ func (s *service) HandleEvent(ctx context.Context, data *model.QueueEvent) error
 		}
 
 		if err := s.inboundOutbound.SaveEvent(ctx, &req); err != nil {
-			s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed save event: %v", err)
+			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save event: %v", err)
 			return err
 		}
-		s.logger.Infofctx(provider.AppLog, ctx, "Event %s for accountID %s saved", data.EventType, account.AccountID)
+		s.logger.Infofctx(logger.AppLog, ctx, "Event %s for accountID %s saved", data.EventType, account.AccountID)
 		return nil
 
 	default:
@@ -424,17 +426,17 @@ func (s *service) GetAccountBySenderJID(ctx context.Context, senderJID string) (
 		// Data found in Redis, unmarshal and return
 		var account entity.WhatsAppAccount
 		if err := json.Unmarshal([]byte(cachedData), &account); err == nil {
-			s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account found in Redis for JID: %s", senderJID)
+			s.logger.Infofctx(logger.AppLog, ctx, "WhatsApp account found in Redis for JID: %s", senderJID)
 			return &account, nil
 		}
 		// If unmarshal fails, continue to database fetch
-		s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to unmarshal cached account data: %v", err)
+		s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to unmarshal cached account data: %v", err)
 	}
 
 	// Data not found in Redis or unmarshal failed, fetch from database
 	account, err := s.whatsappRepo.GetAccountBySenderJID(ctx, senderJID)
 	if err != nil {
-		s.logger.Errorfctx(provider.AppLog, ctx, false, "Failed to get account from database: %v", err)
+		s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to get account from database: %v", err)
 		return nil, err
 	}
 
@@ -442,9 +444,9 @@ func (s *service) GetAccountBySenderJID(ctx context.Context, senderJID string) (
 	accountData, err := json.Marshal(account)
 	if err == nil {
 		s.redis.Set(ctx, key, accountData, time.Second).Err()
-		s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account cached in Redis for JID: %s", senderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "WhatsApp account cached in Redis for JID: %s", senderJID)
 	}
 
-	s.logger.Infofctx(provider.AppLog, ctx, "WhatsApp account found in database for JID: %s", senderJID)
+	s.logger.Infofctx(logger.AppLog, ctx, "WhatsApp account found in database for JID: %s", senderJID)
 	return account, nil
 }
