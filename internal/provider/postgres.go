@@ -5,6 +5,7 @@ import (
 	"eventhandler/util"
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 )
@@ -22,12 +23,29 @@ func NewPostgresConnection(ctx context.Context) (*pgxpool.Pool, error) {
 		strings.Join(cfg.Options, "&"),
 	)
 
-	pool, err := pgxpool.New(ctx, dsn)
+	poolConfig, err := pgxpool.ParseConfig(dsn)
 	if err != nil {
 		return nil, err
 	}
 
-	// Test the connection
+	if cfg.MaxConns > 0 {
+		poolConfig.MaxConns = cfg.MaxConns
+	}
+	if cfg.MinConns > 0 {
+		poolConfig.MinConns = cfg.MinConns
+	}
+	if cfg.MaxConnLifetimeSecs > 0 {
+		poolConfig.MaxConnLifetime = time.Duration(cfg.MaxConnLifetimeSecs) * time.Second
+	}
+	if cfg.MaxConnIdleTimeSecs > 0 {
+		poolConfig.MaxConnIdleTime = time.Duration(cfg.MaxConnIdleTimeSecs) * time.Second
+	}
+
+	pool, err := pgxpool.NewWithConfig(ctx, poolConfig)
+	if err != nil {
+		return nil, err
+	}
+
 	if err := pool.Ping(ctx); err != nil {
 		pool.Close()
 		return nil, err

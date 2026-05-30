@@ -11,6 +11,8 @@ import (
 
 	sharedmodel "zaplio/shared/model"
 	"zaplio/shared/pkg/logger"
+
+	"github.com/google/uuid"
 )
 
 const (
@@ -21,6 +23,7 @@ const (
 func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent) error {
 
 	senderJID := util.ExtractJIDPrefix(data.SenderJID)
+	s.logger.Infofctx(logger.AppLog, ctx, "Processing event: event_id=%s, event_type=%s, sender_jid=%s", data.EventID, data.EventType, data.SenderJID)
 
 	switch data.EventType {
 	case sharedmodel.EventTypeQR:
@@ -66,6 +69,7 @@ func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent)
 			Data:        messageData,
 		}
 
+		s.logger.Infofctx(logger.AppLog, ctx, "Saving outbound message: event_id=%s, account_id=%s, message_id=%s, recipient=%s, message_type=%s", req.EventID, req.AccountID, req.MessageID, req.Recipient, req.MessageType)
 		if err := s.inboundOutbound.SaveMessageOutbound(ctx, &req); err != nil {
 			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save outbound event: %v", err)
 			return err
@@ -241,6 +245,7 @@ func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent)
 			return nil
 		}
 
+		s.logger.Infofctx(logger.AppLog, ctx, "Saving inbound message: event_id=%s, account_id=%s, message_id=%s, sender=%s, message_type=%s", req.EventID, req.AccountID, req.MessageID, req.Sender, req.MessageType)
 		if err := s.inboundOutbound.SaveMessageInbound(ctx, &req); err != nil {
 			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save inbound event: %v", err)
 			return err
@@ -373,8 +378,13 @@ func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent)
 		}
 
 		for _, messageID := range receipt.MessageIDs {
+			// Satu event receipt bisa memuat banyak message_id; receipt_id harus unik
+			// per (event, message) agar tidak bentrok PK. Deterministik supaya redelivery
+			// menghasilkan id yang sama (idempotent dengan ON CONFLICT DO NOTHING di repo).
+			receiptID := uuid.NewSHA1(uuid.NameSpaceOID, []byte(data.EventID+":"+messageID)).String()
+
 			req := entity.CreateMessageReceiptRequest{
-				ReceiptID: data.EventID,
+				ReceiptID: receiptID,
 				AccountID: account.AccountID,
 				MessageID: messageID,
 				Timestamp: time.Unix(receipt.Timestamp, 0),
@@ -440,10 +450,9 @@ func (s *service) GetAccountBySenderJID(ctx context.Context, senderJID string) (
 		return nil, err
 	}
 
-	// Cache the result in Redis for future use (cache for 1 hour)
 	accountData, err := json.Marshal(account)
 	if err == nil {
-		s.redis.Set(ctx, key, accountData, time.Second).Err()
+		s.redis.Set(ctx, key, accountData, time.Hour).Err()
 		s.logger.Infofctx(logger.AppLog, ctx, "WhatsApp account cached in Redis for JID: %s", senderJID)
 	}
 

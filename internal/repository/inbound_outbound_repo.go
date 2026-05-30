@@ -50,10 +50,12 @@ const (
 	insertMessageReceiptQuery = `
 		INSERT INTO whatsapp_web.message_receipts
 			(receipt_id, account_id, message_id, timestamp, status, created_at, updated_at)
-		VALUES (@receipt_id, @account_id, @message_id, @timestamp, @status, @created_at, @updated_at)`
+		VALUES (@receipt_id, @account_id, @message_id, @timestamp, @status, @created_at, @updated_at)
+		ON CONFLICT (receipt_id) DO NOTHING`
 )
 
 func (r *inboundOutboundRepo) SaveEvent(ctx context.Context, req *entity.CreateAccountEventRequest) error {
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert account_event: event_id=%s, account_id=%s, event_type=%s, data=%s", req.EventID, req.AccountID, req.EventType, string(req.Data))
 	params := pgx.NamedArgs{
 		"event_id":   req.EventID,
 		"account_id": req.AccountID,
@@ -65,10 +67,15 @@ func (r *inboundOutboundRepo) SaveEvent(ctx context.Context, req *entity.CreateA
 	}
 
 	_, err := r.pool.Exec(ctx, insertAccountEventQuery, params)
-	return err
+	if err != nil {
+		return err
+	}
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert account_event success: event_id=%s", req.EventID)
+	return nil
 }
 
 func (r *inboundOutboundRepo) SaveMessageInbound(ctx context.Context, req *entity.CreateMessageInboundRequest) error {
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_inbound: inbound_id=%s, account_id=%s, message_id=%s, sender=%s, message_type=%s", req.EventID, req.AccountID, req.MessageID, req.Sender, req.MessageType)
 	params := pgx.NamedArgs{
 		"inbound_id":   req.EventID,
 		"account_id":   req.AccountID,
@@ -83,10 +90,15 @@ func (r *inboundOutboundRepo) SaveMessageInbound(ctx context.Context, req *entit
 	}
 
 	_, err := r.pool.Exec(ctx, insertMessageInboundQuery, params)
-	return err
+	if err != nil {
+		return err
+	}
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_inbound success: inbound_id=%s", req.EventID)
+	return nil
 }
 
 func (r *inboundOutboundRepo) SaveMessageOutbound(ctx context.Context, req *entity.CreateMessageOutboundRequest) error {
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_outbound: outbound_id=%s, account_id=%s, message_id=%s, recipient=%s, message_type=%s", req.EventID, req.AccountID, req.MessageID, req.Recipient, req.MessageType)
 	params := pgx.NamedArgs{
 		"outbound_id":  req.EventID,
 		"account_id":   req.AccountID,
@@ -100,10 +112,15 @@ func (r *inboundOutboundRepo) SaveMessageOutbound(ctx context.Context, req *enti
 	}
 
 	_, err := r.pool.Exec(ctx, insertMessageOutboundQuery, params)
-	return err
+	if err != nil {
+		return err
+	}
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_outbound success: outbound_id=%s", req.EventID)
+	return nil
 }
 
 func (r *inboundOutboundRepo) SaveMessageReceipt(ctx context.Context, req *entity.CreateMessageReceiptRequest) error {
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_receipt: receipt_id=%s, account_id=%s, message_id=%s, status=%s", req.ReceiptID, req.AccountID, req.MessageID, req.Status)
 	params := pgx.NamedArgs{
 		"receipt_id": req.ReceiptID,
 		"account_id": req.AccountID,
@@ -115,5 +132,9 @@ func (r *inboundOutboundRepo) SaveMessageReceipt(ctx context.Context, req *entit
 	}
 
 	_, err := r.pool.Exec(ctx, insertMessageReceiptQuery, params)
-	return err
+	if err != nil {
+		return err
+	}
+	r.logger.Infofctx(logger.AppLog, ctx, "DB insert message_receipt success: receipt_id=%s", req.ReceiptID)
+	return nil
 }

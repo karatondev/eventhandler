@@ -23,12 +23,16 @@ type Config struct {
 		Level      string `mapstructure:"level"`
 	} `mapstructure:"logger"`
 	Postgres struct {
-		Host     string   `mapstructure:"host"`
-		Port     int      `mapstructure:"port"`
-		Username string   `mapstructure:"username"`
-		Password string   `mapstructure:"password"`
-		Database string   `mapstructure:"database"`
-		Options  []string `mapstructure:"options"`
+		Host               string   `mapstructure:"host"`
+		Port               int      `mapstructure:"port"`
+		Username           string   `mapstructure:"username"`
+		Password           string   `mapstructure:"password"`
+		Database           string   `mapstructure:"database"`
+		Options            []string `mapstructure:"options"`
+		MaxConns           int32    `mapstructure:"max_conns"`
+		MinConns           int32    `mapstructure:"min_conns"`
+		MaxConnLifetimeSecs int     `mapstructure:"max_conn_lifetime_secs"`
+		MaxConnIdleTimeSecs int     `mapstructure:"max_conn_idle_time_secs"`
 	} `mapstructure:"postgres"`
 	Redis struct {
 		Host     string   `mapstructure:"host"`

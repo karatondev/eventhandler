@@ -43,11 +43,15 @@ func (c *consumerHandler) Handle(data amqp.Delivery) {
 	payload := sharedmodel.QueueEvent{}
 	if err := json.Unmarshal(data.Body, &payload); err != nil {
 		c.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to unmarshal message: %v", err)
+		data.Nack(false, false)
 		return
 	}
+	c.logger.Infofctx(logger.AppLog, ctx, "Queue message parsed: event_type=%s, event_id=%s, sender_jid=%s", payload.EventType, payload.EventID, payload.SenderJID)
 
 	if err := c.service.HandleEvent(ctx, &payload); err != nil {
 		c.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to process queue: %v", err)
+		data.Nack(false, true)
+		return
 	}
 
 	if err := data.Ack(false); err != nil {

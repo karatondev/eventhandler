@@ -27,10 +27,6 @@ redis:
 
 amqp:
   scheme: "amqp"
-  # host: 172.26.90.92
-  # port: 5672
-  # username: faisol
-  # password: faisol123
   host: localhost
   port: 5672
   username: guest
