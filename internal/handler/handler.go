@@ -50,7 +50,7 @@ func (c *consumerHandler) Handle(data amqp.Delivery) {
 
 	if err := c.service.HandleEvent(ctx, &payload); err != nil {
 		c.logger.Errorfctx(logger.AppLog, ctx, false, "Failed to process queue: %v", err)
-		data.Nack(false, true)
+		data.Nack(false, false)
 		return
 	}
 
