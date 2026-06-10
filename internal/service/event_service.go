@@ -32,14 +32,14 @@ func (s *service) HandleEvent(ctx context.Context, data *sharedmodel.QueueEvent)
 			return err
 		}
 
-		key := fmt.Sprintf(qrKeyPrefix, data.SenderJID)
+		key := fmt.Sprintf(qrKeyPrefix, senderJID)
 		err := s.redis.Set(ctx, key, qe.Code, time.Duration(util.Configuration.Redis.QRSpan)*time.Second).Err()
 		if err != nil {
 			s.logger.Errorfctx(logger.AppLog, ctx, false, "Failed save QR event to redis: %v", err)
 			return err
 		}
 
-		s.logger.Infofctx(logger.AppLog, ctx, "QR event for senderJID %s saved to redis", data.SenderJID)
+		s.logger.Infofctx(logger.AppLog, ctx, "QR event for senderJID %s saved to redis", senderJID)
 		return nil
 
 	case sharedmodel.EventTypeOutboundMessage:
